@@ -794,130 +794,107 @@
                 <div class="section-divider w-24 mx-auto mt-6"></div>
             </div>
 
-            <!-- Grid de Fotos da Frota -->
+            <!-- Grid de Serviços -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-                <!-- Caminhão Munck -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray">
+                <!-- Locação -->
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/munck.jpg" alt="Caminhão Munck - Top Locações"
-                            class="w-full h-full object-cover fleet-image" data-i18n="fleet_munck_alt"
+                        <img src="/servico_locacao.png" alt="Locação de Máquinas"
+                            class="w-full h-full object-cover fleet-image" data-i18n="service_rental_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="fleet_munck_title">Caminhão Munck</h3>
-                        <p class="text-top-yellow text-sm" data-i18n="fleet_munck_sub">Até 12 toneladas</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_rental_title">LOCAÇÃO DE MÁQUINAS E EQUIPAMENTOS</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_rental_sub">Frota revisada e moderna</p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="fleet_munck_hover">Movimentação de cargas pesadas</p>
+                        <p class="text-white font-bold" data-i18n="service_rental_hover">Máquinas prontas para qualquer desafio em obra.</p>
                     </div>
                 </div>
 
-                <!-- Caminhão Pipa -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray">
+                <!-- Construção Civil -->
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/pipa.jpg" alt="Caminhão Pipa - Top Locações"
-                            class="w-full h-full object-cover fleet-image" data-i18n="fleet_pipa_alt"
+                        <img src="/servico_construcao_final.jpg" alt="Construção Civil"
+                            class="w-full h-full object-cover fleet-image" data-i18n="service_construction_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="fleet_pipa_title">Caminhão Pipa</h3>
-                        <p class="text-top-yellow text-sm" data-i18n="fleet_pipa_sub">8.000L a 10.000L</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_construction_title">CONSTRUÇÃO CIVIL</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_construction_sub">Obras de infraestrutura</p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="fleet_pipa_hover">Combate a poeira e irrigação</p>
+                        <p class="text-white font-bold" data-i18n="service_construction_hover">Projeto e execução de obras civis com padrão TOP.</p>
                     </div>
                 </div>
 
-                <!-- Caminhão Comboio -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray">
+                <!-- Montagem Industrial -->
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/comboio.jpg" alt="Caminhão Comboio - Top Locações"
-                            class="w-full h-full object-cover fleet-image" data-i18n="fleet_comboio_alt"
+                        <img src="/servico_industrial.png" alt="Montagem Industrial"
+                            class="w-full h-full object-cover fleet-image" data-i18n="service_industrial_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="fleet_comboio_title">Caminhão Comboio
-                        </h3>
-                        <p class="text-top-yellow text-sm" data-i18n="fleet_comboio_sub">Abastecimento em campo</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_industrial_title">MONTAGEM INDUSTRIAL</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_industrial_sub">Estruturas e Instalações</p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="fleet_comboio_hover">Manutenção e lubrificação</p>
+                        <p class="text-white font-bold" data-i18n="service_industrial_hover">Montagem técnica e suporte especializado.</p>
                     </div>
                 </div>
 
-                <!-- Caminhão Basculante -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray">
+                <!-- Transporte Rodoviário -->
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/cacamba.jpg" alt="Caminhão Basculante - Top Locações"
-                            class="w-full h-full object-cover fleet-image" data-i18n="fleet_dump_alt"
+                        <img src="/servico_transporte.png" alt="Transporte Rodoviário"
+                            class="w-full h-full object-cover fleet-image" data-i18n="service_transport_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="fleet_dump_title">Caminhão Basculante
-                        </h3>
-                        <p class="text-top-yellow text-sm" data-i18n="fleet_dump_sub">5m³ e 10m³</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_transport_title">TRANSPORTE RODOVIÁRIO</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_transport_sub">Cargas pesadas e logística</p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="fleet_dump_hover">Transporte de materiais a granel
-                        </p>
+                        <p class="text-white font-bold" data-i18n="service_transport_hover">Mobilidade e agilidade para seu projeto.</p>
                     </div>
                 </div>
 
-                <!-- Retroescavadeira -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray">
+                <!-- Terceirização -->
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/retroescavadeira.jpg" alt="Retroescavadeira - Top Locações"
-                            class="w-full h-full object-cover fleet-image" data-i18n="fleet_backhoe_alt"
+                        <img src="/servico_terceirizacao_final.jpg" alt="Terceirização"
+                            class="w-full h-full object-cover object-top fleet-image" data-i18n="service_outsourcing_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="fleet_backhoe_title">Retroescavadeiras
-                        </h3>
-                        <p class="text-top-yellow text-sm" data-i18n="fleet_backhoe_sub">Versatilidade em obra</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_outsourcing_title">TERCEIRIZAÇÃO DE MÃO DE OBRA</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_outsourcing_sub">Equipes qualificadas</p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="fleet_backhoe_hover">Escavação e carregamento</p>
+                        <p class="text-white font-bold" data-i18n="service_outsourcing_hover">Profissionais treinados em segurança e operação.</p>
                     </div>
                 </div>
 
-                <!-- Empilhadeira -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray">
+                <!-- Gestão Ambiental -->
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/empilhadeira.jpg" alt="Empilhadeira - Top Locações"
-                            class="w-full h-full object-cover fleet-image" data-i18n="fleet_forklift_alt"
+                        <img src="/servico_ambiental.png" alt="Gestão Ambiental"
+                            class="w-full h-full object-cover fleet-image" data-i18n="service_environmental_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="fleet_forklift_title">Empilhadeira</h3>
-                        <p class="text-top-yellow text-sm" data-i18n="fleet_forklift_sub">Logística e Armazenagem</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_environmental_title">GESTÃO AMBIENTAL</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_environmental_sub">Práticas sustentáveis</p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="fleet_forklift_hover">Movimentação de cargas
-                            industriais</p>
-                    </div>
-                </div>
-
-                <!-- Manipulador Telescópico -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray">
-                    <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/manipulador.jpg" alt="Manipulador Telescópico - Top Locações"
-                            class="w-full h-full object-cover fleet-image" data-i18n="fleet_telehandler_alt"
-                            data-i18n-attr="alt">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="fleet_telehandler_title">Manipulador
-                            Telescópico</h3>
-                        <p class="text-top-yellow text-sm" data-i18n="fleet_telehandler_sub">Alcance e Força</p>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="fleet_telehandler_hover">Movimentação em altura</p>
+                        <p class="text-white font-bold" data-i18n="service_environmental_hover">Compromisso com o meio ambiente e conformidade.</p>
                     </div>
                 </div>
             </div>
@@ -1558,31 +1535,25 @@
                 sector_mining_text: 'Equipamentos para extração mineral, transporte de minérios e infraestrutura de minas.',
                 fleet_title_1: 'NOSSOS',
                 fleet_title_2: ' SERVIÇOS',
-                fleet_p1: 'Equipamentos de última geração prontos para atender às demandas mais complexas dos setores de energia renovável e construção civil.',
-                fleet_munck_alt: 'Caminhão Munck - Top Locações',
-                fleet_pipa_alt: 'Caminhão Pipa - Top Locações',
-                fleet_excav_alt: 'Escavadeiras - Top Locações',
-                fleet_dump_alt: 'Caminhão Basculante - Top Locações',
-                fleet_lowbed_alt: 'Caminhão Prancha - Top Locações',
-                fleet_loader_alt: 'Pá Carregadeira - Top Locações',
-                fleet_munck_title: 'Caminhão Munck',
-                fleet_munck_sub: 'Até 12 toneladas',
-                fleet_munck_hover: 'Movimentação de cargas pesadas',
-                fleet_pipa_title: 'Caminhão Pipa',
-                fleet_pipa_sub: '8.000L a 10.000L',
-                fleet_pipa_hover: 'Combate a poeira e irrigação',
-                fleet_excav_title: 'Escavadeiras',
-                fleet_excav_sub: 'Hidráulicas e Mini',
-                fleet_excav_hover: 'Escavação e terraplenagem',
-                fleet_dump_title: 'Caminhão Basculante',
-                fleet_dump_sub: '5m³ e 10m³',
-                fleet_dump_hover: 'Transporte de materiais a granel',
-                fleet_lowbed_title: 'Caminhão Prancha',
-                fleet_lowbed_sub: 'Reto e Rebaixado',
-                fleet_lowbed_hover: 'Transporte de máquinas pesadas',
-                fleet_loader_title: 'Pá Carregadeira',
-                fleet_loader_sub: 'Diversas capacidades',
-                fleet_loader_hover: 'Carregamento de materiais',
+                fleet_p1: 'Soluções integradas para grandes projetos e infraestrutura em todo o Brasil.',
+                service_rental_title: 'LOCAÇÃO DE MÁQUINAS E EQUIPAMENTOS',
+                service_rental_sub: 'Frota revisada e moderna',
+                service_rental_hover: 'Máquinas prontas para qualquer desafio em obra.',
+                service_construction_title: 'CONSTRUÇÃO CIVIL',
+                service_construction_sub: 'Obras de infraestrutura',
+                service_construction_hover: 'Projeto e execução de obras civis com padrão TOP.',
+                service_industrial_title: 'MONTAGEM INDUSTRIAL',
+                service_industrial_sub: 'Estruturas e Instalações',
+                service_industrial_hover: 'Montagem técnica e suporte especializado.',
+                service_transport_title: 'TRANSPORTE RODOVIÁRIO',
+                service_transport_sub: 'Cargas pesadas e logística',
+                service_transport_hover: 'Mobilidade e agilidade para seu projeto.',
+                service_outsourcing_title: 'TERCEIRIZAÇÃO DE MÃO DE OBRA',
+                service_outsourcing_sub: 'Equipes qualificadas',
+                service_outsourcing_hover: 'Profissionais treinados em segurança e operação.',
+                service_environmental_title: 'GESTÃO AMBIENTAL',
+                service_environmental_sub: 'Práticas sustentáveis',
+                service_environmental_hover: 'Compromisso com o meio ambiente e conformidade.',
                 equip_title_1: 'EQUIPAMENTOS PARA',
                 equip_title_2: ' LOCAÇÃO',
                 equip_p1: 'Conheça nossa linha completa de caminhões e máquinas pesadas disponíveis para locação.',
@@ -1770,31 +1741,25 @@
                 sector_mining_text: 'Equipment for mineral extraction, ore transport and mine infrastructure.',
                 fleet_title_1: 'OUR',
                 fleet_title_2: ' SERVICES',
-                fleet_p1: 'Latest-generation equipment ready to meet the most complex demands of renewable energy and construction.',
-                fleet_munck_alt: 'Truck-Mounted Crane - Top Locações',
-                fleet_pipa_alt: 'Water Truck - Top Locações',
-                fleet_excav_alt: 'Excavators - Top Locações',
-                fleet_dump_alt: 'Dump Truck - Top Locações',
-                fleet_lowbed_alt: 'Lowbed Truck - Top Locações',
-                fleet_loader_alt: 'Wheel Loader - Top Locações',
-                fleet_munck_title: 'Truck-Mounted Crane',
-                fleet_munck_sub: '35 to 45 tons',
-                fleet_munck_hover: 'Heavy load handling',
-                fleet_pipa_title: 'Water Truck',
-                fleet_pipa_sub: '10,000L to 20,000L',
-                fleet_pipa_hover: 'Dust control and irrigation',
-                fleet_excav_title: 'Excavators',
-                fleet_excav_sub: 'Hydraulic and Mini',
-                fleet_excav_hover: 'Excavation and earthmoving',
-                fleet_dump_title: 'Dump Truck',
-                fleet_dump_sub: '6 m³, 12 m³ and 20 m³',
-                fleet_dump_hover: 'Bulk material transport',
-                fleet_lowbed_title: 'Lowbed Truck',
-                fleet_lowbed_sub: 'Flat and Lowbed',
-                fleet_lowbed_hover: 'Heavy machinery transport',
-                fleet_loader_title: 'Wheel Loader',
-                fleet_loader_sub: 'Multiple capacities',
-                fleet_loader_hover: 'Material loading',
+                fleet_p1: 'Integrated solutions for large projects and infrastructure across Brazil.',
+                service_rental_title: 'EQUIPMENT RENTAL',
+                service_rental_sub: 'Modern and inspected fleet',
+                service_rental_hover: 'Machines ready for any construction challenge.',
+                service_construction_title: 'CIVIL CONSTRUCTION',
+                service_construction_sub: 'Infrastructure works',
+                service_construction_hover: 'Design and execution of civil works with TOP standards.',
+                service_industrial_title: 'INDUSTRIAL ASSEMBLY',
+                service_industrial_sub: 'Structures and Installations',
+                service_industrial_hover: 'Technical assembly and specialized support.',
+                service_transport_title: 'ROAD TRANSPORT',
+                service_transport_sub: 'Heavy hauling and logistics',
+                service_transport_hover: 'Mobility and agility for your project.',
+                service_outsourcing_title: 'WORKFORCE OUTSOURCING',
+                service_outsourcing_sub: 'Qualified teams',
+                service_outsourcing_hover: 'Professionals trained in safety and operation.',
+                service_environmental_title: 'ENVIRONMENTAL MANAGEMENT',
+                service_environmental_sub: 'Sustainable practices',
+                service_environmental_hover: 'Commitment to the environment and compliance.',
                 equip_title_1: 'EQUIPMENT FOR',
                 equip_title_2: ' RENTAL',
                 equip_p1: 'Discover our complete line of trucks and heavy machinery available for rental.',
@@ -1980,33 +1945,27 @@
                 sector_industry_text: 'Manipulación de cargas, logística interna y mantenimiento industrial con equipos especializados.',
                 sector_mining_title: 'Minería',
                 sector_mining_text: 'Equipos para extracción mineral, transporte de minerales e infraestructura de minas.',
-                fleet_title_1: 'NUESTRA',
-                fleet_title_2: ' FLOTA',
-                fleet_p1: 'Equipos de última generación listos para atender las demandas más complejas de energía renovable y construcción.',
-                fleet_munck_alt: 'Camión Munck - Top Locações',
-                fleet_pipa_alt: 'Camión Cisterna - Top Locações',
-                fleet_excav_alt: 'Excavadoras - Top Locações',
-                fleet_dump_alt: 'Camión Volquete - Top Locações',
-                fleet_lowbed_alt: 'Camión Cama Baja - Top Locações',
-                fleet_loader_alt: 'Cargadora Frontal - Top Locações',
-                fleet_munck_title: 'Camión Munck',
-                fleet_munck_sub: '35 a 45 toneladas',
-                fleet_munck_hover: 'Manipulación de cargas pesadas',
-                fleet_pipa_title: 'Camión Cisterna',
-                fleet_pipa_sub: '10.000L a 20.000L',
-                fleet_pipa_hover: 'Control de polvo e irrigación',
-                fleet_excav_title: 'Excavadoras',
-                fleet_excav_sub: 'Hidráulicas y Mini',
-                fleet_excav_hover: 'Excavación y movimiento de tierras',
-                fleet_dump_title: 'Camión Volquete',
-                fleet_dump_sub: '6 m³, 12 m³ y 20 m³',
-                fleet_dump_hover: 'Transporte de materiales a granel',
-                fleet_lowbed_title: 'Camión Cama Baja',
-                fleet_lowbed_sub: 'Plano y Rebajado',
-                fleet_lowbed_hover: 'Transporte de maquinaria pesada',
-                fleet_loader_title: 'Cargadora Frontal',
-                fleet_loader_sub: 'Diversas capacidades',
-                fleet_loader_hover: 'Carga de materiales',
+                fleet_title_1: 'NUESTROS',
+                fleet_title_2: ' SERVICIOS',
+                fleet_p1: 'Soluciones integradas para grandes proyectos e infraestructura en todo Brasil.',
+                service_rental_title: 'ALQUILER DE MAQUINARIA Y EQUIPOS',
+                service_rental_sub: 'Flota revisada y moderna',
+                service_rental_hover: 'Máquinas listas para cualquier desafío en obra.',
+                service_construction_title: 'CONSTRUCCIÓN CIVIL',
+                service_construction_sub: 'Obras de infraestructura',
+                service_construction_hover: 'Diseño y ejecución de obras civiles con estándar TOP.',
+                service_industrial_title: 'MONTAJE INDUSTRIAL',
+                service_industrial_sub: 'Estructuras e Instalaciones',
+                service_industrial_hover: 'Montaje técnico y soporte especializado.',
+                service_transport_title: 'TRANSPORTE POR CARRETERA',
+                service_transport_sub: 'Carga pesada y logística',
+                service_transport_hover: 'Movilidad y agilidad para su proyecto.',
+                service_outsourcing_title: 'SUBCONTRATACIÓN DE PERSONAL',
+                service_outsourcing_sub: 'Equipos calificados',
+                service_outsourcing_hover: 'Profesionales capacitados en seguridad y operación.',
+                service_environmental_title: 'GESTIÓN AMBIENTAL',
+                service_environmental_sub: 'Prácticas sostenibles',
+                service_environmental_hover: 'Compromiso con el medio ambiente y cumplimiento.',
                 equip_title_1: 'EQUIPOS PARA',
                 equip_title_2: ' ALQUILER',
                 equip_p1: 'Conozca nuestra línea completa de camiones y maquinaria pesada disponible para alquiler.',
@@ -2192,7 +2151,88 @@
             });
         }
     </script>
+    <!-- Modal de Serviços -->
+    <div id="service-modal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 transition-all duration-300">
+        <div class="absolute inset-0 bg-top-dark/80 backdrop-blur-xl" onclick="closeServiceModal()"></div>
+        <div
+            class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-4xl w-full shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
+            id="modal-content">
+            <button onclick="closeServiceModal()"
+                class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-top-yellow text-white rounded-full flex items-center justify-center transition-all group">
+                <i class="fas fa-times group-hover:scale-110"></i>
+            </button>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-3/5 relative h-64 md:h-auto min-h-[300px]">
+                    <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
+                </div>
+                <div class="md:w-2/5 p-8 md:p-10 flex flex-col justify-center">
+                    <div class="mb-4">
+                        <span class="text-top-yellow font-bold tracking-widest text-xs uppercase mb-2 block"
+                            data-i18n="modal_label">SERVIÇO ESPECIALIZADO</span>
+                        <h3 id="modal-title" class="text-3xl font-display font-bold text-white mb-4 leading-tight"></h3>
+                        <div class="w-12 h-1 bg-top-yellow rounded-full mb-6"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <p id="modal-sub" class="text-top-yellow font-semibold text-lg"></p>
+                        <p id="modal-desc" class="text-gray-300 leading-relaxed text-lg"></p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#contato" onclick="closeServiceModal()"
+                            class="inline-flex items-center space-x-2 text-white bg-top-yellow/10 hover:bg-top-yellow border border-top-yellow/30 hover:border-top-yellow px-6 py-3 rounded-full font-bold transition-all group">
+                            <span data-i18n="modal_cta">Solicitar Orçamento</span>
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
+    
+    <script>
+        function openServiceModal(card) {
+            const modal = document.getElementById('service-modal');
+            const content = document.getElementById('modal-content');
+            const mImg = document.getElementById('modal-img');
+            const mTitle = document.getElementById('modal-title');
+            const mSub = document.getElementById('modal-sub');
+            const mDesc = document.getElementById('modal-desc');
+
+            const img = card.querySelector('img').src;
+            const title = card.querySelector('h3').innerText;
+            const sub = card.querySelector('p:not(.font-bold)').innerText;
+            const desc = card.querySelector('.absolute p.font-bold').innerText;
+
+            mImg.src = img;
+            mTitle.innerText = title;
+            mSub.innerText = sub;
+            mDesc.innerText = desc;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.remove('scale-90', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeServiceModal() {
+            const modal = document.getElementById('service-modal');
+            const content = document.getElementById('modal-content');
+
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-90', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+    </script>
 </body>
 
 </html>
