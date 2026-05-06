@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title">Top Locações | Aluguel de Máquinas e Caminhões para Obras</title>
+    <title data-i18n="page_title">Locação de Máquinas e Retroescavadeiras em Juazeiro e Petrolina | Top Locações</title>
     <meta name="description"
-        content="Aluguel de máquinas e caminhões para pequenas obras e construção civil. Locação de retroescavadeira, caminhão munck e caçamba por hora, diária ou mensal."
+        content="Aluguel de máquinas pesadas, munck e retroescavadeiras no Vale do São Francisco. Atendimento em Juazeiro BA e Petrolina PE com frota própria e suporte 24h."
         data-i18n="meta_description" data-i18n-attr="content">
     <meta name="keywords"
-        content="aluguel de retroescavadeira, locação de munck, alugar caminhão caçamba, locação de equipamentos, aluguel por hora, diária de retroescavadeira, pequenas obras, terraplenagem"
+        content="locação de máquinas juazeiro ba, aluguel de retroescavadeira petrolina pe, vale do são francisco, munck juazeiro, máquinas pesadas petrolina, aluguel de máquinas construção civil"
         data-i18n="meta_keywords" data-i18n-attr="content">
     <meta name="author" content="Top Locações & Serviços">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -101,7 +101,7 @@
         "telephone": "+5584988612210",
         "contactType": "Sales",
         "email": "odailtonpaulino@topconstrucoes.com",
-        "areaServed": "BR",
+        "areaServed": ["Juazeiro, BA", "Petrolina, PE", "Vale do São Francisco"],
         "availableLanguage": ["pt-BR"]
       },
       "sameAs": [
@@ -121,10 +121,22 @@
         "name": "Top Locações & Serviços"
       },
       "description": "Locação de caminhões, máquinas pesadas e terceirização de mão de obra especializada",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Norte e Nordeste"
-      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Petrolina",
+          "sameAs": "https://www.wikidata.org/wiki/Q630739"
+        },
+        {
+          "@type": "City",
+          "name": "Juazeiro",
+          "sameAs": "https://www.wikidata.org/wiki/Q204481"
+        },
+        {
+          "@type": "Place",
+          "name": "Vale do São Francisco"
+        }
+      ],
       "availableChannel": {
         "@type": "ServiceChannel",
         "serviceUrl": "https://www.topgruposervicos.com",
@@ -432,7 +444,20 @@
                 print-color-adjust: exact !important;
             }
         }
-    </style>
+        /* SEO Regions Pulse */
+    @keyframes pulse-gold {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 168, 67, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 168, 67, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 168, 67, 0); }
+    }
+    .pulse-marker { animation: pulse-gold 2s infinite; }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+    .floating { animation: float 3s ease-in-out infinite; }
+</style>
 </head>
 
 <body class="bg-top-dark text-white overflow-x-hidden">
@@ -1484,6 +1509,95 @@
         </div>
     </section>
 
+    <section id="atuacao" class="py-24 bg-top-dark relative overflow-hidden">
+        <!-- Subtle Background Glow -->
+        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-top-yellow/5 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-top-yellow/5 blur-[120px] rounded-full"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-top-yellow font-bold tracking-widest text-xs uppercase mb-3 block" data-i18n="regions_badge">Logística e Mobilização</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                    <span data-i18n="regions_title_1">NOSSA ÁREA DE</span>
+                    <span class="text-top-yellow" data-i18n="regions_title_2"> ATUAÇÃO</span>
+                </h2>
+                <div class="w-24 h-1.5 bg-top-yellow mx-auto rounded-full mb-8"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="regions_p_desc">Presença estratégica no Norte, Nordeste e Minas Gerais, garantindo agilidade na mobilização de equipamentos.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <!-- Map Column -->
+                <div class="lg:w-1/2 relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-top-yellow/20 to-transparent blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative bg-top-gray rounded-3xl p-2 border border-white/10 overflow-hidden shadow-2xl">
+                        <!-- Clean Map Image -->
+                        <img src="assets/img/coverage_map_clean.png" 
+                             alt="Mapa de Atuação Top Locações" 
+                             class="w-full h-auto rounded-2xl opacity-80">
+                    </div>
+                </div>
+
+                <!-- Regions List Column -->
+                <div class="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- RN -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                            <img src="assets/img/flags/rn.svg" alt="RN" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Rio Grande do Norte</h4>
+                        </div>
+                    </div>
+                    <!-- Bahia -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                            <img src="assets/img/flags/ba.png" alt="BA" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Bahia</h4>
+                        </div>
+                    </div>
+                    <!-- Pernambuco -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                            <img src="assets/img/flags/pe.svg" alt="PE" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Pernambuco</h4>
+                        </div>
+                    </div>
+                    <!-- Piauí -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                            <img src="assets/img/flags/pi.svg" alt="PI" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Piauí</h4>
+                        </div>
+                    </div>
+                    <!-- Paraíba -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                            <img src="assets/img/flags/pb.svg" alt="PB" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Paraíba</h4>
+                        </div>
+                    </div>
+                    <!-- Minas Gerais -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/20 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_20px_rgba(212,168,67,0.3)] transition-all bg-white/5">
+                            <img src="assets/img/flags/mg.svg" alt="MG" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Minas Gerais</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-top-gray border-t border-white/10 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1552,15 +1666,15 @@
 
         const translations = {
             'pt-BR': {
-                page_title: 'Top Locações | Aluguel de Máquinas e Caminhões para Obras',
-                meta_description: 'Aluguel de máquinas e caminhões para pequenas obras e construção civil. Locação de retroescavadeira, caminhão munck e caçamba por hora, diária ou mensal.',
+                page_title: 'Locação de Máquinas e Retroescavadeiras em Juazeiro e Petrolina | Top Locações',
+                meta_description: 'Aluguel de máquinas pesadas, munck e retroescavadeiras no Vale do São Francisco. Atendimento em Juazeiro BA e Petrolina PE com frota própria e suporte 24h.',
                 meta_language: 'pt-BR',
-                meta_keywords: 'aluguel de retroescavadeira, locação de munck, alugar caminhão caçamba, locação de equipamentos, aluguel por hora, diária de retroescavadeira, pequenas obras, terraplenagem',
-                og_title: 'Top Locações | Aluguel de Máquinas e Caminhões para Obras',
-                og_description: 'Aluguel de máquinas para pequenas obras. Locação de retroescavadeira, caminhão munck e caçamba por hora ou diária.',
+                meta_keywords: 'locação de máquinas juazeiro ba, aluguel de retroescavadeira petrolina pe, vale do são francisco, munck juazeiro, máquinas pesadas petrolina, aluguel de máquinas construção civil',
+                og_title: 'Locação de Máquinas e Retroescavadeiras em Juazeiro e Petrolina | Top Locações',
+                og_description: 'Aluguel de máquinas pesadas e retroescavadeiras no Vale do São Francisco (Juazeiro e Petrolina). Suporte 24h e frota moderna.',
                 og_locale: 'pt_BR',
-                twitter_title: 'Top Locações | Aluguel de Máquinas e Caminhões para Obras',
-                twitter_description: 'Aluguel de máquinas para pequenas obras. Locação de retroescavadeira, caminhão munck e caçamba por hora ou diária.',
+                twitter_title: 'Locação de Máquinas e Retroescavadeiras em Juazeiro e Petrolina | Top Locações',
+                twitter_description: 'Aluguel de máquinas pesadas e retroescavadeiras no Vale do São Francisco (Juazeiro e Petrolina).',
                 nav_about: 'Sobre',
                 nav_services: 'Serviços',
                 nav_equipment: 'Equipamentos',
@@ -1588,7 +1702,7 @@
                 since_2011: 'DESDE 2011',
                 about_title_1: 'SOBRE A',
                 about_title_2: ' TOP LOCAÇÕES',
-                about_p1: 'Com anos de experiência no mercado, a Top Locações & Serviços consolidou-se como referência em soluções de locação de equipamentos e prestação de serviços especializados para o setor de energia renovável e construção civil.',
+                about_p1: 'Com anos de experiência no mercado, a Top Locações & Serviços consolidou-se como referência em Petrolina e Juazeiro para locação de equipamentos pesados. Atendemos todo o Vale do São Francisco com foco em energia renovável e construção civil.',
                 about_p2: 'Nossa missão é impulsionar o desenvolvimento de infraestruturas sustentáveis, fornecendo máquinas de alta performance e equipes técnicas altamente capacitadas para garantir a excelência em cada etapa do seu projeto.',
                 about_feat_sust: 'Sustentabilidade',
                 about_feat_sust_txt: 'Eficiência operacional e menor impacto ambiental',
@@ -1604,7 +1718,7 @@
                 logo_alt: 'Top Locações & Serviços',
                 sectors_title_1: 'SETORES',
                 sectors_title_2: ' ATENDIDOS',
-                sectors_p1: 'Atuamos em diversos segmentos locais, com destaque para a construção civil e obras em geral.',
+                sectors_p1: 'Atuamos fortemente em Juazeiro, Petrolina e região do Vale do São Francisco, com destaque para a construção civil, agronegócio e obras industriais.',
                 sector_wind_title: 'Energia Eólica',
                 sector_wind_text: 'Locação de equipamentos para construção e manutenção de parques eólicos. Experiência em montagem de aerogeradores e infraestrutura de acesso.',
                 sector_solar_title: 'Energia Solar',
@@ -1642,10 +1756,10 @@
                 equip_title_2: ' LOCAÇÃO',
                 equip_p1: 'Conheça nossa linha completa de caminhões e máquinas pesadas disponíveis para locação.',
                 equip_trucks_title: '<i class="fas fa-truck text-top-yellow mr-3"></i>CAMINHÕES ESPECIALIZADOS',
-                equip_munck_alt: 'Caminhão Munck',
+                equip_munck_alt: 'Caminhão Munck para Locação em Petrolina e Juazeiro',
                 equip_munck_title: 'Munck (Guindauto)',
                 equip_munck_cap: 'Até 12 toneladas',
-                equip_munck_desc: 'Movimentação de cargas pesadas e equipamentos com precisão e segurança.',
+                equip_munck_desc: 'Movimentação de cargas pesadas e equipamentos com precisão e segurança no Vale do São Francisco.',
                 equip_munck_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Caminhão + Carreta',
                 equip_munck_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Operador certificado',
                 equip_munck_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Içamento controlado',
@@ -1688,17 +1802,17 @@
                 equip_excav_alt: 'Escavadeira',
                 equip_excav_title: 'Escavadeiras',
                 equip_excav_desc: 'Hidráulicas e Mini Escavadeiras para diversos tipos de obra',
-                equip_backhoe_alt: 'Retroescavadeira',
+                equip_backhoe_alt: 'Aluguel de Retroescavadeira em Petrolina e Juazeiro',
                 equip_backhoe_title: 'Retroescavadeiras',
                 equip_backhoe_cap: 'Versatilidade',
-                equip_backhoe_desc: 'Versatilidade em escavação e carregamento para obras urbanas e rurais.',
+                equip_backhoe_desc: 'Locação de retroescavadeiras para obras no Vale do São Francisco, Juazeiro e Petrolina.',
                 equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Escavação precisa',
                 equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Carregamento ágil',
                 equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Tração 4x4',
-                equip_forklift_alt: 'Empilhadeira',
+                equip_forklift_alt: 'Locação de Empilhadeira em Juazeiro e Petrolina',
                 equip_forklift_title: 'Empilhadeira',
                 equip_forklift_cap: 'Logística Industrial',
-                equip_forklift_desc: 'Movimentação e logística industrial com agilidade e total segurança.',
+                equip_forklift_desc: 'Movimentação e logística industrial com agilidade e total segurança em toda a região.',
                 equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta manobrabilidade',
                 equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Capacidade variável',
                 equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Ideal para galpões',
@@ -1773,7 +1887,11 @@
                 cta_phone: 'Telefone',
                 cta_email: 'E-mail',
                 footer_rights: '© 2026 Top Locações & Serviços. Todos os direitos reservados.',
-                footer_tagline: 'Desde 2011 impulsionando o desenvolvimento do Brasil'
+                footer_tagline: 'Desde 2011 impulsionando o desenvolvimento do Brasil',
+                regions_badge: 'Logística e Mobilização',
+                regions_title_1: 'NOSSA ÁREA DE',
+                regions_title_2: ' ATUAÇÃO',
+                regions_p_desc: 'Presença estratégica no Norte, Nordeste e Minas Gerais, garantindo agilidade na mobilização de equipamentos.'
             },
             'en-US': {
                 page_title: 'Top Locações & Serviços | Heavy Trucks & Equipment | Renewable Energy',
@@ -1997,7 +2115,11 @@
                 cta_phone: 'Phone',
                 cta_email: 'Email',
                 footer_rights: '© 2026 Top Locações & Serviços. All rights reserved.',
-                footer_tagline: 'Since 2011 powering Brazil’s development'
+                footer_tagline: 'Driving Brazil\'s development since 2011',
+                regions_badge: 'Our Service Area',
+                regions_title_1: 'VALE DO',
+                regions_title_2: ' SÃO FRANCISCO',
+                regions_p: 'We serve Petrolina, Juazeiro, and all cities in the Vale do São Francisco with logistical agility.'
             },
             'es-ES': {
                 page_title: 'Top Locações & Serviços | Camiones y Equipos Pesados | Energía Renovable',
@@ -2221,8 +2343,12 @@
                 cta_phone: 'Teléfono',
                 cta_email: 'E-mail',
                 footer_rights: '© 2026 Top Locações & Serviços. Todos los derechos reservados.',
-                footer_tagline: 'Desde 2011 impulsando el desarrollo de Brasil'
-            }
+                footer_tagline: 'Desde 2011 impulsando el desarrollo de Brasil',
+                regions_badge: 'Nuestra Área de Actuación',
+                regions_title_1: 'VALE DO',
+                regions_title_2: ' SÃO FRANCISCO',
+                regions_p: 'Atendemos Petrolina, Juazeiro e todas las ciudades del Vale do São Francisco con agilidad logística.'
+            },
         };
 
         const languageButtons = document.querySelectorAll('.lang-btn');
