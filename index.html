@@ -248,10 +248,71 @@
         .equipment-card {
             background: linear-gradient(145deg, #2D2D2D 0%, #1A1A1A 100%);
             border: 1px solid rgba(212, 168, 67, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
         }
 
         .equipment-card:hover {
-            border-color: rgba(212, 168, 67, 0.4);
+            border-color: rgba(212, 168, 67, 0.5);
+            box-shadow: 0 20px 40px rgba(212, 168, 67, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .equipment-card:active {
+            transform: scale(0.97) translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 168, 67, 0.35);
+        }
+
+        /* Ripple effect on click */
+        .equipment-card .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(212, 168, 67, 0.3);
+            transform: scale(0);
+            animation: ripple-anim 0.6s linear;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        @keyframes ripple-anim {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Hover overlay on equipment cards */
+        .equipment-card .equip-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26,26,26,0.92) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.25rem;
+            z-index: 10;
+            border-radius: inherit;
+        }
+
+        .equipment-card:hover .equip-overlay {
+            opacity: 1;
+        }
+
+        /* Gold overlay accent on hover */
+        .equipment-card .equip-accent {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(212,168,67,0.15) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 5;
+            border-radius: inherit;
+        }
+
+        .equipment-card:hover .equip-accent {
+            opacity: 1;
         }
 
         .btn-primary {
@@ -299,9 +360,26 @@
 
         .equipment-img {
             width: 100%;
-            height: 250px;
+            height: 256px;
             object-fit: cover;
-            border-radius: 12px 12px 0 0;
+            border-radius: 0;
+            transition: transform 0.5s ease;
+        }
+
+        .equipment-card:hover .equipment-img {
+            transform: scale(1.06);
+        }
+
+        .equipment-img-sm {
+            width: 100%;
+            height: 192px;
+            object-fit: cover;
+            border-radius: 0;
+            transition: transform 0.5s ease;
+        }
+
+        .equipment-card:hover .equipment-img-sm {
+            transform: scale(1.06);
         }
 
         .lang-btn.active {
@@ -915,157 +993,148 @@
                 <div class="section-divider w-24 mx-auto mt-6"></div>
             </div>
 
-            <!-- Caminhões -->
-            <div class="mb-16">
-                <h3 class="font-display font-bold text-2xl text-white mb-8 flex items-center"
-                    data-i18n="equip_trucks_title">
-                    <i class="fas fa-truck text-top-yellow mr-3"></i>
-                    CAMINHÕES ESPECIALIZADOS
-                </h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Munck com foto -->
-                    <div class="equipment-card rounded-2xl overflow-hidden card-hover fade-in">
+            <!-- Grid Unificado de Equipamentos -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Munck -->
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/munck.jpg" alt="Caminhão Munck" class="equipment-img"
                             data-i18n="equip_munck_alt" data-i18n-attr="alt">
-                        <div class="p-6">
-                            <h4 class="font-bold text-xl text-white mb-2" data-i18n="equip_munck_title">Munck
-                                (Guindauto)</h4>
-                            <p class="text-top-yellow font-semibold mb-3" data-i18n="equip_munck_cap">Até 12 toneladas
-                            </p>
-                            <p class="text-gray-400 text-sm mb-4" data-i18n="equip_munck_desc">Movimentação de cargas
-                                pesadas e equipamentos com precisão e segurança.</p>
-                            <ul class="text-sm text-gray-500 space-y-1">
-                                <li data-i18n="equip_munck_li1"><i
-                                        class="fas fa-check text-top-yellow mr-2"></i>Caminhão + Carreta</li>
-                                <li data-i18n="equip_munck_li2"><i
-                                        class="fas fa-check text-top-yellow mr-2"></i>Operador certificado</li>
-                                <li data-i18n="equip_munck_li3"><i
-                                        class="fas fa-check text-top-yellow mr-2"></i>Içamento controlado</li>
-                            </ul>
-                        </div>
                     </div>
+                    <div class="equip-overlay">
+                        <p class="text-white font-bold text-sm" data-i18n="equip_munck_desc">Movimentação de cargas pesadas e equipamentos com precisão e segurança.</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_munck_title">Munck (Guindauto)</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_munck_cap">Até 12 toneladas</p>
+                    </div>
+                    <!-- hidden data for modal -->
+                    <ul class="hidden">
+                        <li data-i18n="equip_munck_li1">Caminhão + Carreta</li>
+                        <li data-i18n="equip_munck_li2">Operador certificado</li>
+                        <li data-i18n="equip_munck_li3">Içamento controlado</li>
+                    </ul>
+                </div>
 
-                    <!-- Pipa com foto -->
-                    <div class="equipment-card rounded-2xl overflow-hidden card-hover fade-in">
+                <!-- Pipa -->
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/pipa.jpg" alt="Caminhão Pipa" class="equipment-img"
                             data-i18n="equip_pipa_alt" data-i18n-attr="alt">
-                        <div class="p-6">
-                            <h4 class="font-bold text-xl text-white mb-2" data-i18n="equip_pipa_title">Caminhão Pipa
-                            </h4>
-                            <p class="text-top-yellow font-semibold mb-3" data-i18n="equip_pipa_cap">8.000L a 10.000L
-                            </p>
-                            <p class="text-gray-400 text-sm mb-4" data-i18n="equip_pipa_desc">Combate a poeira,
-                                irrigação, abastecimento de água e manutenção de estradas.</p>
-                            <ul class="text-sm text-gray-500 space-y-1">
-                                <li data-i18n="equip_pipa_li1"><i
-                                        class="fas fa-check text-top-yellow mr-2"></i>Distribuição controlada</li>
-                                <li data-i18n="equip_pipa_li2"><i
-                                        class="fas fa-check text-top-yellow mr-2"></i>Múltiplas aplicações</li>
-                                <li data-i18n="equip_pipa_li3"><i class="fas fa-check text-top-yellow mr-2"></i>Alta
-                                    pressão</li>
-                            </ul>
-                        </div>
                     </div>
+                    <div class="equip-overlay">
+                        <p class="text-white font-bold text-sm" data-i18n="equip_pipa_desc">Combate a poeira, irrigação, abastecimento de água e manutenção de estradas.</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_pipa_title">Caminhão Pipa</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_pipa_cap">8.000L a 10.000L</p>
+                    </div>
+                    <ul class="hidden">
+                        <li data-i18n="equip_pipa_li1">Distribuição controlada</li>
+                        <li data-i18n="equip_pipa_li2">Múltiplas aplicações</li>
+                        <li data-i18n="equip_pipa_li3">Alta pressão</li>
+                    </ul>
+                </div>
 
-                    <!-- Comboio com foto -->
-                    <div class="equipment-card rounded-2xl overflow-hidden card-hover fade-in">
+                <!-- Comboio -->
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/comboio.jpg" alt="Caminhão Comboio" class="equipment-img"
                             data-i18n="equip_comboio_alt" data-i18n-attr="alt">
-                        <div class="p-6">
-                            <h4 class="font-bold text-xl text-white mb-2" data-i18n="equip_comboio_title">Caminhão
-                                Comboio</h4>
-                            <p class="text-top-yellow font-semibold mb-3" data-i18n="equip_comboio_cap">2.000L a 3.000L
-                            </p>
-                            <p class="text-gray-400 text-sm mb-4" data-i18n="equip_comboio_desc">Abastecimento,
-                                lubrificação e manutenção de máquinas e equipamentos em campo.</p>
-                            <ul class="text-sm text-gray-500 space-y-1">
-                                <li data-i18n="equip_comboio_li1"><i
-                                        class="fas fa-check text-top-yellow mr-2"></i>Transporte de combustível</li>
-                                <li data-i18n="equip_comboio_li2"><i class="fas fa-check text-top-yellow mr-2"></i>Óleos
-                                    e lubrificantes</li>
-                                <li data-i18n="equip_comboio_li3"><i
-                                        class="fas fa-check text-top-yellow mr-2"></i>Abastecimento em campo</li>
-                            </ul>
-                        </div>
                     </div>
+                    <div class="equip-overlay">
+                        <p class="text-white font-bold text-sm" data-i18n="equip_comboio_desc">Abastecimento, lubrificação e manutenção de máquinas e equipamentos em campo.</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_comboio_title">Caminhão Comboio</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_comboio_cap">2.000L a 3.000L</p>
+                    </div>
+                    <ul class="hidden">
+                        <li data-i18n="equip_comboio_li1">Transporte de combustível</li>
+                        <li data-i18n="equip_comboio_li2">Óleos e lubrificantes</li>
+                        <li data-i18n="equip_comboio_li3">Abastecimento em campo</li>
+                    </ul>
+                </div>
 
-                    <!-- Basculante com foto -->
-                    <div class="equipment-card rounded-2xl overflow-hidden card-hover fade-in">
+                <!-- Basculante -->
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/cacamba.jpg" alt="Caminhão Basculante" class="equipment-img"
                             data-i18n="equip_dump_alt" data-i18n-attr="alt">
-                        <div class="p-6">
-                            <h4 class="font-bold text-xl text-white mb-2" data-i18n="equip_dump_title">Basculante
-                                (Caçamba)</h4>
-                            <p class="text-top-yellow font-semibold mb-3" data-i18n="equip_dump_cap">5m³ e 10m³</p>
-                            <p class="text-gray-400 text-sm mb-4" data-i18n="equip_dump_desc">Terraplenagem, mineração e
-                                transporte de materiais a granel.</p>
-                            <ul class="text-sm text-gray-500 space-y-1">
-                                <li data-i18n="equip_dump_li1"><i class="fas fa-check text-top-yellow mr-2"></i>Descarga
-                                    hidráulica</li>
-                                <li data-i18n="equip_dump_li2"><i class="fas fa-check text-top-yellow mr-2"></i>Alta
-                                    capacidade</li>
-                                <li data-i18n="equip_dump_li3"><i
-                                        class="fas fa-check text-top-yellow mr-2"></i>Reforçado para mineração</li>
-                            </ul>
-                        </div>
                     </div>
-
-
+                    <div class="equip-overlay">
+                        <p class="text-white font-bold text-sm" data-i18n="equip_dump_desc">Terraplenagem, mineração e transporte de materiais a granel.</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_dump_title">Basculante (Caçamba)</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_dump_cap">5m³ e 10m³</p>
+                    </div>
+                    <ul class="hidden">
+                        <li data-i18n="equip_dump_li1">Descarga hidráulica</li>
+                        <li data-i18n="equip_dump_li2">Alta capacidade</li>
+                        <li data-i18n="equip_dump_li3">Reforçado para mineração</li>
+                    </ul>
                 </div>
-            </div>
 
-            <!-- Máquinas Pesadas -->
-            <div>
-                <h3 class="font-display font-bold text-2xl text-white mb-8 flex items-center"
-                    data-i18n="equip_machines_title">
-                    <i class="fas fa-cogs text-top-yellow mr-3"></i>
-                    MÁQUINAS PESADAS
-                </h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                    <!-- Retroescavadeira -->
-                    <div class="equipment-card rounded-2xl overflow-hidden card-hover fade-in">
+                <!-- Retroescavadeira -->
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/retroescavadeira.jpg" alt="Retroescavadeira" class="equipment-img"
-                            style="height: 180px;" data-i18n="equip_backhoe_alt" data-i18n-attr="alt">
-                        <div class="p-4">
-                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="equip_backhoe_title">
-                                Retroescavadeiras</h4>
-                            <p class="text-gray-400 text-sm" data-i18n="equip_backhoe_desc">Versatilidade em escavação e
-                                carregamento</p>
-                        </div>
+                            data-i18n="equip_backhoe_alt" data-i18n-attr="alt">
                     </div>
-
-
-                    <!-- Empilhadeira -->
-                    <div class="equipment-card rounded-2xl overflow-hidden card-hover fade-in">
-                        <img src="/equipamentos/empilhadeira.jpg" alt="Empilhadeira" class="equipment-img"
-                            style="height: 180px;" data-i18n="equip_forklift_alt" data-i18n-attr="alt">
-                        <div class="p-4">
-                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="equip_forklift_title">Empilhadeira
-                            </h4>
-                            <p class="text-gray-400 text-sm" data-i18n="equip_forklift_desc">Movimentação e logística
-                                industrial</p>
-                        </div>
+                    <div class="equip-overlay">
+                        <p class="text-white font-bold text-sm" data-i18n="equip_backhoe_desc">Versatilidade em escavação e carregamento</p>
                     </div>
-
-                    <!-- Manipulador Telescópico -->
-                    <div class="equipment-card rounded-2xl overflow-hidden card-hover fade-in">
-                        <img src="/equipamentos/manipulador.jpg" alt="Manipulador Telescópico" class="equipment-img"
-                            style="height: 180px;" data-i18n="equip_telehandler_alt" data-i18n-attr="alt">
-                        <div class="p-4">
-                            <h4 class="font-bold text-lg text-white mb-1" data-i18n="equip_telehandler_title">
-                                Manipulador Telescópico</h4>
-                            <p class="text-gray-400 text-sm" data-i18n="equip_telehandler_desc">Elevação e alcance de
-                                cargas pesadas</p>
-                        </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_backhoe_title">Retroescavadeiras</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_backhoe_desc">Versatilidade em escavação e carregamento</p>
                     </div>
-
                 </div>
+
+                <!-- Empilhadeira -->
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden">
+                        <img src="/equipamentos/empilhadeira.jpg" alt="Empilhadeira" class="equipment-img"
+                            data-i18n="equip_forklift_alt" data-i18n-attr="alt">
+                    </div>
+                    <div class="equip-overlay">
+                        <p class="text-white font-bold text-sm" data-i18n="equip_forklift_desc">Movimentação e logística industrial</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_forklift_title">Empilhadeira</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_forklift_desc">Movimentação e logística industrial</p>
+                    </div>
+                </div>
+
+                <!-- Manipulador Telescópico -->
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden">
+                        <img src="/equipamentos/manipulador.jpg" alt="Manipulador Telescópico" class="equipment-img"
+                            data-i18n="equip_telehandler_alt" data-i18n-attr="alt">
+                    </div>
+                    <div class="equip-overlay">
+                        <p class="text-white font-bold text-sm" data-i18n="equip_telehandler_desc">Elevação e alcance de cargas pesadas</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_telehandler_title">Manipulador Telescópico</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_telehandler_desc">Elevação e alcance de cargas pesadas</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Rental Modes -->
+
     <section class="py-24 bg-top-gray">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
@@ -2190,6 +2259,47 @@
         </div>
     </div>
 
+    <!-- Modal de Equipamentos -->
+    <div id="equipment-modal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 transition-all duration-300">
+        <div class="absolute inset-0 bg-top-dark/80 backdrop-blur-xl" onclick="closeEquipmentModal()"></div>
+        <div
+            class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-4xl w-full shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
+            id="equip-modal-content">
+            <button onclick="closeEquipmentModal()"
+                class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-top-yellow text-white rounded-full flex items-center justify-center transition-all group">
+                <i class="fas fa-times group-hover:scale-110"></i>
+            </button>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-3/5 relative h-64 md:h-auto min-h-[320px]">
+                    <img id="equip-modal-img" src="" alt="" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 z-10">
+                        <span id="equip-modal-cap-badge"
+                            class="bg-top-yellow text-top-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide"></span>
+                    </div>
+                </div>
+                <div class="md:w-2/5 p-8 md:p-10 flex flex-col justify-between">
+                    <div>
+                        <span class="text-top-yellow font-bold tracking-widest text-xs uppercase mb-2 block">EQUIPAMENTO DISPONÍVEL</span>
+                        <h3 id="equip-modal-title" class="text-2xl md:text-3xl font-display font-bold text-white mb-2 leading-tight"></h3>
+                        <p id="equip-modal-cap" class="text-top-yellow font-semibold text-base mb-4"></p>
+                        <div class="w-12 h-1 bg-top-yellow rounded-full mb-5"></div>
+                        <p id="equip-modal-desc" class="text-gray-300 leading-relaxed text-base mb-5"></p>
+                        <ul id="equip-modal-features" class="space-y-2 text-sm text-gray-300"></ul>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#contato" onclick="closeEquipmentModal()"
+                            class="inline-flex items-center space-x-2 text-white bg-top-yellow/10 hover:bg-top-yellow border border-top-yellow/30 hover:border-top-yellow px-6 py-3 rounded-full font-bold transition-all group">
+                            <span>Solicitar Orçamento</span>
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
     
     <script>
@@ -2227,6 +2337,71 @@
             content.classList.remove('scale-100', 'opacity-100');
             content.classList.add('scale-90', 'opacity-0');
             
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        function equipmentRipple(event, card) {
+            card.querySelectorAll('.ripple').forEach(r => r.remove());
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            const rect = card.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            card.appendChild(ripple);
+            ripple.addEventListener('animationend', () => ripple.remove());
+        }
+
+        function openEquipmentModal(event, card) {
+            // Trigger ripple
+            equipmentRipple(event, card);
+
+            const modal = document.getElementById('equipment-modal');
+            const content = document.getElementById('equip-modal-content');
+
+            // Extract data from card
+            const img       = card.querySelector('img');
+            const titleEl   = card.querySelector('h4');
+            const capEl     = card.querySelector('.text-top-yellow');
+            const descEl    = card.querySelector('.equip-overlay p');
+            const listItems = card.querySelectorAll('ul li');
+
+            document.getElementById('equip-modal-img').src   = img      ? img.src      : '';
+            document.getElementById('equip-modal-img').alt   = img      ? img.alt      : '';
+            document.getElementById('equip-modal-title').innerText = titleEl ? titleEl.innerText : '';
+            document.getElementById('equip-modal-cap').innerText   = capEl   ? capEl.innerText   : '';
+            document.getElementById('equip-modal-cap-badge').innerText = capEl ? capEl.innerText : '';
+            document.getElementById('equip-modal-desc').innerText  = descEl  ? descEl.innerText  : '';
+
+            // Build features list
+            const featList = document.getElementById('equip-modal-features');
+            featList.innerHTML = '';
+            listItems.forEach(li => {
+                const item = document.createElement('li');
+                item.className = 'flex items-center gap-2';
+                item.innerHTML = '<i class="fas fa-check-circle text-top-yellow"></i><span>' + li.innerText.trim() + '</span>';
+                featList.appendChild(item);
+            });
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.remove('scale-90', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEquipmentModal() {
+            const modal   = document.getElementById('equipment-modal');
+            const content = document.getElementById('equip-modal-content');
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-90', 'opacity-0');
             setTimeout(() => {
                 modal.classList.add('hidden');
                 document.body.style.overflow = '';
