@@ -997,7 +997,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Munck -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="Até 12 toneladas">
                     <div class="equip-accent"></div>
                     <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/munck.jpg" alt="Caminhão Munck" class="equipment-img"
@@ -1019,7 +1019,7 @@
                 </div>
 
                 <!-- Pipa -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="8.000L a 10.000L">
                     <div class="equip-accent"></div>
                     <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/pipa.jpg" alt="Caminhão Pipa" class="equipment-img"
@@ -1040,7 +1040,7 @@
                 </div>
 
                 <!-- Comboio -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="2.000L a 3.000L">
                     <div class="equip-accent"></div>
                     <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/comboio.jpg" alt="Caminhão Comboio" class="equipment-img"
@@ -1061,7 +1061,7 @@
                 </div>
 
                 <!-- Basculante -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="5m³ e 10m³">
                     <div class="equip-accent"></div>
                     <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/cacamba.jpg" alt="Caminhão Basculante" class="equipment-img"
@@ -1082,51 +1082,66 @@
                 </div>
 
                 <!-- Retroescavadeira -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="Versatilidade">
                     <div class="equip-accent"></div>
                     <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/retroescavadeira.jpg" alt="Retroescavadeira" class="equipment-img"
                             data-i18n="equip_backhoe_alt" data-i18n-attr="alt">
                     </div>
                     <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_backhoe_desc">Versatilidade em escavação e carregamento</p>
+                        <p class="text-white font-bold text-sm" data-i18n="equip_backhoe_desc">Versatilidade em escavação e carregamento para obras urbanas e rurais.</p>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_backhoe_title">Retroescavadeiras</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_backhoe_desc">Versatilidade em escavação e carregamento</p>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_backhoe_cap">Versatilidade</p>
                     </div>
+                    <ul class="hidden">
+                        <li data-i18n="equip_backhoe_li1">Escavação precisa</li>
+                        <li data-i18n="equip_backhoe_li2">Carregamento ágil</li>
+                        <li data-i18n="equip_backhoe_li3">Tração 4x4</li>
+                    </ul>
                 </div>
 
                 <!-- Empilhadeira -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="Logística Industrial">
                     <div class="equip-accent"></div>
                     <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/empilhadeira.jpg" alt="Empilhadeira" class="equipment-img"
                             data-i18n="equip_forklift_alt" data-i18n-attr="alt">
                     </div>
                     <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_forklift_desc">Movimentação e logística industrial</p>
+                        <p class="text-white font-bold text-sm" data-i18n="equip_forklift_desc">Movimentação e logística industrial com agilidade e total segurança.</p>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_forklift_title">Empilhadeira</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_forklift_desc">Movimentação e logística industrial</p>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_forklift_cap">Logística Industrial</p>
                     </div>
+                    <ul class="hidden">
+                        <li data-i18n="equip_forklift_li1">Alta manobrabilidade</li>
+                        <li data-i18n="equip_forklift_li2">Capacidade variável</li>
+                        <li data-i18n="equip_forklift_li3">Ideal para galpões</li>
+                    </ul>
                 </div>
 
                 <!-- Manipulador Telescópico -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="Elevação e Alcance">
                     <div class="equip-accent"></div>
                     <div class="h-64 overflow-hidden">
                         <img src="/equipamentos/manipulador.jpg" alt="Manipulador Telescópico" class="equipment-img"
                             data-i18n="equip_telehandler_alt" data-i18n-attr="alt">
                     </div>
                     <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_telehandler_desc">Elevação e alcance de cargas pesadas</p>
+                        <p class="text-white font-bold text-sm" data-i18n="equip_telehandler_desc">Elevação e alcance de cargas pesadas em diferentes alturas e terrenos.</p>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_telehandler_title">Manipulador Telescópico</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_telehandler_desc">Elevação e alcance de cargas pesadas</p>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_telehandler_cap">Elevação e Alcance</p>
                     </div>
+                    <ul class="hidden">
+                        <li data-i18n="equip_telehandler_li1">Grande alcance vertical</li>
+                        <li data-i18n="equip_telehandler_li2">Estabilidade reforçada</li>
+                        <li data-i18n="equip_telehandler_li3">Acessórios diversos</li>
+                    </ul>
                 </div>
 
             </div>
@@ -1675,7 +1690,18 @@
                 equip_excav_desc: 'Hidráulicas e Mini Escavadeiras para diversos tipos de obra',
                 equip_backhoe_alt: 'Retroescavadeira',
                 equip_backhoe_title: 'Retroescavadeiras',
-                equip_backhoe_desc: 'Versatilidade em escavação e carregamento',
+                equip_backhoe_cap: 'Versatilidade',
+                equip_backhoe_desc: 'Versatilidade em escavação e carregamento para obras urbanas e rurais.',
+                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Escavação precisa',
+                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Carregamento ágil',
+                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Tração 4x4',
+                equip_forklift_alt: 'Empilhadeira',
+                equip_forklift_title: 'Empilhadeira',
+                equip_forklift_cap: 'Logística Industrial',
+                equip_forklift_desc: 'Movimentação e logística industrial com agilidade e total segurança.',
+                equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta manobrabilidade',
+                equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Capacidade variável',
+                equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Ideal para galpões',
                 equip_loader_alt: 'Pá Carregadeira',
                 equip_loader_title: 'Pá Carregadeira',
                 equip_loader_desc: 'Carregamento de materiais e movimentação',
@@ -1688,6 +1714,13 @@
                 equip_dozer_alt: 'Trator de Esteira',
                 equip_dozer_title: 'Trator de Esteira',
                 equip_dozer_desc: 'Alta tração e arrasto para obras pesadas',
+                equip_telehandler_alt: 'Manipulador Telescópico',
+                equip_telehandler_title: 'Manipulador Telescópico',
+                equip_telehandler_cap: 'Elevação e Alcance',
+                equip_telehandler_desc: 'Elevação e alcance de cargas pesadas em diferentes alturas e terrenos.',
+                equip_telehandler_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Grande alcance vertical',
+                equip_telehandler_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Estabilidade reforçada',
+                equip_telehandler_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Acessórios diversos',
                 equip_tele_alt: 'Manipulador Telescópico',
                 equip_tele_title: 'Manipulador',
                 equip_tele_desc: 'Telescópico para altura e alcance',
@@ -1881,7 +1914,18 @@
                 equip_excav_desc: 'Hydraulic and mini excavators for multiple job types',
                 equip_backhoe_alt: 'Backhoe Loader',
                 equip_backhoe_title: 'Backhoe Loaders',
-                equip_backhoe_desc: 'Versatility in excavation and loading',
+                equip_backhoe_cap: 'Versatility',
+                equip_backhoe_desc: 'Versatility in excavation and loading for urban and rural works.',
+                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Precise excavation',
+                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Fast loading',
+                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>4x4 Traction',
+                equip_forklift_alt: 'Forklift',
+                equip_forklift_title: 'Forklift',
+                equip_forklift_cap: 'Industrial Logistics',
+                equip_forklift_desc: 'Industrial handling and logistics with agility and total safety.',
+                equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>High maneuverability',
+                equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Variable capacity',
+                equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Ideal for warehouses',
                 equip_loader_alt: 'Wheel Loader',
                 equip_loader_title: 'Wheel Loader',
                 equip_loader_desc: 'Material loading and handling',
@@ -1894,6 +1938,13 @@
                 equip_dozer_alt: 'Bulldozer',
                 equip_dozer_title: 'Bulldozer',
                 equip_dozer_desc: 'High traction and pushing for heavy works',
+                equip_telehandler_alt: 'Telehandler',
+                equip_telehandler_title: 'Telehandler',
+                equip_telehandler_cap: 'Elevation & Reach',
+                equip_telehandler_desc: 'Elevation and reach of heavy loads at different heights and terrains.',
+                equip_telehandler_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Great vertical reach',
+                equip_telehandler_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Reinforced stability',
+                equip_telehandler_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Various attachments',
                 equip_tele_alt: 'Telescopic Handler',
                 equip_tele_title: 'Telehandler',
                 equip_tele_desc: 'Telescopic reach for height and range',
@@ -2087,7 +2138,18 @@
                 equip_excav_desc: 'Excavadoras hidráulicas y mini para diversos tipos de obra',
                 equip_backhoe_alt: 'Retroexcavadora',
                 equip_backhoe_title: 'Retroexcavadoras',
-                equip_backhoe_desc: 'Versatilidad en excavación y carga',
+                equip_backhoe_cap: 'Versatilidad',
+                equip_backhoe_desc: 'Versatilidad en excavación y carga para obras urbanas y rurales.',
+                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Excavación precisa',
+                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Carga ágil',
+                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Tracción 4x4',
+                equip_forklift_alt: 'Montacargas',
+                equip_forklift_title: 'Montacargas',
+                equip_forklift_cap: 'Logística Industrial',
+                equip_forklift_desc: 'Movimiento y logística industrial con agilidad y total seguridad.',
+                equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta maniobrabilidad',
+                equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Capacidad variable',
+                equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Ideal para almacenes',
                 equip_loader_alt: 'Cargadora Frontal',
                 equip_loader_title: 'Cargadora Frontal',
                 equip_loader_desc: 'Carga de materiales y movimiento',
@@ -2100,6 +2162,13 @@
                 equip_dozer_alt: 'Tractor de Orugas',
                 equip_dozer_title: 'Tractor de Orugas',
                 equip_dozer_desc: 'Alta tracción y empuje para obras pesadas',
+                equip_telehandler_alt: 'Manipulador Telescópico',
+                equip_telehandler_title: 'Manipulador Telescópico',
+                equip_telehandler_cap: 'Elevación y Alcance',
+                equip_telehandler_desc: 'Elevación y alcance de cargas pesadas en diferentes alturas y terrenos.',
+                equip_telehandler_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Gran alcance vertical',
+                equip_telehandler_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Estabilidad reforzada',
+                equip_telehandler_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Accesorios diversos',
                 equip_tele_alt: 'Manipulador Telescópico',
                 equip_tele_title: 'Manipulador',
                 equip_tele_desc: 'Telescópico para altura y alcance',
@@ -2270,8 +2339,8 @@
                 class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-top-yellow text-white rounded-full flex items-center justify-center transition-all group">
                 <i class="fas fa-times group-hover:scale-110"></i>
             </button>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-3/5 relative h-64 md:h-auto min-h-[320px]">
+            <div class="flex flex-col md:flex-row md:h-[550px]">
+                <div class="md:w-3/5 relative h-64 md:h-full">
                     <img id="equip-modal-img" src="" alt="" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
                     <div class="absolute bottom-4 left-4 z-10">
@@ -2279,7 +2348,7 @@
                             class="bg-top-yellow text-top-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide"></span>
                     </div>
                 </div>
-                <div class="md:w-2/5 p-8 md:p-10 flex flex-col justify-between">
+                <div class="md:w-2/5 p-8 md:p-10 flex flex-col justify-between overflow-y-auto">
                     <div>
                         <span class="text-top-yellow font-bold tracking-widest text-xs uppercase mb-2 block">EQUIPAMENTO DISPONÍVEL</span>
                         <h3 id="equip-modal-title" class="text-2xl md:text-3xl font-display font-bold text-white mb-2 leading-tight"></h3>
@@ -2365,19 +2434,23 @@
             const modal = document.getElementById('equipment-modal');
             const content = document.getElementById('equip-modal-content');
 
-            // Extract data from card
+            // Extract data from card using data-cap attribute (avoids text-top-yellow collision)
             const img       = card.querySelector('img');
             const titleEl   = card.querySelector('h4');
-            const capEl     = card.querySelector('.text-top-yellow');
+            const cap       = card.dataset.cap || '';
             const descEl    = card.querySelector('.equip-overlay p');
             const listItems = card.querySelectorAll('ul li');
 
-            document.getElementById('equip-modal-img').src   = img      ? img.src      : '';
-            document.getElementById('equip-modal-img').alt   = img      ? img.alt      : '';
+            document.getElementById('equip-modal-img').src   = img ? img.src : '';
+            document.getElementById('equip-modal-img').alt   = img ? img.alt : '';
             document.getElementById('equip-modal-title').innerText = titleEl ? titleEl.innerText : '';
-            document.getElementById('equip-modal-cap').innerText   = capEl   ? capEl.innerText   : '';
-            document.getElementById('equip-modal-cap-badge').innerText = capEl ? capEl.innerText : '';
+            document.getElementById('equip-modal-cap').innerText   = cap;
             document.getElementById('equip-modal-desc').innerText  = descEl  ? descEl.innerText  : '';
+
+            // Badge: show only when cap has value
+            const badge = document.getElementById('equip-modal-cap-badge');
+            badge.innerText = cap;
+            badge.style.display = cap ? '' : 'none';
 
             // Build features list
             const featList = document.getElementById('equip-modal-features');
