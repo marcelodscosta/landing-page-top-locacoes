@@ -452,6 +452,12 @@
     }
     .pulse-marker { animation: pulse-gold 2s infinite; }
 
+    @keyframes pulse-subtle {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(0.98); }
+    }
+    .animate-pulse-subtle { animation: pulse-subtle 3s ease-in-out infinite; }
+
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-5px); }
@@ -1027,6 +1033,18 @@
                      data-images="/equipamentos/munck.jpg,/equipamentos/munck_2.jpg"
                      data-detailed="true"
                      data-key="munck">
+                    
+                    <!-- Indicators -->
+                    <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                            <i class="fas fa-images text-top-yellow"></i>
+                            <span>GALERIA</span>
+                        </div>
+                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                            FICHA TÉCNICA
+                        </div>
+                    </div>
+
                     <div class="equip-accent"></div>
                     <div class="h-64 overflow-hidden relative">
                         <img src="/equipamentos/munck.jpg" alt="Caminhão Munck" class="equipment-img"
@@ -2509,12 +2527,12 @@
                     <div id="equip-modal-overlay" class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
                     
                     <!-- Carousel Controls -->
-                    <div id="equip-modal-carousel-controls" class="absolute inset-0 flex items-center justify-between px-4 opacity-0 lg:group-hover:opacity-100 transition-opacity pointer-events-none">
-                        <button onclick="changeEquipImage(-1)" class="w-10 h-10 bg-black/40 hover:bg-top-yellow text-white rounded-full flex items-center justify-center pointer-events-auto transition-all">
-                            <i class="fas fa-chevron-left"></i>
+                    <div id="equip-modal-carousel-controls" class="absolute inset-0 flex items-center justify-between px-4 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity pointer-events-none">
+                        <button onclick="changeEquipImage(-1)" class="w-10 h-10 sm:w-12 sm:h-12 bg-top-dark/40 backdrop-blur-xl border border-white/10 hover:border-top-yellow/50 text-white hover:text-top-yellow rounded-xl sm:rounded-2xl flex items-center justify-center pointer-events-auto transition-all duration-300 shadow-2xl group">
+                            <i class="fas fa-chevron-left group-hover:-translate-x-0.5 transition-transform text-sm sm:text-base"></i>
                         </button>
-                        <button onclick="changeEquipImage(1)" class="w-10 h-10 bg-black/40 hover:bg-top-yellow text-white rounded-full flex items-center justify-center pointer-events-auto transition-all">
-                            <i class="fas fa-chevron-right"></i>
+                        <button onclick="changeEquipImage(1)" class="w-10 h-10 sm:w-12 sm:h-12 bg-top-dark/40 backdrop-blur-xl border border-white/10 hover:border-top-yellow/50 text-white hover:text-top-yellow rounded-xl sm:rounded-2xl flex items-center justify-center pointer-events-auto transition-all duration-300 shadow-2xl group">
+                            <i class="fas fa-chevron-right group-hover:translate-x-0.5 transition-transform text-sm sm:text-base"></i>
                         </button>
                     </div>
 
@@ -2624,9 +2642,29 @@
         let currentEquipImages = [];
         let currentEquipIndex = 0;
         let isDetailedEquip = false;
+        let equipAutoInterval = null;
 
-        function changeEquipImage(dir) {
+        function startEquipAuto() {
+            stopEquipAuto();
             if (currentEquipImages.length <= 1) return;
+            equipAutoInterval = setInterval(() => {
+                changeEquipImage(1, true);
+            }, 20000);
+        }
+
+        function stopEquipAuto() {
+            if (equipAutoInterval) {
+                clearInterval(equipAutoInterval);
+                equipAutoInterval = null;
+            }
+        }
+
+        function changeEquipImage(dir, isAuto = false) {
+            if (currentEquipImages.length <= 1) return;
+            
+            // If manual interaction, reset the timer
+            if (!isAuto) startEquipAuto();
+
             currentEquipIndex = (currentEquipIndex + dir + currentEquipImages.length) % currentEquipImages.length;
             
             const imgEl = document.getElementById('equip-modal-img');
@@ -2716,6 +2754,9 @@
             controls.style.display = currentEquipImages.length > 1 ? '' : 'none';
             updateEquipDots();
 
+            // Start Auto
+            startEquipAuto();
+
             // Basic Info
             const title = card.querySelector('h4').innerText;
             const cap = card.dataset.cap || '';
@@ -2785,6 +2826,7 @@
         }
 
         function closeEquipmentModal() {
+            stopEquipAuto();
             const modal   = document.getElementById('equipment-modal');
             const content = document.getElementById('equip-modal-content');
             content.classList.remove('scale-100', 'opacity-100');
