@@ -2493,23 +2493,23 @@
 
     <!-- Modal de Equipamentos -->
     <div id="equipment-modal"
-        class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 transition-all duration-300">
-        <div class="absolute inset-0 bg-top-dark/80 backdrop-blur-xl" onclick="closeEquipmentModal()"></div>
+        class="fixed inset-0 z-[100] hidden flex justify-center overflow-y-auto py-8 px-4 transition-all duration-300">
+        <div class="fixed inset-0 bg-top-dark/80 backdrop-blur-xl" onclick="closeEquipmentModal()"></div>
         <div
-            class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-5xl w-full shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
+            class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-5xl w-full h-fit my-auto shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
             id="equip-modal-content">
             <button onclick="closeEquipmentModal()"
-                class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-top-yellow text-white rounded-full flex items-center justify-center transition-all group">
+                class="absolute top-4 right-4 z-40 w-10 h-10 bg-black/50 hover:bg-top-yellow text-white rounded-full flex items-center justify-center transition-all group">
                 <i class="fas fa-times group-hover:scale-110"></i>
             </button>
             <div class="flex flex-col lg:flex-row lg:h-[650px]">
                 <!-- Left: Image / Carousel -->
-                <div class="lg:w-1/2 relative h-72 lg:h-full group">
-                    <img id="equip-modal-img" src="" alt="" class="w-full h-full object-cover transition-opacity duration-300">
+                <div class="lg:w-1/2 relative h-64 sm:h-80 lg:h-full group bg-black/10">
+                    <img id="equip-modal-img" src="" alt="" class="w-full h-full object-cover lg:object-cover transition-opacity duration-300">
                     <div id="equip-modal-overlay" class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
                     
                     <!-- Carousel Controls -->
-                    <div id="equip-modal-carousel-controls" class="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    <div id="equip-modal-carousel-controls" class="absolute inset-0 flex items-center justify-between px-4 opacity-0 lg:group-hover:opacity-100 transition-opacity pointer-events-none">
                         <button onclick="changeEquipImage(-1)" class="w-10 h-10 bg-black/40 hover:bg-top-yellow text-white rounded-full flex items-center justify-center pointer-events-auto transition-all">
                             <i class="fas fa-chevron-left"></i>
                         </button>
@@ -2520,55 +2520,55 @@
 
                     <div class="absolute bottom-4 left-4 z-10 flex gap-2">
                         <span id="equip-modal-cap-badge"
-                            class="bg-top-yellow text-top-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide"></span>
+                            class="bg-top-yellow text-top-dark text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide"></span>
                         <div id="equip-modal-dots" class="flex gap-1 items-center"></div>
                     </div>
                 </div>
 
                 <!-- Right: Content -->
-                <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-between overflow-y-auto custom-scrollbar bg-top-dark/30">
+                <div class="lg:w-1/2 p-6 sm:p-8 lg:p-12 flex flex-col justify-between lg:overflow-y-auto custom-scrollbar bg-top-dark/30">
                     <div id="equip-modal-main-info">
-                        <span class="text-top-yellow font-bold tracking-widest text-xs uppercase mb-2 block" data-i18n="equip_modal_badge">EQUIPAMENTO DISPONÍVEL</span>
-                        <h3 id="equip-modal-title" class="text-3xl lg:text-4xl font-display font-bold text-white mb-2 leading-tight"></h3>
-                        <p id="equip-modal-cap" class="text-top-yellow font-semibold text-lg mb-4"></p>
-                        <div class="w-16 h-1 bg-top-yellow rounded-full mb-6"></div>
+                        <span class="text-top-yellow font-bold tracking-widest text-[10px] uppercase mb-2 block" data-i18n="equip_modal_badge">EQUIPAMENTO DISPONÍVEL</span>
+                        <h3 id="equip-modal-title" class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white mb-2 leading-tight"></h3>
+                        <p id="equip-modal-cap" class="text-top-yellow font-semibold text-base mb-4"></p>
+                        <div class="w-12 lg:w-16 h-1 bg-top-yellow rounded-full mb-6"></div>
                         
                         <div id="equip-basic-info">
-                            <p id="equip-modal-desc" class="text-gray-300 leading-relaxed text-lg mb-6"></p>
-                            <ul id="equip-modal-features" class="space-y-3 text-gray-300"></ul>
+                            <p id="equip-modal-desc" class="text-gray-300 leading-relaxed text-base sm:text-lg mb-6"></p>
+                            <ul id="equip-modal-features" class="space-y-3 text-gray-300 text-sm sm:text-base"></ul>
                         </div>
 
-                        <!-- Technical Detailed Section (Conditional) -->
+                        <!-- Technical Detailed Section -->
                         <div id="equip-detailed-info" class="hidden space-y-6 animate-fade-in">
-                            <p id="equip-modal-full-desc" class="text-gray-400 text-sm leading-relaxed"></p>
+                            <p id="equip-modal-full-desc" class="text-gray-400 text-xs sm:text-sm leading-relaxed"></p>
                             
-                            <div class="grid grid-cols-1 gap-6">
+                            <div class="grid grid-cols-1 gap-4 sm:gap-6">
                                 <div class="bg-white/5 rounded-xl p-4 border border-white/5">
-                                    <h5 id="equip-modal-truck-title" class="text-top-yellow font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                                    <h5 id="equip-modal-truck-title" class="text-top-yellow font-bold text-xs uppercase mb-3 flex items-center gap-2">
                                         <i class="fas fa-truck"></i> <span></span>
                                     </h5>
-                                    <ul id="equip-modal-truck-specs" class="space-y-2 text-xs text-gray-400"></ul>
+                                    <ul id="equip-modal-truck-specs" class="space-y-2 text-[11px] text-gray-400"></ul>
                                 </div>
                                 <div class="bg-white/5 rounded-xl p-4 border border-white/5">
-                                    <h5 id="equip-modal-crane-title" class="text-top-yellow font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                                    <h5 id="equip-modal-crane-title" class="text-top-yellow font-bold text-xs uppercase mb-3 flex items-center gap-2">
                                         <i class="fas fa-faucet-drip"></i> <span></span>
                                     </h5>
-                                    <ul id="equip-modal-crane-specs" class="space-y-2 text-xs text-gray-400"></ul>
+                                    <ul id="equip-modal-crane-specs" class="space-y-2 text-[11px] text-gray-400"></ul>
                                 </div>
                             </div>
 
                             <div class="bg-top-yellow/5 rounded-xl p-4 border border-top-yellow/10">
-                                <h5 id="equip-modal-diff-title" class="text-white font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                                <h5 id="equip-modal-diff-title" class="text-white font-bold text-xs uppercase mb-3 flex items-center gap-2">
                                     <i class="fas fa-star text-top-yellow"></i> <span></span>
                                 </h5>
-                                <ul id="equip-modal-diff-specs" class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-gray-400"></ul>
+                                <ul id="equip-modal-diff-specs" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-gray-400"></ul>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-10 flex flex-wrap gap-4">
+                    <div class="mt-8 flex flex-wrap gap-4">
                         <a href="#contato" onclick="closeEquipmentModal()"
-                            class="flex-1 inline-flex items-center justify-center space-x-2 text-top-dark bg-top-yellow hover:bg-top-gold px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-top-yellow/20 group">
+                            class="flex-1 inline-flex items-center justify-center space-x-2 text-top-dark bg-top-yellow hover:bg-top-gold px-6 py-3.5 sm:py-4 rounded-xl font-bold transition-all shadow-lg shadow-top-yellow/20 group text-sm sm:text-base">
                             <span data-i18n="modal_cta">Solicitar Orçamento</span>
                             <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -2679,6 +2679,15 @@
             ripple.addEventListener('animationend', () => ripple.remove());
         }
 
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        function handleEquipSwipe() {
+            const threshold = 50;
+            if (touchEndX < touchStartX - threshold) changeEquipImage(1);
+            if (touchEndX > touchStartX + threshold) changeEquipImage(-1);
+        }
+
         function openEquipmentModal(event, card) {
             equipmentRipple(event, card);
 
@@ -2695,6 +2704,13 @@
             imgEl.src = currentEquipImages[0];
             imgEl.alt = card.querySelector('img').alt;
             imgEl.classList.remove('opacity-0');
+
+            // Touch support
+            imgEl.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX, {passive: true});
+            imgEl.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleEquipSwipe();
+            }, {passive: true});
 
             const controls = document.getElementById('equip-modal-carousel-controls');
             controls.style.display = currentEquipImages.length > 1 ? '' : 'none';
