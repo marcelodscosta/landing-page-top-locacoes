@@ -1184,11 +1184,6 @@
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_telehandler_title">Manipulador Telescópico</h4>
                         <p class="text-top-yellow text-sm" data-i18n="equip_telehandler_cap">Elevação e Alcance</p>
                     </div>
-                    <ul class="hidden">
-                        <li data-i18n="equip_telehandler_li1">Grande alcance vertical</li>
-                        <li data-i18n="equip_telehandler_li2">Estabilidade reforçada</li>
-                        <li data-i18n="equip_telehandler_li3">Acessórios diversos</li>
-                    </ul>
                 </div>
 
             </div>
@@ -1196,52 +1191,59 @@
     </section>
 
     <!-- Rental Modes -->
+    <section class="relative py-32 overflow-hidden bg-top-dark">
+        <!-- Static Background Image -->
+        <div class="absolute inset-0 z-0 bg-top-dark">
+            <img src="https://images.unsplash.com/photo-1466611653911-954ff21161d1?auto=format&fit=crop&q=80&w=2070" 
+                 alt="Parque Eólico" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-b from-top-dark/90 via-top-dark/40 to-top-dark"></div>
+        </div>
 
-    <section class="py-24 bg-top-gray">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="font-display font-bold text-4xl md:text-5xl mb-4">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 fade-in">
+                <div class="inline-flex items-center space-x-2 bg-top-yellow/10 border border-top-yellow/20 rounded-full px-4 py-1 mb-4">
+                    <span class="w-2 h-2 bg-top-yellow rounded-full animate-pulse"></span>
+                    <span class="text-xs font-bold text-top-yellow uppercase tracking-widest" data-i18n="modes_badge">Soluções Personalizadas</span>
+                </div>
+                <h2 class="font-display font-bold text-4xl md:text-6xl mb-6">
                     <span class="text-white" data-i18n="modes_title_1">MODALIDADES DE</span>
                     <span class="text-top-yellow" data-i18n="modes_title_2"> LOCAÇÃO</span>
                 </h2>
-                <div class="section-divider w-24 mx-auto mt-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed" data-i18n="modes_subtitle">Oferecemos diferentes formatos de contrato para atender às necessidades específicas do seu projeto.</p>
+                <div class="section-divider w-24 mx-auto mt-8"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-top-dark rounded-2xl p-6 border border-white/10 text-center card-hover fade-in">
-                    <div class="w-16 h-16 mx-auto bg-top-yellow/20 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-user-gear text-top-yellow text-3xl"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
+                    <div class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
+                        <i class="fas fa-user-gear text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
                     </div>
-                    <h4 class="font-bold text-white text-lg mb-2" data-i18n="mode_with_title">Com Operador</h4>
-                    <p class="text-gray-400 text-sm" data-i18n="mode_with_text">Profissionais certificados e experientes
-                        inclusos</p>
+                    <h4 class="font-bold text-white text-xl mb-3" data-i18n="mode_with_title">Com Operador</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_with_text">Mão de obra especializada e treinada inclusa no pacote, garantindo máxima eficiência e segurança.</p>
                 </div>
 
-                <div class="bg-top-dark rounded-2xl p-6 border border-white/10 text-center card-hover fade-in">
-                    <div class="w-16 h-16 mx-auto bg-top-yellow/20 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-user-slash text-top-yellow text-3xl"></i>
+                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
+                    <div class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
+                        <i class="fas fa-user-slash text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
                     </div>
-                    <h4 class="font-bold text-white text-lg mb-2" data-i18n="mode_without_title">Sem Operador</h4>
-                    <p class="text-gray-400 text-sm" data-i18n="mode_without_text">Para empresas com equipe própria
-                        qualificada</p>
+                    <h4 class="font-bold text-white text-xl mb-3" data-i18n="mode_without_title">Sem Operador</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_without_text">Locação pura do equipamento para empresas que já possuem equipe operacional qualificada.</p>
                 </div>
 
-                <div class="bg-top-dark rounded-2xl p-6 border border-white/10 text-center card-hover fade-in">
-                    <div class="w-16 h-16 mx-auto bg-top-yellow/20 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-calendar-check text-top-yellow text-3xl"></i>
+                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
+                    <div class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
+                        <i class="fas fa-calendar-check text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
                     </div>
-                    <h4 class="font-bold text-white text-lg mb-2" data-i18n="mode_flex_title">Flexível</h4>
-                    <p class="text-gray-400 text-sm" data-i18n="mode_flex_text">Diária, semanal, mensal ou por projeto
-                    </p>
+                    <h4 class="font-bold text-white text-xl mb-3" data-i18n="mode_flex_title">Flexível</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_flex_text">Modelos de contrato por diária, semana, mês ou pacotes específicos por projeto.</p>
                 </div>
 
-                <div class="bg-top-dark rounded-2xl p-6 border border-white/10 text-center card-hover fade-in">
-                    <div class="w-16 h-16 mx-auto bg-top-yellow/20 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-screwdriver-wrench text-top-yellow text-3xl"></i>
+                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
+                    <div class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
+                        <i class="fas fa-screwdriver-wrench text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
                     </div>
-                    <h4 class="font-bold text-white text-lg mb-2" data-i18n="mode_maint_title">Manutenção Inclusa</h4>
-                    <p class="text-gray-400 text-sm" data-i18n="mode_maint_text">Preventiva e corretiva sem custo extra
-                    </p>
+                    <h4 class="font-bold text-white text-xl mb-3" data-i18n="mode_maint_title">Manutenção Inclusa</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_maint_text">Suporte técnico preventivo e corretivo garantido durante todo o período de locação.</p>
                 </div>
             </div>
         </div>
