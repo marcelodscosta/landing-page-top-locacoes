@@ -1022,22 +1022,26 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Munck -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="Até 12 toneladas">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
+                     data-cap="Até 62 toneladas métricas"
+                     data-images="/equipamentos/munck.jpg,/equipamentos/munck_2.jpg"
+                     data-detailed="true"
+                     data-key="munck">
                     <div class="equip-accent"></div>
-                    <div class="h-64 overflow-hidden">
+                    <div class="h-64 overflow-hidden relative">
                         <img src="/equipamentos/munck.jpg" alt="Caminhão Munck" class="equipment-img"
                             data-i18n="equip_munck_alt" data-i18n-attr="alt">
-                    </div>
-                    <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_munck_desc">Movimentação de cargas pesadas e equipamentos com precisão e segurança.</p>
+                        <div class="equip-overlay">
+                            <p class="text-white font-bold text-sm" data-i18n="equip_munck_desc">Movimentação de cargas pesadas e equipamentos com precisão e segurança.</p>
+                        </div>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_munck_title">Munck (Guindauto)</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_munck_cap">Até 12 toneladas</p>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_munck_cap">Até 62 toneladas métricas</p>
                     </div>
                     <!-- hidden data for modal -->
                     <ul class="hidden">
-                        <li data-i18n="equip_munck_li1">Caminhão + Carreta</li>
+                        <li data-i18n="equip_munck_li1">Caminhão + Implemento</li>
                         <li data-i18n="equip_munck_li2">Operador certificado</li>
                         <li data-i18n="equip_munck_li3">Içamento controlado</li>
                     </ul>
@@ -1566,6 +1570,15 @@
                             <h4 class="text-white font-bold">Pernambuco</h4>
                         </div>
                     </div>
+                    <!-- Ceará -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                            <img src="assets/img/flags/ce.png" alt="CE" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Ceará</h4>
+                        </div>
+                    </div>
                     <!-- Piauí -->
                     <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
                         <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
@@ -1667,9 +1680,9 @@
         const translations = {
             'pt-BR': {
                 page_title: 'Locação de Máquinas e Retroescavadeiras em Juazeiro e Petrolina | Top Locações',
-                meta_description: 'Aluguel de máquinas pesadas, munck e retroescavadeiras no Vale do São Francisco. Atendimento em Juazeiro BA e Petrolina PE com frota própria e suporte 24h.',
+                meta_description: 'Aluguel de máquinas pesadas, munck e retroescavadeiras no Vale do São Francisco e Ceará. Atendimento em Juazeiro BA, Petrolina PE e região com frota própria e suporte 24h.',
                 meta_language: 'pt-BR',
-                meta_keywords: 'locação de máquinas juazeiro ba, aluguel de retroescavadeira petrolina pe, vale do são francisco, munck juazeiro, máquinas pesadas petrolina, aluguel de máquinas construção civil',
+                meta_keywords: 'locação de máquinas juazeiro ba, aluguel de retroescavadeira petrolina pe, ceará, fortaleza, juazeiro do norte, vale do são francisco, munck juazeiro, máquinas pesadas petrolina, aluguel de máquinas construção civil',
                 og_title: 'Locação de Máquinas e Retroescavadeiras em Juazeiro e Petrolina | Top Locações',
                 og_description: 'Aluguel de máquinas pesadas e retroescavadeiras no Vale do São Francisco (Juazeiro e Petrolina). Suporte 24h e frota moderna.',
                 og_locale: 'pt_BR',
@@ -1758,11 +1771,19 @@
                 equip_trucks_title: '<i class="fas fa-truck text-top-yellow mr-3"></i>CAMINHÕES ESPECIALIZADOS',
                 equip_munck_alt: 'Caminhão Munck para Locação em Petrolina e Juazeiro',
                 equip_munck_title: 'Munck (Guindauto)',
-                equip_munck_cap: 'Até 12 toneladas',
+                equip_munck_cap: 'Até 62 toneladas métricas',
                 equip_munck_desc: 'Movimentação de cargas pesadas e equipamentos com precisão e segurança no Vale do São Francisco.',
-                equip_munck_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Caminhão + Carreta',
+                equip_munck_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Caminhão + Implemento',
                 equip_munck_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Operador certificado',
                 equip_munck_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Içamento controlado',
+                equip_munck_full_title: 'Conjunto: Caminhão + Munck',
+                equip_munck_full_desc: 'O conjunto é formado pelo caminhão Volvo VM 290 6x4R Euro 6 equipado com guindaste articulado Argos AGI 45.0, oferecendo alta capacidade de carga, robustez e desempenho para operações severas e fora de estrada.',
+                equip_munck_truck_title: 'Principais Características do Caminhão',
+                equip_munck_truck_specs: 'Motor Volvo D8K (7,7L) – 290 cv e 1.050 Nm de torque;Tração 6x4 com cubo redutor (ideal para terrenos difíceis);PBT: 26.700 kg;CMT: até 40.000 kg;Transmissão manual ou automatizada I-Shift;Sistema de freios eletrônicos (EBS) + freio motor de alto desempenho',
+                equip_munck_crane_title: 'Principais Características do Munck',
+                equip_munck_crane_specs: 'Capacidade: 45 toneladas-metro (tm);Alcance: até 23,8 m vertical e 20,2 m horizontal;Configuração: 4 lanças hidráulicas + 4 manuais;Peso do equipamento: ~4.600 kg;Estabilização: patolamento hidráulico completo;Controle remoto via rádio com joysticks',
+                equip_munck_diff_title: 'Diferenciais do Conjunto',
+                equip_munck_diff_specs: 'Alta capacidade para içamentos complexos;Excelente desempenho off-road;Maior segurança com controle remoto;Conjunto robusto para operações severas',
                 equip_pipa_alt: 'Caminhão Pipa',
                 equip_pipa_title: 'Caminhão Pipa',
                 equip_pipa_cap: '8.000L a 10.000L',
@@ -1895,9 +1916,9 @@
             },
             'en-US': {
                 page_title: 'Top Locações & Serviços | Heavy Trucks & Equipment | Renewable Energy',
-                meta_description: 'Specialists in heavy truck and equipment rental for wind and solar energy, civil construction and mining. Serving major companies in Brazil since 2011 with 24/7 support.',
+                meta_description: 'Specialists in heavy truck and equipment rental for wind and solar energy, civil construction and mining. Serving major companies in Brazil (Northeast and Ceará) since 2011 with 24/7 support.',
                 meta_language: 'en-US',
-                meta_keywords: 'truck rental, heavy equipment, wind energy, solar energy, workforce outsourcing, civil construction, mining, North Northeast Brazil',
+                meta_keywords: 'truck rental, heavy equipment, ceará, wind energy, solar energy, workforce outsourcing, civil construction, mining, North Northeast Brazil',
                 og_title: 'Top Locações & Serviços | Rental Solutions',
                 og_description: 'Heavy equipment rental and workforce services for wind and solar farms and civil construction. Strong presence in the North and Northeast.',
                 og_locale: 'en_US',
@@ -1986,11 +2007,19 @@
                 equip_trucks_title: '<i class="fas fa-truck text-top-yellow mr-3"></i>SPECIALIZED TRUCKS',
                 equip_munck_alt: 'Truck-Mounted Crane',
                 equip_munck_title: 'Truck-Mounted Crane',
-                equip_munck_cap: '35 to 45 tons',
+                equip_munck_cap: 'Up to 62 metric tons',
                 equip_munck_desc: 'Heavy load handling with precision and safety.',
-                equip_munck_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Truck + Trailer',
+                equip_munck_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Truck + Implement',
                 equip_munck_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Certified operator',
                 equip_munck_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Controlled lifting',
+                equip_munck_full_title: 'Unit: Truck + Munck',
+                equip_munck_full_desc: 'The unit consists of a Volvo VM 290 6x4R Euro 6 truck equipped with an Argos AGI 45.0 articulated crane, offering high load capacity, robustness, and performance for severe and off-road operations.',
+                equip_munck_truck_title: 'Truck Key Features',
+                equip_munck_truck_specs: 'Volvo D8K Motor (7.7L) – 290 hp and 1,050 Nm torque;6x4 Traction with reduction hub;GVW: 26,700 kg;GCW: up to 40,000 kg;Manual or I-Shift automated transmission;Electronic Brake System (EBS) + High-performance engine brake',
+                equip_munck_crane_title: 'Munck Key Features',
+                equip_munck_crane_specs: 'Capacity: 45 ton-meters (tm);Reach: up to 23.8 m vertical and 20.2 m horizontal;Configuration: 4 hydraulic + 4 manual booms;Equipment weight: ~4,600 kg;Full hydraulic stabilization;Radio remote control with joysticks',
+                equip_munck_diff_title: 'Unit Differentials',
+                equip_munck_diff_specs: 'High capacity for complex lifts;Excellent off-road performance;Increased safety with remote control;Robust unit for severe operations',
                 equip_pipa_alt: 'Water Truck',
                 equip_pipa_title: 'Water Truck',
                 equip_pipa_cap: '10,000L to 20,000L',
@@ -2123,9 +2152,9 @@
             },
             'es-ES': {
                 page_title: 'Top Locações & Serviços | Camiones y Equipos Pesados | Energía Renovable',
-                meta_description: 'Especialistas en alquiler de camiones y equipos pesados para energía eólica, solar, construcción civil y minería. Desde 2011 atendiendo a grandes empresas de Brasil con soporte 24/7.',
+                meta_description: 'Especialistas en alquiler de camiones y equipos pesados para energía eólica, solar, construcción civil y minería. Atendiendo a grandes empresas en Ceará y Nordeste de Brasil con soporte 24/7.',
                 meta_language: 'es-ES',
-                meta_keywords: 'alquiler de camiones, equipos pesados, energía eólica, energía solar, tercerización de mano de obra, construcción civil, minería, Norte Nordeste Brasil',
+                meta_keywords: 'alquiler de camiones, equipos pesados, ceará, energía eólica, energía solar, tercerización de mano de obra, construcción civil, minería, Norte Nordeste Brasil',
                 og_title: 'Top Locações & Serviços | Soluciones de Alquiler',
                 og_description: 'Alquiler de equipos pesados y mano de obra para parques eólicos, solares y construcción civil. Fuerte presencia en el Norte y Nordeste.',
                 og_locale: 'es_ES',
@@ -2214,11 +2243,19 @@
                 equip_trucks_title: '<i class="fas fa-truck text-top-yellow mr-3"></i>CAMIONES ESPECIALIZADOS',
                 equip_munck_alt: 'Camión Munck',
                 equip_munck_title: 'Camión Munck',
-                equip_munck_cap: '35 a 45 toneladas',
+                equip_munck_cap: 'Hasta 62 toneladas métricas',
                 equip_munck_desc: 'Manipulación de cargas pesadas y equipos con precisión y seguridad.',
-                equip_munck_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Camión + Remolque',
+                equip_munck_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Camión + Implemento',
                 equip_munck_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Operador certificado',
                 equip_munck_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Izado controlado',
+                equip_munck_full_title: 'Conjunto: Camión + Munck',
+                equip_munck_full_desc: 'El conjunto está formado por el camión Volvo VM 290 6x4R Euro 6 equipado con grúa articulada Argos AGI 45.0, ofreciendo alta capacidad de carga, robustez y rendimiento para operaciones severas y fuera de carretera.',
+                equip_munck_truck_title: 'Características Principales del Camión',
+                equip_munck_truck_specs: 'Motor Volvo D8K (7,7L) – 290 cv e 1.050 Nm de torque;Tracción 6x4 con cubo reductor;PBT: 26.700 kg;CMT: hasta 40.000 kg;Transmisión manual o automatizada I-Shift;Sistema de frenos electrónicos (EBS) + freno motor de alto rendimiento',
+                equip_munck_crane_title: 'Características Principales del Munck',
+                equip_munck_crane_specs: 'Capacidad: 45 toneladas-metro (tm);Alcance: hasta 23,8 m vertical y 20,2 m horizontal;Configuración: 4 lanzas hidráulicas + 4 manuales;Peso del equipo: ~4.600 kg;Estabilización: patolamiento hidráulico completo;Control remoto vía radio con joysticks',
+                equip_munck_diff_title: 'Diferenciales del Conjunto',
+                equip_munck_diff_specs: 'Alta capacidad para izajes complejos;Excelente rendimiento off-road;Mayor seguridad con control remoto;Conjunto robusto para operaciones severas',
                 equip_pipa_alt: 'Camión Cisterna',
                 equip_pipa_title: 'Camión Cisterna',
                 equip_pipa_cap: '10.000L a 20.000L',
@@ -2459,34 +2496,80 @@
         class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 transition-all duration-300">
         <div class="absolute inset-0 bg-top-dark/80 backdrop-blur-xl" onclick="closeEquipmentModal()"></div>
         <div
-            class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-4xl w-full shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
+            class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-5xl w-full shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
             id="equip-modal-content">
             <button onclick="closeEquipmentModal()"
                 class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-top-yellow text-white rounded-full flex items-center justify-center transition-all group">
                 <i class="fas fa-times group-hover:scale-110"></i>
             </button>
-            <div class="flex flex-col md:flex-row md:h-[550px]">
-                <div class="md:w-3/5 relative h-64 md:h-full">
-                    <img id="equip-modal-img" src="" alt="" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
-                    <div class="absolute bottom-4 left-4 z-10">
+            <div class="flex flex-col lg:flex-row lg:h-[650px]">
+                <!-- Left: Image / Carousel -->
+                <div class="lg:w-1/2 relative h-72 lg:h-full group">
+                    <img id="equip-modal-img" src="" alt="" class="w-full h-full object-cover transition-opacity duration-300">
+                    <div id="equip-modal-overlay" class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
+                    
+                    <!-- Carousel Controls -->
+                    <div id="equip-modal-carousel-controls" class="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                        <button onclick="changeEquipImage(-1)" class="w-10 h-10 bg-black/40 hover:bg-top-yellow text-white rounded-full flex items-center justify-center pointer-events-auto transition-all">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button onclick="changeEquipImage(1)" class="w-10 h-10 bg-black/40 hover:bg-top-yellow text-white rounded-full flex items-center justify-center pointer-events-auto transition-all">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="absolute bottom-4 left-4 z-10 flex gap-2">
                         <span id="equip-modal-cap-badge"
                             class="bg-top-yellow text-top-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide"></span>
+                        <div id="equip-modal-dots" class="flex gap-1 items-center"></div>
                     </div>
                 </div>
-                <div class="md:w-2/5 p-8 md:p-10 flex flex-col justify-between overflow-y-auto">
-                    <div>
-                        <span class="text-top-yellow font-bold tracking-widest text-xs uppercase mb-2 block">EQUIPAMENTO DISPONÍVEL</span>
-                        <h3 id="equip-modal-title" class="text-2xl md:text-3xl font-display font-bold text-white mb-2 leading-tight"></h3>
-                        <p id="equip-modal-cap" class="text-top-yellow font-semibold text-base mb-4"></p>
-                        <div class="w-12 h-1 bg-top-yellow rounded-full mb-5"></div>
-                        <p id="equip-modal-desc" class="text-gray-300 leading-relaxed text-base mb-5"></p>
-                        <ul id="equip-modal-features" class="space-y-2 text-sm text-gray-300"></ul>
+
+                <!-- Right: Content -->
+                <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-between overflow-y-auto custom-scrollbar bg-top-dark/30">
+                    <div id="equip-modal-main-info">
+                        <span class="text-top-yellow font-bold tracking-widest text-xs uppercase mb-2 block" data-i18n="equip_modal_badge">EQUIPAMENTO DISPONÍVEL</span>
+                        <h3 id="equip-modal-title" class="text-3xl lg:text-4xl font-display font-bold text-white mb-2 leading-tight"></h3>
+                        <p id="equip-modal-cap" class="text-top-yellow font-semibold text-lg mb-4"></p>
+                        <div class="w-16 h-1 bg-top-yellow rounded-full mb-6"></div>
+                        
+                        <div id="equip-basic-info">
+                            <p id="equip-modal-desc" class="text-gray-300 leading-relaxed text-lg mb-6"></p>
+                            <ul id="equip-modal-features" class="space-y-3 text-gray-300"></ul>
+                        </div>
+
+                        <!-- Technical Detailed Section (Conditional) -->
+                        <div id="equip-detailed-info" class="hidden space-y-6 animate-fade-in">
+                            <p id="equip-modal-full-desc" class="text-gray-400 text-sm leading-relaxed"></p>
+                            
+                            <div class="grid grid-cols-1 gap-6">
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <h5 id="equip-modal-truck-title" class="text-top-yellow font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                                        <i class="fas fa-truck"></i> <span></span>
+                                    </h5>
+                                    <ul id="equip-modal-truck-specs" class="space-y-2 text-xs text-gray-400"></ul>
+                                </div>
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <h5 id="equip-modal-crane-title" class="text-top-yellow font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                                        <i class="fas fa-faucet-drip"></i> <span></span>
+                                    </h5>
+                                    <ul id="equip-modal-crane-specs" class="space-y-2 text-xs text-gray-400"></ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-top-yellow/5 rounded-xl p-4 border border-top-yellow/10">
+                                <h5 id="equip-modal-diff-title" class="text-white font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                                    <i class="fas fa-star text-top-yellow"></i> <span></span>
+                                </h5>
+                                <ul id="equip-modal-diff-specs" class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-gray-400"></ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-6">
+
+                    <div class="mt-10 flex flex-wrap gap-4">
                         <a href="#contato" onclick="closeEquipmentModal()"
-                            class="inline-flex items-center space-x-2 text-white bg-top-yellow/10 hover:bg-top-yellow border border-top-yellow/30 hover:border-top-yellow px-6 py-3 rounded-full font-bold transition-all group">
-                            <span>Solicitar Orçamento</span>
+                            class="flex-1 inline-flex items-center justify-center space-x-2 text-top-dark bg-top-yellow hover:bg-top-gold px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-top-yellow/20 group">
+                            <span data-i18n="modal_cta">Solicitar Orçamento</span>
                             <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -2538,6 +2621,49 @@
             }, 300);
         }
 
+        let currentEquipImages = [];
+        let currentEquipIndex = 0;
+        let isDetailedEquip = false;
+
+        function changeEquipImage(dir) {
+            if (currentEquipImages.length <= 1) return;
+            currentEquipIndex = (currentEquipIndex + dir + currentEquipImages.length) % currentEquipImages.length;
+            
+            const imgEl = document.getElementById('equip-modal-img');
+            const basicSec = document.getElementById('equip-basic-info');
+            const detailedSec = document.getElementById('equip-detailed-info');
+
+            imgEl.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                imgEl.src = currentEquipImages[currentEquipIndex];
+                imgEl.classList.remove('opacity-0');
+                updateEquipDots();
+
+                // Toggle content based on slide if detailed
+                if (isDetailedEquip) {
+                    if (currentEquipIndex === 0) {
+                        basicSec.classList.remove('hidden');
+                        detailedSec.classList.add('hidden');
+                    } else {
+                        basicSec.classList.add('hidden');
+                        detailedSec.classList.remove('hidden');
+                    }
+                }
+            }, 200);
+        }
+
+        function updateEquipDots() {
+            const dotsCont = document.getElementById('equip-modal-dots');
+            dotsCont.innerHTML = '';
+            if (currentEquipImages.length <= 1) return;
+            currentEquipImages.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = `w-1.5 h-1.5 rounded-full transition-all ${i === currentEquipIndex ? 'bg-top-yellow w-3' : 'bg-white/30'}`;
+                dotsCont.appendChild(dot);
+            });
+        }
+
         function equipmentRipple(event, card) {
             card.querySelectorAll('.ripple').forEach(r => r.remove());
             const ripple = document.createElement('span');
@@ -2554,31 +2680,41 @@
         }
 
         function openEquipmentModal(event, card) {
-            // Trigger ripple
             equipmentRipple(event, card);
 
             const modal = document.getElementById('equipment-modal');
             const content = document.getElementById('equip-modal-content');
 
-            // Extract data from card using data-cap attribute (avoids text-top-yellow collision)
-            const img       = card.querySelector('img');
-            const titleEl   = card.querySelector('h4');
-            const cap       = card.dataset.cap || '';
-            const descEl    = card.querySelector('.equip-overlay p');
+            // Carousel Setup
+            const imagesStr = card.dataset.images || '';
+            currentEquipImages = imagesStr ? imagesStr.split(',') : [card.querySelector('img').src];
+            currentEquipIndex = 0;
+            isDetailedEquip = card.dataset.detailed === 'true';
+            
+            const imgEl = document.getElementById('equip-modal-img');
+            imgEl.src = currentEquipImages[0];
+            imgEl.alt = card.querySelector('img').alt;
+            imgEl.classList.remove('opacity-0');
+
+            const controls = document.getElementById('equip-modal-carousel-controls');
+            controls.style.display = currentEquipImages.length > 1 ? '' : 'none';
+            updateEquipDots();
+
+            // Basic Info
+            const title = card.querySelector('h4').innerText;
+            const cap = card.dataset.cap || '';
+            const desc = card.querySelector('.equip-overlay p').innerText;
             const listItems = card.querySelectorAll('ul li');
 
-            document.getElementById('equip-modal-img').src   = img ? img.src : '';
-            document.getElementById('equip-modal-img').alt   = img ? img.alt : '';
-            document.getElementById('equip-modal-title').innerText = titleEl ? titleEl.innerText : '';
-            document.getElementById('equip-modal-cap').innerText   = cap;
-            document.getElementById('equip-modal-desc').innerText  = descEl  ? descEl.innerText  : '';
-
-            // Badge: show only when cap has value
+            document.getElementById('equip-modal-title').innerText = title;
+            document.getElementById('equip-modal-cap').innerText = cap;
+            document.getElementById('equip-modal-desc').innerText = desc;
+            
             const badge = document.getElementById('equip-modal-cap-badge');
             badge.innerText = cap;
             badge.style.display = cap ? '' : 'none';
 
-            // Build features list
+            // Features List
             const featList = document.getElementById('equip-modal-features');
             featList.innerHTML = '';
             listItems.forEach(li => {
@@ -2587,6 +2723,42 @@
                 item.innerHTML = '<i class="fas fa-check-circle text-top-yellow"></i><span>' + li.innerText.trim() + '</span>';
                 featList.appendChild(item);
             });
+
+            // Detailed Specs Init
+            const detailedSec = document.getElementById('equip-detailed-info');
+            const basicSec = document.getElementById('equip-basic-info');
+            const key = card.dataset.key;
+
+            if (isDetailedEquip && key) {
+                basicSec.classList.remove('hidden');
+                detailedSec.classList.add('hidden');
+                
+                const currentLang = document.documentElement.lang || 'pt-BR';
+                const dict = translations[currentLang] || translations['pt-BR'];
+
+                document.getElementById('equip-modal-full-desc').innerText = dict[`equip_${key}_full_desc`];
+                
+                // Truck Specs
+                document.getElementById('equip-modal-truck-title').querySelector('span').innerText = dict[`equip_${key}_truck_title`];
+                const truckSpecs = (dict[`equip_${key}_truck_specs`] || '').split(';');
+                const truckList = document.getElementById('equip-modal-truck-specs');
+                truckList.innerHTML = truckSpecs.map(s => `<li>• ${s.trim()}</li>`).join('');
+
+                // Crane Specs
+                document.getElementById('equip-modal-crane-title').querySelector('span').innerText = dict[`equip_${key}_crane_title`];
+                const craneSpecs = (dict[`equip_${key}_crane_specs`] || '').split(';');
+                const craneList = document.getElementById('equip-modal-crane-specs');
+                craneList.innerHTML = craneSpecs.map(s => `<li>• ${s.trim()}</li>`).join('');
+
+                // Differentials
+                document.getElementById('equip-modal-diff-title').querySelector('span').innerText = dict[`equip_${key}_diff_title`];
+                const diffSpecs = (dict[`equip_${key}_diff_specs`] || '').split(';');
+                const diffList = document.getElementById('equip-modal-diff-specs');
+                diffList.innerHTML = diffSpecs.map(s => `<li>• ${s.trim()}</li>`).join('');
+            } else {
+                basicSec.classList.remove('hidden');
+                detailedSec.classList.add('hidden');
+            }
 
             modal.classList.remove('hidden');
             setTimeout(() => {
