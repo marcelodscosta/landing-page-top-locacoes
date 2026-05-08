@@ -1180,18 +1180,34 @@
                 </div>
 
                 <!-- Retroescavadeira -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="Versatilidade">
-                    <div class="equip-accent"></div>
-                    <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/retroescavadeira.jpg" alt="Retroescavadeira" class="equipment-img"
-                            data-i18n="equip_backhoe_alt" data-i18n-attr="alt">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
+                     data-cap="4 x 4"
+                     data-images="/equipamentos/retroescavadeira_1.jpg,/equipamentos/retroescavadeira_2.jpg"
+                     data-detailed="true"
+                     data-key="backhoe">
+                    
+                    <!-- Indicators -->
+                    <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                            <i class="fas fa-images text-top-yellow"></i>
+                            <span>GALERIA</span>
+                        </div>
+                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                            FICHA TÉCNICA
+                        </div>
                     </div>
-                    <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_backhoe_desc">Versatilidade em escavação e carregamento para obras urbanas e rurais.</p>
+
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/equipamentos/retroescavadeira_1.jpg" alt="Retroescavadeira" class="equipment-img"
+                            data-i18n="equip_backhoe_alt" data-i18n-attr="alt">
+                        <div class="equip-overlay">
+                            <p class="text-white font-bold text-sm" data-i18n="equip_backhoe_desc">Versatilidade em escavação e carregamento para obras urbanas e rurais.</p>
+                        </div>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_backhoe_title">Retroescavadeiras</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_backhoe_cap">Versatilidade</p>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_backhoe_cap">4 x 4</p>
                     </div>
                     <ul class="hidden">
                         <li data-i18n="equip_backhoe_li1">Escavação precisa</li>
@@ -1893,13 +1909,13 @@
                 equip_dump_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta capacidade de carga',
                 equip_dump_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Reforçado para mineração',
                 equip_dump_full_title: 'Caminhão VW CONSTELLATION 24.260 6x2 (BASCULANTE 14m³)',
-                equip_dump_full_desc: 'Caminhão Volkswagen Constellation 24.260 6x2 equipado com caçamba basculante de 14m³, ideal para transporte de agregados, terraplenagem e mineração com alta produtividade.',
+                equip_dump_full_desc: 'O conjunto é formado pelo caminhão VW Constellation 24.260 6x2 equipado com caçamba basculante de 14m³, ideal para transporte de agregados, terraplenagem e mineração com alta produtividade.',
                 equip_dump_truck_title: 'Principais Características do Caminhão',
-                equip_dump_truck_specs: 'Modelo: VW CONSTELLATION 24.260 - 6x2;Motor: MAN D08 36 260 (Tecnologia EGR);Potência: 256 cv @ 2.300 rpm;Torque: 900 Nm @ 1.100 - 1.800 rpm;Câmbio: Eaton FS 6406-B (Manual, 6 marchas);PBT Homologado: 23.000 kg;CMT: 35.000 kg;Capacidade de Carga Útil + Carroceria: ~16.500 kg',
+                equip_dump_truck_specs: 'Modelo: VW CONSTELLATION 24.260 - 6x2;Motor: MAN D08 36 260 (Tecnologia EGR - Dispensa Arla 32);Potência: 256 cv @ 2.300 rpm;Torque: 900 Nm @ 1.100 - 1.800 rpm;Câmbio: Eaton FS 6406-B (Manual, 6 marchas);PBT Homologado: 23.000 kg;CMT: 35.000 kg;Carga Útil + Carroceria: ~16.500 kg',
                 equip_dump_crane_title: 'Equipamento Basculante (Caçamba)',
-                equip_dump_crane_specs: 'Volume Nominal: 14 m³;Material: Aço estrutural de alta resistência;Sistema Hidráulico: Cilindro frontal ou central;Suspensão Dianteira: Molas parabólicas com amortecedores;Suspensão Traseira: Eixo rígido em tandem',
-                equip_dump_diff_title: 'Diferenciais do Conjunto',
-                equip_dump_diff_specs: 'Motor MAN com tecnologia EGR (Dispensa Arla 32);Alta capacidade de carga útil;Robustez comprovada em mineração;Sistema de freios com ABS e EBD',
+                equip_dump_crane_specs: 'Volume Nominal: 14 m³;Material: Aço estrutural de alta resistência;Sistema Hidráulico: Cilindro frontal ou central;Entre-eixos: 5.207 mm;Tanque Combustível: 275 litros (Plástico);Rodas e Pneus: 275/80 R22.5',
+                equip_dump_diff_title: 'Segurança e Diferenciais',
+                equip_dump_diff_specs: 'Freios a Ar com ABS e EBD;Freio Motor: MAN Exhaust Valve Brake (EVB);Suspensão Dianteira: Molas parabólicas;Suspensão Traseira: Eixo rígido em tandem;Tecnologia EGR (Dispensa Arla 32);Alta capacidade de carga útil',
                 equip_lowbed_alt: 'Caminhão Prancha',
                 equip_lowbed_title: 'Caminhão Prancha',
                 equip_lowbed_cap: 'Reto e Rebaixado',
@@ -1918,13 +1934,21 @@
                 equip_excav_alt: 'Escavadeira',
                 equip_excav_title: 'Escavadeiras',
                 equip_excav_desc: 'Hidráulicas e Mini Escavadeiras para diversos tipos de obra',
-                equip_backhoe_alt: 'Aluguel de Retroescavadeira em Petrolina e Juazeiro',
+                equip_backhoe_alt: 'Aluguel de Retroescavadeira JCB 3CX 4x4',
                 equip_backhoe_title: 'Retroescavadeiras',
-                equip_backhoe_cap: 'Versatilidade',
-                equip_backhoe_desc: 'Locação de retroescavadeiras para obras no Vale do São Francisco, Juazeiro e Petrolina.',
-                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Escavação precisa',
-                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Carregamento ágil',
-                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Tração 4x4',
+                equip_backhoe_cap: '4 x 4',
+                equip_backhoe_desc: 'A retroescavadeira JCB 3CX é um equipamento líder de mercado, projetado para alta produtividade e economia.',
+                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Escavação de 5,64m',
+                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Tração 4x4',
+                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Motor JCB 92hp',
+                equip_backhoe_full_title: 'Unidade: Retroescavadeira JCB 3CX',
+                equip_backhoe_full_desc: 'A retroescavadeira JCB 3CX é projetada para alta produtividade e economia, apresentando motor JCB Dieselmax de 92 hp e profundidade de escavação superior. Equipada com tração 4x4, oferece comandos ergonômicos e manutenção simplificada.',
+                equip_backhoe_truck_title: 'Ficha Técnica Resumida - JCB 3CX',
+                equip_backhoe_truck_specs: 'Motor: JCB Dieselmax 444, Mecânico, 92 hp (Turbo);Profundidade Máxima de Escavação: 5,64 metros;Força de Excavación da Caçamba: 6.324 kgf;Força de Desagregação da Carregadeira: 6.170 kgf;Velocidade Máxima: 40 a 48 km/h;Peso Operacional: 6.674 a 7.000 kg;Tanque de Diesel: 130 a 150L',
+                equip_backhoe_crane_title: 'Destaques e Recursos',
+                equip_backhoe_crane_specs: 'Eficiência: Alto torque em baixas rotações;Manutenção: Pontos de verificação ao nível do solo;Cabine: Ampla com ar-condicionado e suspensão;Versatilidade: Bomba hidráulica de alto desempenho;Durabilidade: Estruturas reforçadas',
+                equip_backhoe_diff_title: 'Diferenciais JCB',
+                equip_backhoe_diff_specs: 'Tração 4x4 de série;Comandos ergonômicos;Compatibilidade com caçamba 6em1;Sistema de monitoramento integrado',
                 equip_forklift_alt: 'Locação de Empilhadeira em Juazeiro e Petrolina',
                 equip_forklift_title: 'Empilhadeira',
                 equip_forklift_cap: 'Logística Industrial',
@@ -2153,13 +2177,13 @@
                 equip_dump_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>High load capacity',
                 equip_dump_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Reinforced for mining',
                 equip_dump_full_title: 'VW CONSTELLATION 24.260 6x2 TRUCK (14m³ DUMP)',
-                equip_dump_full_desc: 'Volkswagen Constellation 24.260 6x2 truck equipped with a 14m³ dump body, ideal for aggregate transport, earthmoving, and mining with high productivity.',
+                equip_dump_full_desc: 'The unit consists of a VW Constellation 24.260 6x2 truck equipped with a 14m³ dump body, ideal for aggregate transport, earthmoving, and mining with high productivity.',
                 equip_dump_truck_title: 'Truck Key Features',
-                equip_dump_truck_specs: 'Model: VW CONSTELLATION 24.260 - 6x2;Engine: MAN D08 36 260 (EGR Technology);Power: 256 hp @ 2,300 rpm;Torque: 900 Nm @ 1,100 - 1,800 rpm;Transmission: Eaton FS 6406-B (Manual, 6 speeds);GVW: 23,000 kg;GCW: 35,000 kg;Payload + Body Capacity: ~16,500 kg',
+                equip_dump_truck_specs: 'Model: VW CONSTELLATION 24.260 - 6x2;Engine: MAN D08 36 260 (EGR Technology - No AdBlue needed);Power: 256 hp @ 2,300 rpm;Torque: 900 Nm @ 1,100 - 1,800 rpm;Transmission: Eaton FS 6406-B (Manual, 6 speeds);GVW: 23,000 kg;GCW: 35,000 kg;Payload + Body Capacity: ~16,500 kg',
                 equip_dump_crane_title: 'Dump Equipment (Body)',
-                equip_dump_crane_specs: 'Nominal Volume: 14 m³;Material: High-strength structural steel;Hydraulic System: Front or central cylinder;Front Suspension: Parabolic springs with dampers;Rear Suspension: Rigid tandem axle',
-                equip_dump_diff_title: 'Unit Differentials',
-                equip_dump_diff_specs: 'MAN engine with EGR technology (No AdBlue needed);High payload capacity;Proven robustness in mining;Brake system with ABS and EBD',
+                equip_dump_crane_specs: 'Nominal Volume: 14 m³;Material: High-strength structural steel;Hydraulic System: Front or central cylinder;Wheelbase: 5,207 mm;Fuel Tank: 275 liters (Plastic);Wheels and Tires: 275/80 R22.5',
+                equip_dump_diff_title: 'Safety and Differentials',
+                equip_dump_diff_specs: 'Air Brakes with ABS and EBD;Engine Brake: MAN Exhaust Valve Brake (EVB);Front Suspension: Parabolic springs;Rear Suspension: Rigid tandem axle;EGR Technology (No AdBlue needed);High payload capacity',
                 equip_lowbed_alt: 'Lowbed Truck',
                 equip_lowbed_title: 'Lowbed Truck',
                 equip_lowbed_cap: 'Flat and Lowbed',
@@ -2167,6 +2191,21 @@
                 equip_lowbed_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Extendable decks',
                 equip_lowbed_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Special loads',
                 equip_lowbed_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Low-profile deck',
+                equip_backhoe_alt: 'JCB 3CX 4x4 Backhoe Loader Rental',
+                equip_backhoe_title: 'Backhoe Loaders',
+                equip_backhoe_cap: '4 x 4',
+                equip_backhoe_desc: 'The JCB 3CX backhoe loader is a market leader, designed for high productivity and economy.',
+                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>5.64m digging depth',
+                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>4x4 Traction',
+                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>92hp JCB Motor',
+                equip_backhoe_full_title: 'Unit: JCB 3CX Backhoe Loader',
+                equip_backhoe_full_desc: 'The JCB 3CX backhoe loader is designed for high productivity and economy, featuring a 92 hp JCB Dieselmax engine and superior digging depth. Equipped with 4x4 traction, it offers ergonomic controls and simplified maintenance.',
+                equip_backhoe_truck_title: 'Technical Summary - JCB 3CX',
+                equip_backhoe_truck_specs: 'Engine: JCB Dieselmax 444, Mechanical, 92 hp (Turbo);Max Digging Depth: 5.64 meters;Bucket Digging Force: 6,324 kgf;Loader Breakout Force: 6,170 kgf;Max Speed: 40 to 48 km/h;Operating Weight: 6,674 to 7,000 kg;Diesel Tank: 130 to 150L',
+                equip_backhoe_crane_title: 'Highlights and Features',
+                equip_backhoe_crane_specs: 'Efficiency: High torque at low RPM;Maintenance: Ground-level check points;Cab: Spacious with A/C and suspension;Versatility: High-performance hydraulic pump;Durability: Reinforced structures',
+                equip_backhoe_diff_title: 'JCB Differentials',
+                equip_backhoe_diff_specs: 'Standard 4x4 traction;Ergonomic controls;6-in-1 bucket compatibility;Integrated monitoring system',
                 equip_box_alt: 'Box Truck',
                 equip_box_title: 'Box / Dry Freight',
                 equip_box_cap: '3/4, Toco and Truck',
@@ -2178,13 +2217,21 @@
                 equip_excav_alt: 'Excavator',
                 equip_excav_title: 'Excavators',
                 equip_excav_desc: 'Hydraulic and mini excavators for multiple job types',
-                equip_backhoe_alt: 'Backhoe Loader',
+                equip_backhoe_alt: 'JCB 3CX 4x4 Backhoe Loader Rental',
                 equip_backhoe_title: 'Backhoe Loaders',
-                equip_backhoe_cap: 'Versatility',
-                equip_backhoe_desc: 'Versatility in excavation and loading for urban and rural works.',
-                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Precise excavation',
-                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Fast loading',
-                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>4x4 Traction',
+                equip_backhoe_cap: '4 x 4',
+                equip_backhoe_desc: 'The JCB 3CX backhoe loader is a market leader, designed for high productivity and economy.',
+                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>5.64m digging depth',
+                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>4x4 Traction',
+                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>92hp JCB Motor',
+                equip_backhoe_full_title: 'Unit: JCB 3CX Backhoe Loader',
+                equip_backhoe_full_desc: 'The JCB 3CX backhoe loader is designed for high productivity and economy, featuring a 92 hp JCB Dieselmax engine and superior digging depth. Equipped with 4x4 traction, it offers ergonomic controls and simplified maintenance.',
+                equip_backhoe_truck_title: 'Technical Summary - JCB 3CX',
+                equip_backhoe_truck_specs: 'Engine: JCB Dieselmax 444, Mechanical, 92 hp (Turbo);Max Digging Depth: 5.64 meters;Bucket Digging Force: 6,324 kgf;Loader Breakout Force: 6,170 kgf;Max Speed: 40 to 48 km/h;Operating Weight: 6,674 to 7,000 kg;Diesel Tank: 130 to 150L',
+                equip_backhoe_crane_title: 'Highlights and Features',
+                equip_backhoe_crane_specs: 'Efficiency: High torque at low RPM;Maintenance: Ground-level check points;Cab: Spacious with A/C and suspension;Versatility: High-performance hydraulic pump;Durability: Reinforced structures',
+                equip_backhoe_diff_title: 'JCB Differentials',
+                equip_backhoe_diff_specs: 'Standard 4x4 traction;Ergonomic controls;6-in-1 bucket compatibility;Integrated monitoring system',
                 equip_forklift_alt: 'Forklift',
                 equip_forklift_title: 'Forklift',
                 equip_forklift_cap: 'Industrial Logistics',
@@ -2413,13 +2460,13 @@
                 equip_dump_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta capacidad de carga',
                 equip_dump_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Reforzado para minería',
                 equip_dump_full_title: 'Camión VW CONSTELLATION 24.260 6x2 (VOLQUETE 14m³)',
-                equip_dump_full_desc: 'Camión Volkswagen Constellation 24.260 6x2 equipado con tolva basculante de 14m³, ideal para transporte de agregados, movimiento de tierras y minería con alta productividad.',
+                equip_dump_full_desc: 'El conjunto está formado por el camión VW Constellation 24.260 6x2 equipado con tolva basculante de 14m³, ideal para transporte de agregados, movimiento de tierras y minería con alta productividad.',
                 equip_dump_truck_title: 'Características Principales del Camión',
-                equip_dump_truck_specs: 'Modelo: VW CONSTELLATION 24.260 - 6x2;Motor: MAN D08 36 260 (Tecnología EGR);Potencia: 256 cv @ 2.300 rpm;Torque: 900 Nm @ 1.100 - 1.800 rpm;Transmisión: Eaton FS 6406-B (Manual, 6 marchas);PBT: 23.000 kg;CMT: 35.000 kg;Capacidad de Carga Útil + Carrocería: ~16.500 kg',
+                equip_dump_truck_specs: 'Modelo: VW CONSTELLATION 24.260 - 6x2;Motor: MAN D08 36 260 (Tecnología EGR - No requiere Urea);Potencia: 256 cv @ 2.300 rpm;Torque: 900 Nm @ 1.100 - 1.800 rpm;Transmisión: Eaton FS 6406-B (Manual, 6 marchas);PBT: 23.000 kg;CMT: 35.000 kg;Carga Útil + Carrocería: ~16.500 kg',
                 equip_dump_crane_title: 'Equipo Basculante (Tolva)',
-                equip_dump_crane_specs: 'Volumen Nominal: 14 m³;Material: Acero estructural de alta resistencia;Sistema Hidráulico: Cilindro frontal o central;Suspensión Delantera: Muelles parabólicos con amortiguadores;Suspensión Trasera: Eje rígido en tándem',
-                equip_dump_diff_title: 'Diferenciales del Conjunto',
-                equip_dump_diff_specs: 'Motor MAN con tecnología EGR (No requiere Urea/AdBlue);Alta capacidad de carga útil;Robustez probada en minería;Sistema de frenos con ABS y EBD',
+                equip_dump_crane_specs: 'Volumen Nominal: 14 m³;Material: Acero estructural de alta resistencia;Sistema Hidráulico: Cilindro frontal o central;Distancia entre ejes: 5.207 mm;Tanque de Combustible: 275 litros (Plástico);Ruedas y Neumáticos: 275/80 R22.5',
+                equip_dump_diff_title: 'Seguridad y Diferenciales',
+                equip_dump_diff_specs: 'Frenos de Aire con ABS y EBD;Freno de Motor: MAN Exhaust Valve Brake (EVB);Suspensión Delantera: Muelles parabólicos;Suspensión Trasera: Eje rígido en tándem;Tecnología EGR (No requiere Urea/AdBlue);Alta capacidad de carga útil',
                 equip_lowbed_alt: 'Camión Cama Baja',
                 equip_lowbed_title: 'Camión Cama Baja',
                 equip_lowbed_cap: 'Plano y Rebajado',
@@ -2438,13 +2485,21 @@
                 equip_excav_alt: 'Excavadora',
                 equip_excav_title: 'Excavadoras',
                 equip_excav_desc: 'Excavadoras hidráulicas y mini para diversos tipos de obra',
-                equip_backhoe_alt: 'Retroexcavadora',
+                equip_backhoe_alt: 'Alquiler de Retroexcavadora JCB 3CX 4x4',
                 equip_backhoe_title: 'Retroexcavadoras',
-                equip_backhoe_cap: 'Versatilidad',
-                equip_backhoe_desc: 'Versatilidad en excavación y carga para obras urbanas y rurales.',
-                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Excavación precisa',
-                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Carga ágil',
-                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Tracción 4x4',
+                equip_backhoe_cap: '4 x 4',
+                equip_backhoe_desc: 'La retroexcavadora JCB 3CX es un equipo líder en el mercado, diseñado para alta productividad y economía.',
+                equip_backhoe_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Excavación de 5,64m',
+                equip_backhoe_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Tracción 4x4',
+                equip_backhoe_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Motor JCB 92hp',
+                equip_backhoe_full_title: 'Unidad: Retroexcavadora JCB 3CX',
+                equip_backhoe_full_desc: 'La retroexcavadora JCB 3CX está diseñada para alta productividad y economía, con motor JCB Dieselmax de 92 hp y profundidad de excavación superior. Equipada con tracción 4x4, ofrece mandos ergonómicos y mantenimiento simplificado.',
+                equip_backhoe_truck_title: 'Ficha Técnica Resumida - JCB 3CX',
+                equip_backhoe_truck_specs: 'Motor: JCB Dieselmax 444, Mecánico, 92 hp (Turbo);Profundidad Máxima de Excavación: 5,64 metros;Fuerza de Excavación del Cucharón: 6.324 kgf;Fuerza de Desgarro de la Cargadora: 6.170 kgf;Velocidad Máxima: 40 a 48 km/h;Peso Operativo: 6.674 a 7.000 kg;Tanque de Diesel: 130 a 150L',
+                equip_backhoe_crane_title: 'Aspectos Destacados y Recursos',
+                equip_backhoe_crane_specs: 'Eficiencia: Alto torque a bajas revoluciones;Mantenimiento: Puntos de verificación a nivel del suelo;Cabina: Amplia con aire acondicionado y suspensión;Versatilidad: Bomba hidráulica de alto rendimiento;Durabilidad: Estruturas reforzadas',
+                equip_backhoe_diff_title: 'Diferenciales JCB',
+                equip_backhoe_diff_specs: 'Tracción 4x4 de serie;Mandos ergonómicos;Compatibilidad con cucharón 6en1;Sistema de monitoreo integrado',
                 equip_forklift_alt: 'Montacargas',
                 equip_forklift_title: 'Montacargas',
                 equip_forklift_cap: 'Logística Industrial',
