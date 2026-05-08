@@ -1104,23 +1104,40 @@
                 </div>
 
                 <!-- Comboio -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="2.000L a 3.000L">
-                    <div class="equip-accent"></div>
-                    <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/comboio.jpg" alt="Caminhão Comboio" class="equipment-img"
-                            data-i18n="equip_comboio_alt" data-i18n-attr="alt">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
+                     data-cap="6.000L"
+                     data-images="/equipamentos/comboio_1.jpg,/equipamentos/comboio_2.jpg"
+                     data-detailed="true"
+                     data-key="comboio">
+                    
+                    <!-- Indicators -->
+                    <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                            <i class="fas fa-images text-top-yellow"></i>
+                            <span>GALERIA</span>
+                        </div>
+                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                            FICHA TÉCNICA
+                        </div>
                     </div>
-                    <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_comboio_desc">Abastecimento, lubrificação e manutenção de máquinas e equipamentos em campo.</p>
+
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/equipamentos/comboio_1.jpg" alt="Caminhão Comboio" class="equipment-img"
+                            data-i18n="equip_comboio_alt" data-i18n-attr="alt">
+                        <div class="equip-overlay">
+                            <p class="text-white font-bold text-sm" data-i18n="equip_comboio_desc">Abastecimento, lubrificação e manutenção de máquinas e equipamentos em campo com alta eficiência.</p>
+                        </div>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_comboio_title">Caminhão Comboio</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_comboio_cap">2.000L a 3.000L</p>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_comboio_cap">6.000L</p>
                     </div>
+                    <!-- hidden data for modal -->
                     <ul class="hidden">
-                        <li data-i18n="equip_comboio_li1">Transporte de combustível</li>
-                        <li data-i18n="equip_comboio_li2">Óleos e lubrificantes</li>
-                        <li data-i18n="equip_comboio_li3">Abastecimento em campo</li>
+                        <li data-i18n="equip_comboio_li1">Caminhão + Implemento</li>
+                        <li data-i18n="equip_comboio_li2">Operador certificado</li>
+                        <li data-i18n="equip_comboio_li3">Abastecimento e lubrificação</li>
                     </ul>
                 </div>
 
@@ -1836,13 +1853,21 @@
                 equip_pipa_crane_specs: 'Tanque Pipa - Transporte Água;Modelo: Multitarefas;Capacidade: 20.000L;Tomada de força direta e engrenada acionada pelo câmbio;Auto carregamento do tanque / Canhão Monitor;Barra irrigadora traseira / Aspersor traseiro rabo de pavão;Aspersor dianteiro laterais / Sistema lava ruas 2 bicos de pato frontais;Possui protetor ciclista / Para-choque traseiro homologado / Adequação chassi balanço traseiro',
                 equip_pipa_diff_title: 'Diferenciais do Conjunto',
                 equip_pipa_diff_specs: 'Alta capacidade de 20.000L;Versatilidade multitarefas;Excelente desempenho off-road 6x4;Segurança e conforto operacional',
-                equip_comboio_alt: 'Caminhão Comboio',
+                equip_comboio_alt: 'Caminhão Comboio 6.000L para Locação',
                 equip_comboio_title: 'Caminhão Comboio',
-                equip_comboio_cap: '2.000L a 3.000L',
-                equip_comboio_desc: 'Abastecimento, lubrificação e manutenção de máquinas e equipamentos em campo.',
-                equip_comboio_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Transporte de combustível',
-                equip_comboio_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Óleos e lubrificantes',
-                equip_comboio_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Abastecimento em campo',
+                equip_comboio_cap: '6.000L',
+                equip_comboio_desc: 'Abastecimento, lubrificação e manutenção de máquinas e equipamentos em campo com alta eficiência.',
+                equip_comboio_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Caminhão + Implemento',
+                equip_comboio_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Operador certificado',
+                equip_comboio_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Abastecimento e lubrificação',
+                equip_comboio_full_title: 'Caminhão MB ATEGO 1719 4x2 COMBOIO 6.000 L',
+                equip_comboio_full_desc: 'Caminhão Mercedes-Benz Atego 1719 4x2 equipado com unidade móvel de abastecimento e lubrificação (Comboio) de 6.000L, ideal para manutenção de frotas em campo com alta eficiência.',
+                equip_comboio_truck_title: 'Principais Características do Caminhão',
+                equip_comboio_truck_specs: 'Modelo: MB ATEGO 1719 - 22/23;Motor: MB OM 924 LA BlueTec5;Potência: 185 cv @ 2.200 rpm;Torque: 700 Nm @ 1.200 - 1.600 rpm;Transmissão: Manual - MB G 60-6;PBT: 16.000/17.100 kg;Tração: 4x2;Distância Entre Eixos: 4.796 mm / Comprimento total: 8.792 mm',
+                equip_comboio_crane_title: 'Informação dos Implementos',
+                equip_comboio_crane_specs: 'Comboio 6.000Lts: 2.000L Diesel 01 + 4.000L Diesel 02 (70L/min com filtro);1.100 Lts Água com bomba de lavagem em alta pressão;3 Reservatórios 220 Lts pressurizado com carretel retrátil e medidor digital;Suporte para tambor 200 Kg de graxa com carretel retrátil;Compressor de AR 20 pés e 175 Psi com carreta retrátil;Acoplamento das bombas e compressor com sistema hidráulico;Fundo EPOXI / Pintura em PU',
+                equip_comboio_diff_title: 'Diferenciais do Conjunto',
+                equip_comboio_diff_specs: 'Capacidade total de 6.000L de Diesel;Sistema completo de lubrificação e lavagem;Operação totalmente hidráulica;Manutenção preventiva eficiente em campo',
                 equip_dump_alt: 'Caminhão Basculante',
                 equip_dump_title: 'Basculante (Caçamba)',
                 equip_dump_cap: '5m³ e 10m³',
@@ -2080,13 +2105,21 @@
                 equip_pipa_crane_specs: 'Water Tank - Water Transport;Model: Multi-task;Capacity: 20,000L;Direct and geared power take-off activated by the gearbox;Auto tank loading / Monitor Cannon;Rear irrigator bar / Peacock tail rear sprayer;Side front sprayers / Street washing system 2 front duck bill nozzles;Cyclist protector / Approved rear bumper / Rear swing chassis adjustment',
                 equip_pipa_diff_title: 'Unit Differentials',
                 equip_pipa_diff_specs: 'High capacity of 20,000L;Multi-task versatility;Excellent 6x4 off-road performance;Operational safety and comfort',
-                equip_comboio_alt: 'Fuel Service Truck',
+                equip_comboio_alt: '6,000L Service Truck for Rental',
                 equip_comboio_title: 'Fuel Service Truck',
-                equip_comboio_cap: '4,000L to 6,000L',
-                equip_comboio_desc: 'Refueling, lubrication and field maintenance for machines and equipment.',
-                equip_comboio_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Fuel transport',
-                equip_comboio_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Oils and lubricants',
-                equip_comboio_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>On-site refueling',
+                equip_comboio_cap: '6,000L',
+                equip_comboio_desc: 'Refueling, lubrication and field maintenance for machines and equipment with high efficiency.',
+                equip_comboio_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Truck + Implement',
+                equip_comboio_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Certified operator',
+                equip_comboio_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Refueling and lubrication',
+                equip_comboio_full_title: 'MB ATEGO 1719 4x2 SERVICE TRUCK 6,000 L',
+                equip_comboio_full_desc: 'Mercedes-Benz Atego 1719 4x2 truck equipped with a 6,000L mobile refueling and lubrication unit (Service Truck), ideal for efficient field fleet maintenance.',
+                equip_comboio_truck_title: 'Truck Key Features',
+                equip_comboio_truck_specs: 'Model: MB ATEGO 1719 - 22/23;Engine: MB OM 924 LA BlueTec5;Power: 185 hp @ 2,200 rpm;Torque: 700 Nm @ 1,200 - 1,600 rpm;Transmission: Manual - MB G 60-6;GVW: 16,000/17,100 kg;Traction: 4x2;Wheelbase: 4,796 mm / Total length: 8,792 mm',
+                equip_comboio_crane_title: 'Implement Information',
+                equip_comboio_crane_specs: '6,000L Service Unit: 2,000L Diesel 01 + 4,000L Diesel 02 (70L/min with filter);1,100L Water with high-pressure washing pump;3 Pressurized 220L reservoirs with retractable reel and digital meter;200kg grease drum support with retractable reel;20ft 175 Psi Air Compressor with retractable reel;Hydraulic coupling for pumps and compressor;EPOXY primer / PU painting',
+                equip_comboio_diff_title: 'Unit Differentials',
+                equip_comboio_diff_specs: 'Total capacity of 6,000L of Diesel;Complete lubrication and washing system;Fully hydraulic operation;Efficient preventive maintenance in the field',
                 equip_dump_alt: 'Dump Truck',
                 equip_dump_title: 'Dump (Tipper)',
                 equip_dump_cap: '6 m³, 12 m³ and 20 m³',
@@ -2324,13 +2357,21 @@
                 equip_pipa_crane_specs: 'Tanque Cisterna - Transporte de Agua;Modelo: Multitarea;Capacidad: 20.000L;Toma de fuerza directa y engranada activada por la caja de cambios;Carga automática del tanque / Cañón Monitor;Barra irrigadora trasera / Aspersor trasero cola de pavo real;Aspersores delanteros laterales / Sistema de lavado de calles 2 boquillas de pato frontales;Protector de ciclista / Parachoques trasero homologado / Ajuste del chasis de balanceo trasero',
                 equip_pipa_diff_title: 'Diferenciales del Conjunto',
                 equip_pipa_diff_specs: 'Alta capacidad de 20.000L;Versatilidad multitarea;Excelente rendimiento off-road 6x4;Seguridad y confort operativo',
-                equip_comboio_alt: 'Camión de Servicio',
+                equip_comboio_alt: 'Camión de Servicio 6.000L para Alquiler',
                 equip_comboio_title: 'Camión de Servicio',
-                equip_comboio_cap: '4.000L a 6.000L',
-                equip_comboio_desc: 'Abastecimiento, lubricación y mantenimiento de máquinas y equipos en campo.',
-                equip_comboio_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Transporte de combustible',
-                equip_comboio_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Aceites y lubricantes',
-                equip_comboio_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Abastecimiento en campo',
+                equip_comboio_cap: '6.000L',
+                equip_comboio_desc: 'Abastecimiento, lubricación y mantenimiento de máquinas y equipos en campo con alta eficiencia.',
+                equip_comboio_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Camión + Implemento',
+                equip_comboio_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Operador certificado',
+                equip_comboio_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Abastecimiento y lubricación',
+                equip_comboio_full_title: 'Camión MB ATEGO 1719 4x2 SERVICIO 6.000 L',
+                equip_comboio_full_desc: 'Camión Mercedes-Benz Atego 1719 4x2 equipado con una unidad móvil de reabastecimiento e lubrificación (Comboio) de 6.000L, ideal para el mantenimiento eficiente de flotas en campo.',
+                equip_comboio_truck_title: 'Características Principales del Camión',
+                equip_comboio_truck_specs: 'Modelo: MB ATEGO 1719 - 22/23;Motor: MB OM 924 LA BlueTec5;Potencia: 185 cv @ 2.200 rpm;Torque: 700 Nm @ 1.200 - 1.600 rpm;Transmisión: Manual - MB G 60-6;PBT: 16.000/17.100 kg;Tracción: 4x2;Distancia entre ejes: 4.796 mm / Longitud total: 8.792 mm',
+                equip_comboio_crane_title: 'Información de los Implementos',
+                equip_comboio_crane_specs: 'Unidad de Servicio 6.000L: 2.000L Diesel 01 + 4.000L Diesel 02 (70L/min com filtro);1.100L Agua con bomba de lavado a alta pressão;3 Reservorios presurizados de 220L con carrete retráctil y medidor digital;Soporte para tambor de grasa de 200kg con carrete retráctil;Compresor de aire de 20 pies e 175 Psi con carrete retráctil;Acoplamiento hidráulico para bombas y compresor;Fondo EPOXI / Pintura en PU',
+                equip_comboio_diff_title: 'Diferenciales del Conjunto',
+                equip_comboio_diff_specs: 'Capacidad total de 6.000L de Diesel;Sistema completo de lubricación y lavado;Operación totalmente hidráulica;Mantenimiento preventivo eficiente en campo',
                 equip_dump_alt: 'Camión Volquete',
                 equip_dump_title: 'Volquete (Tolva)',
                 equip_dump_cap: '6 m³, 12 m³ y 20 m³',
