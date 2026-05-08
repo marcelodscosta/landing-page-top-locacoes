@@ -1217,18 +1217,34 @@
                 </div>
 
                 <!-- Empilhadeira -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="Logística Industrial">
-                    <div class="equip-accent"></div>
-                    <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/empilhadeira.jpg" alt="Empilhadeira" class="equipment-img"
-                            data-i18n="equip_forklift_alt" data-i18n-attr="alt">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
+                     data-cap="2 a 4 Toneladas"
+                     data-images="/equipamentos/empilhadeira_1.jpg,/equipamentos/empilhadeira_2.jpg"
+                     data-detailed="true"
+                     data-key="forklift">
+                    
+                    <!-- Indicators -->
+                    <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                            <i class="fas fa-images text-top-yellow"></i>
+                            <span>GALERIA</span>
+                        </div>
+                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                            FICHA TÉCNICA
+                        </div>
                     </div>
-                    <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_forklift_desc">Movimentação e logística industrial com agilidade e total segurança.</p>
+
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/equipamentos/empilhadeira_1.jpg" alt="Empilhadeira" class="equipment-img"
+                            data-i18n="equip_forklift_alt" data-i18n-attr="alt">
+                        <div class="equip-overlay">
+                            <p class="text-white font-bold text-sm" data-i18n="equip_forklift_desc">Movimentação e logística industrial com agilidade e total segurança.</p>
+                        </div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_forklift_title">Empilhadeira</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_forklift_cap">Logística Industrial</p>
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_forklift_title">Empilhadeiras</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_forklift_cap">2 a 4 Toneladas</p>
                     </div>
                     <ul class="hidden">
                         <li data-i18n="equip_forklift_li1">Alta manobrabilidade</li>
@@ -1949,13 +1965,21 @@
                 equip_backhoe_crane_specs: 'Eficiência: Alto torque em baixas rotações;Manutenção: Pontos de verificação ao nível do solo;Cabine: Ampla com ar-condicionado e suspensão;Versatilidade: Bomba hidráulica de alto desempenho;Durabilidade: Estruturas reforçadas',
                 equip_backhoe_diff_title: 'Diferenciais JCB',
                 equip_backhoe_diff_specs: 'Tração 4x4 de série;Comandos ergonômicos;Compatibilidade com caçamba 6em1;Sistema de monitoramento integrado',
-                equip_forklift_alt: 'Locação de Empilhadeira em Juazeiro e Petrolina',
-                equip_forklift_title: 'Empilhadeira',
-                equip_forklift_cap: 'Logística Industrial',
-                equip_forklift_desc: 'Movimentação e logística industrial com agilidade e total segurança em toda a região.',
-                equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta manobrabilidade',
-                equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Capacidade variável',
-                equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Ideal para galpões',
+                equip_forklift_alt: 'Locação de Empilhadeira Hangcha 4t Diesel em Juazeiro e Petrolina',
+                equip_forklift_title: 'Empilhadeiras',
+                equip_forklift_cap: '2 a 4 Toneladas',
+                equip_forklift_desc: 'A empilhadeira diesel Hangcha de 4 toneladas (Série X/XF) é projetada para trabalhos pesados, destacando-se pela robustez e economia.',
+                equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Capacidade de 4.000 kg',
+                equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Elevação até 7,0m',
+                equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Motor Diesel Ecológico',
+                equip_forklift_full_title: 'Unidade: Empilhadeira Hangcha 4,0t Diesel',
+                equip_forklift_full_desc: 'A empilhadeira diesel Hangcha de 4 toneladas (Série X/XF) é projetada para trabalhos pesados, destacando-se pela robustez, economia e conformidade ambiental. Equipada com motor diesel Xinchai 4D32R, oferece alta capacidade de elevação (até 7,0m), transmissão Powershift, centro de carga de 500mm e ergonomia superior.',
+                equip_forklift_truck_title: 'Ficha Técnica Principal - Hangcha 4,0t',
+                equip_forklift_truck_specs: 'Capacidade de Carga: 4.000 kg (4 toneladas);Centro de Carga: 500 mm;Motorização: Diesel Xinchai 4D32R (motor ecológico);Torre de Elevação: Duplex ou Triplex (até 7,0 metros);Transmissão: Powershift YQX (automática);Peso Operacional: Alta estabilidade com CG baixo',
+                equip_forklift_crane_title: 'Destaques e Aplicação',
+                equip_forklift_crane_specs: 'Ergonomia: Projetada para reduzir fadiga;Segurança: Sistemas de frenagem hidráulica;Pneus: Pneumáticos ou maciços;Acessórios: Deslocador lateral Cascade;Série: X ou XF de alta performance;Aplicação: Logística e carga/descarga em ambientes abertos',
+                equip_forklift_diff_title: 'Diferenciais Hangcha',
+                equip_forklift_diff_specs: 'Baixo custo de manutenção;Motor de alto torque e baixa emissão;Estrutura reforçada para uso severo;Visibilidade panorâmica para o operador',
                 equip_loader_alt: 'Pá Carregadeira',
                 equip_loader_title: 'Pá Carregadeira',
                 equip_loader_desc: 'Carregamento de materiais e movimentação',
@@ -2232,13 +2256,21 @@
                 equip_backhoe_crane_specs: 'Efficiency: High torque at low RPM;Maintenance: Ground-level check points;Cab: Spacious with A/C and suspension;Versatility: High-performance hydraulic pump;Durability: Reinforced structures',
                 equip_backhoe_diff_title: 'JCB Differentials',
                 equip_backhoe_diff_specs: 'Standard 4x4 traction;Ergonomic controls;6-in-1 bucket compatibility;Integrated monitoring system',
-                equip_forklift_alt: 'Forklift',
-                equip_forklift_title: 'Forklift',
-                equip_forklift_cap: 'Industrial Logistics',
-                equip_forklift_desc: 'Industrial handling and logistics with agility and total safety.',
-                equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>High maneuverability',
-                equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Variable capacity',
-                equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Ideal for warehouses',
+                equip_forklift_alt: 'Hangcha 4t Diesel Forklift Rental',
+                equip_forklift_title: 'Forklifts',
+                equip_forklift_cap: '2 to 4 Tons',
+                equip_forklift_desc: 'The Hangcha 4-ton diesel forklift (X/XF Series) is designed for heavy-duty work, featuring robustness and economy.',
+                equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>4,000 kg Capacity',
+                equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Lift up to 7.0m',
+                equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Eco Diesel Engine',
+                equip_forklift_full_title: 'Unit: Hangcha 4.0t Diesel Forklift',
+                equip_forklift_full_desc: 'The Hangcha 4-ton diesel forklift (X/XF Series) is designed for heavy-duty work, standing out for its robustness, economy, and environmental compliance. Equipped with a Xinchai 4D32R diesel engine, it offers high lifting capacity (up to 7.0m), Powershift transmission, 500mm load center, and superior ergonomics.',
+                equip_forklift_truck_title: 'Main Technical Specifications - Hangcha 4.0t',
+                equip_forklift_truck_specs: 'Load Capacity: 4,000 kg (4 tons);Load Center: 500 mm;Engine: Diesel Xinchai 4D32R (Eco engine);Lift Tower: Duplex or Triplex (up to 7.0 meters);Transmission: Powershift YQX (automatic);Operating Weight: High stability with low CG',
+                equip_forklift_crane_title: 'Highlights and Application',
+                equip_forklift_crane_specs: 'Ergonomics: Designed to reduce fatigue;Safety: Hydraulic braking systems;Tires: Pneumatic or solid;Accessories: Optional Cascade side shifter;Series: High performance X or XF;Application: Logistics and loading/unloading in open environments',
+                equip_forklift_diff_title: 'Hangcha Differentials',
+                equip_forklift_diff_specs: 'Low maintenance cost;High torque and low emission engine;Reinforced structure for severe use;Panoramic visibility for the operator',
                 equip_loader_alt: 'Wheel Loader',
                 equip_loader_title: 'Wheel Loader',
                 equip_loader_desc: 'Material loading and handling',
@@ -2500,13 +2532,21 @@
                 equip_backhoe_crane_specs: 'Eficiencia: Alto torque a bajas revoluciones;Mantenimiento: Puntos de verificación a nivel del suelo;Cabina: Amplia con aire acondicionado y suspensión;Versatilidad: Bomba hidráulica de alto rendimiento;Durabilidad: Estruturas reforzadas',
                 equip_backhoe_diff_title: 'Diferenciales JCB',
                 equip_backhoe_diff_specs: 'Tracción 4x4 de serie;Mandos ergonómicos;Compatibilidad con cucharón 6en1;Sistema de monitoreo integrado',
-                equip_forklift_alt: 'Montacargas',
+                equip_forklift_alt: 'Alquiler de Montacargas Hangcha 4t Diesel',
                 equip_forklift_title: 'Montacargas',
-                equip_forklift_cap: 'Logística Industrial',
-                equip_forklift_desc: 'Movimiento y logística industrial con agilidad y total seguridad.',
-                equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta maniobrabilidad',
-                equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Capacidad variable',
-                equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Ideal para almacenes',
+                equip_forklift_cap: '2 a 4 Toneladas',
+                equip_forklift_desc: 'El montacargas diesel Hangcha de 4 toneladas (Serie X/XF) está diseñado para trabajos pesados, destacándose por su robustez y economía.',
+                equip_forklift_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Capacidad de 4.000 kg',
+                equip_forklift_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Elevación hasta 7,0m',
+                equip_forklift_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Motor Diesel Ecológico',
+                equip_forklift_full_title: 'Unidad: Montacargas Hangcha 4,0t Diesel',
+                equip_forklift_full_desc: 'El montacargas diesel Hangcha de 4 toneladas (Serie X/XF) está diseñado para trabajos pesados, destacándose por su robustez, economía y cumplimiento ambiental. Equipado con motor diesel Xinchai 4D32R, ofrece alta capacidad de elevação (hasta 7,0 m), transmisión Powershift, centro de carga de 500 mm y ergonomía superior.',
+                equip_forklift_truck_title: 'Ficha Técnica Principal - Hangcha 4,0t',
+                equip_forklift_truck_specs: 'Capacidad de Carga: 4.000 kg (4 toneladas);Centro de Carga: 500 mm;Motorización: Diesel Xinchai 4D32R (motor ecológico);Torre de Elevación: Duplex o Triplex (hasta 7,0 metros);Transmisión: Powershift YQX (automática);Peso Operativo: Alta estabilidad con CG bajo',
+                equip_forklift_crane_title: 'Aspectos Destacados y Aplicación',
+                equip_forklift_crane_specs: 'Ergonomía: Diseñada para reducir la fatiga;Seguridad: Sistemas de frenado hidráulico;Neumáticos: Neumáticos o macizos;Accesorios: Desplazador lateral Cascade opcional;Serie: X o XF de alto rendimiento;Aplicación: Logística y carga/descarga en ambientes abiertos',
+                equip_forklift_diff_title: 'Diferenciales Hangcha',
+                equip_forklift_diff_specs: 'Bajo costo de mantenimiento;Motor de alto torque y baja emisión;Estructura reforzada para uso severo;Visibilidad panorámica para el operador',
                 equip_loader_alt: 'Cargadora Frontal',
                 equip_loader_title: 'Cargadora Frontal',
                 equip_loader_desc: 'Carga de materiales y movimiento',
