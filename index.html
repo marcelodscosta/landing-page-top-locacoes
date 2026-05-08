@@ -1290,6 +1290,80 @@
                     </ul>
                 </div>
 
+                <!-- Carreta Prancha -->
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
+                     data-cap="35 a 45 toneladas"
+                     data-images="/equipamentos/carretaprancha_1.jpg,/equipamentos/carretaprancha_2.jpg"
+                     data-detailed="true"
+                     data-key="lowbed">
+                    
+                    <!-- Indicators -->
+                    <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                            <i class="fas fa-images text-top-yellow"></i>
+                            <span>GALERIA</span>
+                        </div>
+                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                            FICHA TÉCNICA
+                        </div>
+                    </div>
+
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/equipamentos/carretaprancha_1.jpg" alt="Caminhão Carreta Prancha" class="equipment-img"
+                            data-i18n="equip_lowbed_alt" data-i18n-attr="alt">
+                        <div class="equip-overlay">
+                            <p class="text-white font-bold text-sm" data-i18n="equip_lowbed_desc">Transporte de máquinas pesadas e cargas indivisíveis com segurança.</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_lowbed_title">Caminhão Carreta Prancha</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_lowbed_cap">35 a 45 toneladas</p>
+                    </div>
+                    <ul class="hidden">
+                        <li data-i18n="equip_lowbed_li1">Pranchas extensivas</li>
+                        <li data-i18n="equip_lowbed_li2">Cargas especiais</li>
+                        <li data-i18n="equip_lowbed_li3">Prancha rebaixada</li>
+                    </ul>
+                </div>
+
+                <!-- Pá Carregadeira -->
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
+                     data-cap="13.471 kg / 2,3 m³"
+                     data-images="/equipamentos/pacarregadeira_1.jpg,/equipamentos/pacarregadeira_2.jpg"
+                     data-detailed="true"
+                     data-key="loader">
+                    
+                    <!-- Indicators -->
+                    <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                            <i class="fas fa-images text-top-yellow"></i>
+                            <span>GALERIA</span>
+                        </div>
+                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                            FICHA TÉCNICA
+                        </div>
+                    </div>
+
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/equipamentos/pacarregadeira_1.jpg" alt="Pá Carregadeira" class="equipment-img"
+                            data-i18n="equip_loader_alt" data-i18n-attr="alt">
+                        <div class="equip-overlay">
+                            <p class="text-white font-bold text-sm" data-i18n="equip_loader_desc">Alta performance para operações severas e eficiência de combustível.</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_loader_title">Pá Carregadeira JCB 427ZX</h4>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_loader_cap">13.471 kg / 2,3 m³</p>
+                    </div>
+                    <ul class="hidden">
+                        <li data-i18n="equip_loader_li1">Caçamba 2,3 m³</li>
+                        <li data-i18n="equip_loader_li2">Motor Cummins 160 HP</li>
+                        <li data-i18n="equip_loader_li3">Transmissão ZF Powershift</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1971,13 +2045,21 @@
                 equip_dump_crane_specs: 'Volume Nominal: 14 m³;Material: Aço estrutural de alta resistência;Sistema Hidráulico: Cilindro frontal ou central;Entre-eixos: 5.207 mm;Tanque Combustível: 275 litros (Plástico);Rodas e Pneus: 275/80 R22.5',
                 equip_dump_diff_title: 'Segurança e Diferenciais',
                 equip_dump_diff_specs: 'Freios a Ar com ABS e EBD;Freio Motor: MAN Exhaust Valve Brake (EVB);Suspensão Dianteira: Molas parabólicas;Suspensão Traseira: Eixo rígido em tandem;Tecnologia EGR (Dispensa Arla 32);Alta capacidade de carga útil',
-                equip_lowbed_alt: 'Caminhão Prancha',
-                equip_lowbed_title: 'Caminhão Prancha',
-                equip_lowbed_cap: 'Reto e Rebaixado',
+                equip_lowbed_alt: 'Caminhão Carreta Prancha para Locação',
+                equip_lowbed_title: 'Caminhão Carreta Prancha',
+                equip_lowbed_cap: '35 a 45 toneladas',
                 equip_lowbed_desc: 'Transporte de máquinas pesadas e cargas indivisíveis com segurança.',
                 equip_lowbed_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Pranchas extensivas',
                 equip_lowbed_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Cargas especiais',
                 equip_lowbed_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Prancha rebaixada',
+                equip_lowbed_full_title: 'Unidade: Caminhão Carreta Prancha',
+                equip_lowbed_full_desc: 'Equipamento de alta resistência para transporte de cargas pesadas e indivisíveis. Construído em aço estrutural de alta resistência (ASTM A572 GR50) com pescoço tipo "Naja" (rebaixado) para melhorar a distribuição de carga.',
+                equip_lowbed_truck_title: 'Capacidade e Estrutura',
+                equip_lowbed_truck_specs: 'Capacidade Técnica: 35 a 45 toneladas (específicos até 60t);PBT: ~57 toneladas;3 eixos tubulares (13t cada);Suspensão mecânica de balancim;Suspensor pneumático no 1º eixo',
+                equip_lowbed_crane_title: 'Dimensões e Componentes',
+                equip_lowbed_crane_specs: 'Comprimento Útil: acima de 10 metros;Largura: 2.600 mm a 3.200 mm com alargadores;Assoalho: Madeira de lei (50 mm) e aço;Rampas Traseiras: Acionamento manual ou eletro-hidráulico;Freios: A ar sistema S-Came com ABS',
+                equip_lowbed_diff_title: 'Diferenciais e Itens de Série',
+                equip_lowbed_diff_specs: 'Alta capacidade técnica (até 60t);Alargadores laterais inclusos;Argolas de amarração reforçadas;Pé de apoio mecânico 2 velocidades',
                 equip_box_alt: 'Caminhão Baú',
                 equip_box_title: 'Baú / Carga Seca',
                 equip_box_cap: '3/4, Toco e Truck',
@@ -2019,9 +2101,21 @@
                 equip_forklift_crane_specs: 'Ergonomia: Projetada para reduzir fadiga;Segurança: Sistemas de frenagem hidráulica;Pneus: Pneumáticos ou maciços;Acessórios: Deslocador lateral Cascade;Série: X ou XF de alta performance;Aplicação: Logística e carga/descarga em ambientes abertos',
                 equip_forklift_diff_title: 'Diferenciais Hangcha',
                 equip_forklift_diff_specs: 'Baixo custo de manutenção;Motor de alto torque e baixa emissão;Estrutura reforçada para uso severo;Visibilidade panorâmica para o operador',
-                equip_loader_alt: 'Pá Carregadeira',
-                equip_loader_title: 'Pá Carregadeira',
-                equip_loader_desc: 'Carregamento de materiais e movimentação',
+                equip_loader_alt: 'Pá Carregadeira JCB 427ZX para Locação',
+                equip_loader_title: 'Pá Carregadeira JCB 427ZX',
+                equip_loader_cap: '13.471 kg / 2,3 m³',
+                equip_loader_desc: 'Alta performance para operações severas e eficiência de combustível.',
+                equip_loader_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Caçamba 2,3 m³',
+                equip_loader_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Motor Cummins 160 HP',
+                equip_loader_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Transmissão ZF Powershift',
+                equip_loader_full_title: 'Unidade: Pá Carregadeira JCB 427ZX',
+                equip_loader_full_desc: 'A pá carregadeira JCB 427ZX é um equipamento de alta performance com peso operacional de aproximadamente 13.471 kg. Projetada para operações severas, possui caçamba padrão de 2,3 m³ e foco em eficiência de combustível e produtividade.',
+                equip_loader_truck_title: 'Ficha Técnica Principal',
+                equip_loader_truck_specs: 'Motor: Cummins QSB 6.7 (6 cilindros);Potência Bruta: 160 HP (119 kW);Torque Máximo: 732 Nm;Transmissão: ZF Powershift (4F / 3R);Sistema Hidráulico: Bombas de pistão axial (132-264 L/min)',
+                equip_loader_crane_title: 'Capacidades e Desempenho',
+                equip_loader_crane_specs: 'Peso Operacional: 13.471 kg;Capacidade da Caçamba: 2,3 m³;Carga de Tombamento: 8.422 kg;Foco em eficiência de combustível',
+                equip_loader_diff_title: 'Diferenciais JCB',
+                equip_loader_diff_specs: 'Motor Cummins gerenciamento eletrônico;Transmissão ZF de alta durabilidade;Ciclos de trabalho rápidos;Ergonomia e visibilidade superior',
                 equip_grader_alt: 'Motoniveladora',
                 equip_grader_title: 'Motoniveladora',
                 equip_grader_desc: 'Nivelamento e acabamento de estradas',
@@ -2255,13 +2349,21 @@
                 equip_dump_crane_specs: 'Nominal Volume: 14 m³;Material: High-strength structural steel;Hydraulic System: Front or central cylinder;Wheelbase: 5,207 mm;Fuel Tank: 275 liters (Plastic);Wheels and Tires: 275/80 R22.5',
                 equip_dump_diff_title: 'Safety and Differentials',
                 equip_dump_diff_specs: 'Air Brakes with ABS and EBD;Engine Brake: MAN Exhaust Valve Brake (EVB);Front Suspension: Parabolic springs;Rear Suspension: Rigid tandem axle;EGR Technology (No AdBlue needed);High payload capacity',
-                equip_lowbed_alt: 'Lowbed Truck',
+                equip_lowbed_alt: 'Lowbed Truck for Rental',
                 equip_lowbed_title: 'Lowbed Truck',
-                equip_lowbed_cap: 'Flat and Lowbed',
+                equip_lowbed_cap: '35 to 45 tons',
                 equip_lowbed_desc: 'Safe transport of heavy machinery and indivisible loads.',
                 equip_lowbed_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Extendable decks',
                 equip_lowbed_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Special loads',
                 equip_lowbed_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Low-profile deck',
+                equip_lowbed_full_title: 'Unit: Lowbed Truck',
+                equip_lowbed_full_desc: 'High-strength equipment for transporting heavy and indivisible loads. Built with high-strength structural steel (ASTM A572 GR50) with "Gooseneck" (lowered) design to improve load distribution.',
+                equip_lowbed_truck_title: 'Capacity and Structure',
+                equip_lowbed_truck_specs: 'Technical Capacity: 35 to 45 tons (specific models up to 60t);GVW: ~57 tons;3 tubular axles (13t each);Mechanical rocker suspension;Pneumatic lift on 1st axle',
+                equip_lowbed_crane_title: 'Dimensions and Components',
+                equip_lowbed_crane_specs: 'Useful Length: over 10 meters;Width: 2,600 mm to 3,200 mm with wideners;Floor: Hardwood (50 mm) and steel;Rear Ramps: Manual or electro-hydraulic operation;Brakes: S-Came air system with ABS',
+                equip_lowbed_diff_title: 'Differentials and Standard Items',
+                equip_lowbed_diff_specs: 'High technical capacity (up to 60t);Side wideners included;Reinforced lashing rings;2-speed mechanical landing gear',
                 equip_backhoe_alt: 'JCB 3CX 4x4 Backhoe Loader Rental',
                 equip_backhoe_title: 'Backhoe Loaders',
                 equip_backhoe_cap: '4 x 4',
@@ -2318,9 +2420,21 @@
                 equip_forklift_crane_specs: 'Ergonomics: Designed to reduce fatigue;Safety: Hydraulic braking systems;Tires: Pneumatic or solid;Accessories: Optional Cascade side shifter;Series: High performance X or XF;Application: Logistics and loading/unloading in open environments',
                 equip_forklift_diff_title: 'Hangcha Differentials',
                 equip_forklift_diff_specs: 'Low maintenance cost;High torque and low emission engine;Reinforced structure for severe use;Panoramic visibility for the operator',
-                equip_loader_alt: 'Wheel Loader',
-                equip_loader_title: 'Wheel Loader',
-                equip_loader_desc: 'Material loading and handling',
+                equip_loader_alt: 'JCB 427ZX Wheel Loader for Rental',
+                equip_loader_title: 'JCB 427ZX Wheel Loader',
+                equip_loader_cap: '13,471 kg / 2.3 m³',
+                equip_loader_desc: 'High performance for severe operations and fuel efficiency.',
+                equip_loader_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>2.3 m³ Bucket',
+                equip_loader_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>160 HP Cummins Motor',
+                equip_loader_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>ZF Powershift Transmission',
+                equip_loader_full_title: 'Unit: JCB 427ZX Wheel Loader',
+                equip_loader_full_desc: 'The JCB 427ZX wheel loader is a high-performance machine with an operating weight of approximately 13,471 kg. Designed for severe operations, it features a standard 2.3 m³ bucket and focuses on fuel efficiency and productivity.',
+                equip_loader_truck_title: 'Main Technical Data',
+                equip_loader_truck_specs: 'Engine: Cummins QSB 6.7 (6 cylinders);Gross Power: 160 HP (119 kW);Max Torque: 732 Nm;Transmission: ZF Powershift (4F / 3R);Hydraulic System: Axial piston pumps (132-264 L/min)',
+                equip_loader_crane_title: 'Capacities and Performance',
+                equip_loader_crane_specs: 'Operating Weight: 13,471 kg;Bucket Capacity: 2.3 m³;Tipping Load: 8,422 kg;Fuel efficiency focus',
+                equip_loader_diff_title: 'JCB Differentials',
+                equip_loader_diff_specs: 'Cummins engine with electronic management;High-durability ZF transmission;Fast work cycles;Superior ergonomics and visibility',
                 equip_grader_alt: 'Motor Grader',
                 equip_grader_title: 'Motor Grader',
                 equip_grader_desc: 'Road leveling and finishing',
@@ -2554,13 +2668,21 @@
                 equip_dump_crane_specs: 'Volumen Nominal: 14 m³;Material: Acero estructural de alta resistencia;Sistema Hidráulico: Cilindro frontal o central;Distancia entre ejes: 5.207 mm;Tanque de Combustible: 275 litros (Plástico);Ruedas y Neumáticos: 275/80 R22.5',
                 equip_dump_diff_title: 'Seguridad y Diferenciales',
                 equip_dump_diff_specs: 'Frenos de Aire con ABS y EBD;Freno de Motor: MAN Exhaust Valve Brake (EVB);Suspensión Delantera: Muelles parabólicos;Suspensión Trasera: Eje rígido en tándem;Tecnología EGR (No requiere Urea/AdBlue);Alta capacidad de carga útil',
-                equip_lowbed_alt: 'Camión Cama Baja',
-                equip_lowbed_title: 'Camión Cama Baja',
-                equip_lowbed_cap: 'Plano y Rebajado',
+                equip_lowbed_alt: 'Camión Cama Baja para Alquiler',
+                equip_lowbed_title: 'Camión Cama Baja (Prancha)',
+                equip_lowbed_cap: '35 a 45 toneladas',
                 equip_lowbed_desc: 'Transporte seguro de maquinaria pesada y cargas indivisibles.',
                 equip_lowbed_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Plataformas extensibles',
                 equip_lowbed_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Cargas especiales',
                 equip_lowbed_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Plataforma rebajada',
+                equip_lowbed_full_title: 'Unidad: Camión Cama Baja',
+                equip_lowbed_full_desc: 'Equipo de alta resistencia para el transporte de cargas pesadas e indivisibles. Construido en acero estructural de alta resistencia (ASTM A572 GR50) con cuello tipo "Naja" (rebajado) para mejorar la distribución de carga.',
+                equip_lowbed_truck_title: 'Capacidad y Estructura',
+                equip_lowbed_truck_specs: 'Capacidad Técnica: 35 a 45 toneladas (específicos hasta 60t);PBT: ~57 toneladas;3 ejes tubulares (13t cada uno);Suspensión mecánica de balancín;Suspensión neumática en el 1er eje',
+                equip_lowbed_crane_title: 'Dimensiones y Componentes',
+                equip_lowbed_crane_specs: 'Longitud útil: más de 10 metros;Ancho: 2.600 mm a 3.200 mm con ensanchadores;Piso: Madera de ley (50 mm) y acero;Rampas traseras: Accionamiento manual o electrohidráulico;Frenos: Sistema de aire S-Came con ABS',
+                equip_lowbed_diff_title: 'Diferenciales y Elementos de Serie',
+                equip_lowbed_diff_specs: 'Alta capacidad técnica (hasta 60t);Ensanchadores laterales incluidos;Anillos de amarre reforzados;Pies de apoyo mecánicos de 2 velocidades',
                 equip_box_alt: 'Camión Caja',
                 equip_box_title: 'Caja / Carga Seca',
                 equip_box_cap: '3/4, Toco y Truck',
@@ -2617,9 +2739,21 @@
                 equip_telehandler_crane_specs: 'Estabilizadores: Esenciales para la máxima estabilidad;Enganche Rápido Q-Fit: Cambio rápido de implementos;Confort: Cabina espaciosa con aire acondicionado;Seguridad: Sistema de nivelación de carga SWAY;Versatilidad: Sustituye a la cargadora y la grúa;Maniobrabilidad: Radio de giro de 4,1 m',
                 equip_telehandler_diff_title: 'Dimensiones y Capacidades',
                 equip_telehandler_diff_specs: 'Altura Total: 2,69 m;Anchura Total: 2,44 m;Longitud Total: 5,08 m;Capacidad a Altura Máxima: 2.500 kg;Capacidad a Alcance Máximo: 600 kg;Diferencial autoblocante para terrenos severos',
-                equip_loader_alt: 'Cargadora Frontal',
-                equip_loader_title: 'Cargadora Frontal',
-                equip_loader_desc: 'Carga de materiales y movimiento',
+                equip_loader_alt: 'Pala Cargadora JCB 427ZX para Alquiler',
+                equip_loader_title: 'Pala Cargadora JCB 427ZX',
+                equip_loader_cap: '13.471 kg / 2,3 m³',
+                equip_loader_desc: 'Alto rendimiento para operaciones severas y eficiencia de combustible.',
+                equip_loader_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Cucharón de 2,3 m³',
+                equip_loader_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Motor Cummins 160 HP',
+                equip_loader_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Transmisión ZF Powershift',
+                equip_loader_full_title: 'Unidad: Pala Cargadora JCB 427ZX',
+                equip_loader_full_desc: 'La pala cargadora JCB 427ZX es un equipo de alto rendimiento con un peso operativo de aproximadamente 13.471 kg. Diseñada para operaciones severas, posee un cucharón estándar de 2,3 m³ y se enfoca en la eficiencia de combustible y productividad.',
+                equip_loader_truck_title: 'Ficha Técnica Principal',
+                equip_loader_truck_specs: 'Motor: Cummins QSB 6.7 (6 cilindros);Potencia Bruta: 160 HP (119 kW);Torque Máximo: 732 Nm;Transmisión: ZF Powershift (4F / 3R);Sistema Hidráulico: Bombas de pistón axial (132-264 L/min)',
+                equip_loader_crane_title: 'Capacidades y Rendimiento',
+                equip_loader_crane_specs: 'Peso Operativo: 13.471 kg;Capacidad del Cucharón: 2,3 m³;Carga de Vuelco: 8.422 kg;Enfoque en la eficiencia de combustible',
+                equip_loader_diff_title: 'Diferenciales JCB',
+                equip_loader_diff_specs: 'Motor Cummins con gestión electrónica;Transmisión ZF de alta durabilidad;Ciclos de trabajo rápidos;Ergonomía y visibilidad superior',
                 equip_grader_alt: 'Motoniveladora',
                 equip_grader_title: 'Motoniveladora',
                 equip_grader_desc: 'Nivelación y acabado de caminos',
