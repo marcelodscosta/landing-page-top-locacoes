@@ -1142,22 +1142,39 @@
                 </div>
 
                 <!-- Basculante -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="5m³ e 10m³">
-                    <div class="equip-accent"></div>
-                    <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/cacamba.jpg" alt="Caminhão Basculante" class="equipment-img"
-                            data-i18n="equip_dump_alt" data-i18n-attr="alt">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
+                     data-cap="10 a 20m³"
+                     data-images="/equipamentos/cacamba_1.jpg,/equipamentos/cacamba_2.jpg"
+                     data-detailed="true"
+                     data-key="dump">
+                    
+                    <!-- Indicators -->
+                    <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                            <i class="fas fa-images text-top-yellow"></i>
+                            <span>GALERIA</span>
+                        </div>
+                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                            FICHA TÉCNICA
+                        </div>
                     </div>
-                    <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_dump_desc">Terraplenagem, mineração e transporte de materiais a granel.</p>
+
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/equipamentos/cacamba_1.jpg" alt="Caminhão Basculante" class="equipment-img"
+                            data-i18n="equip_dump_alt" data-i18n-attr="alt">
+                        <div class="equip-overlay">
+                            <p class="text-white font-bold text-sm" data-i18n="equip_dump_desc">Terraplenagem, mineração e transporte de materiais a granel com robustez e agilidade.</p>
+                        </div>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_dump_title">Basculante (Caçamba)</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_dump_cap">5m³ e 10m³</p>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_dump_cap">10 a 20m³</p>
                     </div>
+                    <!-- hidden data for modal -->
                     <ul class="hidden">
                         <li data-i18n="equip_dump_li1">Descarga hidráulica</li>
-                        <li data-i18n="equip_dump_li2">Alta capacidade</li>
+                        <li data-i18n="equip_dump_li2">Alta capacidade de carga</li>
                         <li data-i18n="equip_dump_li3">Reforçado para mineração</li>
                     </ul>
                 </div>
@@ -1868,13 +1885,21 @@
                 equip_comboio_crane_specs: 'Comboio 6.000Lts: 2.000L Diesel 01 + 4.000L Diesel 02 (70L/min com filtro);1.100 Lts Água com bomba de lavagem em alta pressão;3 Reservatórios 220 Lts pressurizado com carretel retrátil e medidor digital;Suporte para tambor 200 Kg de graxa com carretel retrátil;Compressor de AR 20 pés e 175 Psi com carreta retrátil;Acoplamento das bombas e compressor com sistema hidráulico;Fundo EPOXI / Pintura em PU',
                 equip_comboio_diff_title: 'Diferenciais do Conjunto',
                 equip_comboio_diff_specs: 'Capacidade total de 6.000L de Diesel;Sistema completo de lubrificação e lavagem;Operação totalmente hidráulica;Manutenção preventiva eficiente em campo',
-                equip_dump_alt: 'Caminhão Basculante',
+                equip_dump_alt: 'Caminhão Basculante (Caçamba) para Locação',
                 equip_dump_title: 'Basculante (Caçamba)',
-                equip_dump_cap: '5m³ e 10m³',
-                equip_dump_desc: 'Terraplenagem, mineração e transporte de materiais a granel.',
+                equip_dump_cap: '10 a 20m³',
+                equip_dump_desc: 'Terraplenagem, mineração e transporte de materiais a granel com robustez e agilidade.',
                 equip_dump_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Descarga hidráulica',
-                equip_dump_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta capacidade',
+                equip_dump_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta capacidade de carga',
                 equip_dump_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Reforçado para mineração',
+                equip_dump_full_title: 'Caminhão VW CONSTELLATION 24.260 6x2 (BASCULANTE 14m³)',
+                equip_dump_full_desc: 'Caminhão Volkswagen Constellation 24.260 6x2 equipado com caçamba basculante de 14m³, ideal para transporte de agregados, terraplenagem e mineração com alta produtividade.',
+                equip_dump_truck_title: 'Principais Características do Caminhão',
+                equip_dump_truck_specs: 'Modelo: VW CONSTELLATION 24.260 - 6x2;Motor: MAN D08 36 260 (Tecnologia EGR);Potência: 256 cv @ 2.300 rpm;Torque: 900 Nm @ 1.100 - 1.800 rpm;Câmbio: Eaton FS 6406-B (Manual, 6 marchas);PBT Homologado: 23.000 kg;CMT: 35.000 kg;Capacidade de Carga Útil + Carroceria: ~16.500 kg',
+                equip_dump_crane_title: 'Equipamento Basculante (Caçamba)',
+                equip_dump_crane_specs: 'Volume Nominal: 14 m³;Material: Aço estrutural de alta resistência;Sistema Hidráulico: Cilindro frontal ou central;Suspensão Dianteira: Molas parabólicas com amortecedores;Suspensão Traseira: Eixo rígido em tandem',
+                equip_dump_diff_title: 'Diferenciais do Conjunto',
+                equip_dump_diff_specs: 'Motor MAN com tecnologia EGR (Dispensa Arla 32);Alta capacidade de carga útil;Robustez comprovada em mineração;Sistema de freios com ABS e EBD',
                 equip_lowbed_alt: 'Caminhão Prancha',
                 equip_lowbed_title: 'Caminhão Prancha',
                 equip_lowbed_cap: 'Reto e Rebaixado',
@@ -2120,13 +2145,21 @@
                 equip_comboio_crane_specs: '6,000L Service Unit: 2,000L Diesel 01 + 4,000L Diesel 02 (70L/min with filter);1,100L Water with high-pressure washing pump;3 Pressurized 220L reservoirs with retractable reel and digital meter;200kg grease drum support with retractable reel;20ft 175 Psi Air Compressor with retractable reel;Hydraulic coupling for pumps and compressor;EPOXY primer / PU painting',
                 equip_comboio_diff_title: 'Unit Differentials',
                 equip_comboio_diff_specs: 'Total capacity of 6,000L of Diesel;Complete lubrication and washing system;Fully hydraulic operation;Efficient preventive maintenance in the field',
-                equip_dump_alt: 'Dump Truck',
+                equip_dump_alt: 'Dump Truck for Rental',
                 equip_dump_title: 'Dump (Tipper)',
-                equip_dump_cap: '6 m³, 12 m³ and 20 m³',
-                equip_dump_desc: 'Earthworks, mining and bulk material transport.',
-                equip_dump_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Hydraulic dumping',
-                equip_dump_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>High capacity',
+                equip_dump_cap: '10 to 20m³',
+                equip_dump_desc: 'Earthmoving, mining and transport of bulk materials with robustness and agility.',
+                equip_dump_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Hydraulic discharge',
+                equip_dump_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>High load capacity',
                 equip_dump_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Reinforced for mining',
+                equip_dump_full_title: 'VW CONSTELLATION 24.260 6x2 TRUCK (14m³ DUMP)',
+                equip_dump_full_desc: 'Volkswagen Constellation 24.260 6x2 truck equipped with a 14m³ dump body, ideal for aggregate transport, earthmoving, and mining with high productivity.',
+                equip_dump_truck_title: 'Truck Key Features',
+                equip_dump_truck_specs: 'Model: VW CONSTELLATION 24.260 - 6x2;Engine: MAN D08 36 260 (EGR Technology);Power: 256 hp @ 2,300 rpm;Torque: 900 Nm @ 1,100 - 1,800 rpm;Transmission: Eaton FS 6406-B (Manual, 6 speeds);GVW: 23,000 kg;GCW: 35,000 kg;Payload + Body Capacity: ~16,500 kg',
+                equip_dump_crane_title: 'Dump Equipment (Body)',
+                equip_dump_crane_specs: 'Nominal Volume: 14 m³;Material: High-strength structural steel;Hydraulic System: Front or central cylinder;Front Suspension: Parabolic springs with dampers;Rear Suspension: Rigid tandem axle',
+                equip_dump_diff_title: 'Unit Differentials',
+                equip_dump_diff_specs: 'MAN engine with EGR technology (No AdBlue needed);High payload capacity;Proven robustness in mining;Brake system with ABS and EBD',
                 equip_lowbed_alt: 'Lowbed Truck',
                 equip_lowbed_title: 'Lowbed Truck',
                 equip_lowbed_cap: 'Flat and Lowbed',
@@ -2372,13 +2405,21 @@
                 equip_comboio_crane_specs: 'Unidad de Servicio 6.000L: 2.000L Diesel 01 + 4.000L Diesel 02 (70L/min com filtro);1.100L Agua con bomba de lavado a alta pressão;3 Reservorios presurizados de 220L con carrete retráctil y medidor digital;Soporte para tambor de grasa de 200kg con carrete retráctil;Compresor de aire de 20 pies e 175 Psi con carrete retráctil;Acoplamiento hidráulico para bombas y compresor;Fondo EPOXI / Pintura en PU',
                 equip_comboio_diff_title: 'Diferenciales del Conjunto',
                 equip_comboio_diff_specs: 'Capacidad total de 6.000L de Diesel;Sistema completo de lubricación y lavado;Operación totalmente hidráulica;Mantenimiento preventivo eficiente en campo',
-                equip_dump_alt: 'Camión Volquete',
+                equip_dump_alt: 'Camión Volquete para Alquiler',
                 equip_dump_title: 'Volquete (Tolva)',
-                equip_dump_cap: '6 m³, 12 m³ y 20 m³',
-                equip_dump_desc: 'Movimiento de tierras, minería y transporte de materiales a granel.',
+                equip_dump_cap: '10 a 20m³',
+                equip_dump_desc: 'Movimiento de tierras, minería y transporte de materiales a granel con robustez y agilidad.',
                 equip_dump_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Descarga hidráulica',
-                equip_dump_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta capacidad',
+                equip_dump_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta capacidad de carga',
                 equip_dump_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Reforzado para minería',
+                equip_dump_full_title: 'Camión VW CONSTELLATION 24.260 6x2 (VOLQUETE 14m³)',
+                equip_dump_full_desc: 'Camión Volkswagen Constellation 24.260 6x2 equipado con tolva basculante de 14m³, ideal para transporte de agregados, movimiento de tierras y minería con alta productividad.',
+                equip_dump_truck_title: 'Características Principales del Camión',
+                equip_dump_truck_specs: 'Modelo: VW CONSTELLATION 24.260 - 6x2;Motor: MAN D08 36 260 (Tecnología EGR);Potencia: 256 cv @ 2.300 rpm;Torque: 900 Nm @ 1.100 - 1.800 rpm;Transmisión: Eaton FS 6406-B (Manual, 6 marchas);PBT: 23.000 kg;CMT: 35.000 kg;Capacidad de Carga Útil + Carrocería: ~16.500 kg',
+                equip_dump_crane_title: 'Equipo Basculante (Tolva)',
+                equip_dump_crane_specs: 'Volumen Nominal: 14 m³;Material: Acero estructural de alta resistencia;Sistema Hidráulico: Cilindro frontal o central;Suspensión Delantera: Muelles parabólicos con amortiguadores;Suspensión Trasera: Eje rígido en tándem',
+                equip_dump_diff_title: 'Diferenciales del Conjunto',
+                equip_dump_diff_specs: 'Motor MAN con tecnología EGR (No requiere Urea/AdBlue);Alta capacidad de carga útil;Robustez probada en minería;Sistema de frenos con ABS y EBD',
                 equip_lowbed_alt: 'Camión Cama Baja',
                 equip_lowbed_title: 'Camión Cama Baja',
                 equip_lowbed_cap: 'Plano y Rebajado',
