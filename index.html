@@ -298,7 +298,7 @@
         .equipment-card .equip-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(26,26,26,0.92) 0%, transparent 60%);
+            background: linear-gradient(to top, rgba(26, 26, 26, 0.92) 0%, transparent 60%);
             opacity: 0;
             transition: opacity 0.3s ease;
             display: flex;
@@ -316,7 +316,7 @@
         .equipment-card .equip-accent {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(212,168,67,0.15) 0%, transparent 60%);
+            background: linear-gradient(135deg, rgba(212, 168, 67, 0.15) 0%, transparent 60%);
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 5;
@@ -444,26 +444,63 @@
                 print-color-adjust: exact !important;
             }
         }
+
         /* SEO Regions Pulse */
-    @keyframes pulse-gold {
-        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 168, 67, 0.7); }
-        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 168, 67, 0); }
-        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 168, 67, 0); }
-    }
-    .pulse-marker { animation: pulse-gold 2s infinite; }
+        @keyframes pulse-gold {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(212, 168, 67, 0.7);
+            }
 
-    @keyframes pulse-subtle {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.8; transform: scale(0.98); }
-    }
-    .animate-pulse-subtle { animation: pulse-subtle 3s ease-in-out infinite; }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(212, 168, 67, 0);
+            }
 
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
-    }
-    .floating { animation: float 3s ease-in-out infinite; }
-</style>
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(212, 168, 67, 0);
+            }
+        }
+
+        .pulse-marker {
+            animation: pulse-gold 2s infinite;
+        }
+
+        @keyframes pulse-subtle {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(0.98);
+            }
+        }
+
+        .animate-pulse-subtle {
+            animation: pulse-subtle 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
 </head>
 
 <body class="bg-top-dark text-white overflow-x-hidden">
@@ -568,11 +605,7 @@
                         class="h-36 md:h-48 w-auto drop-shadow-2xl logo-img" data-i18n="logo_alt" data-i18n-attr="alt">
                 </div>
 
-                <div
-                    class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-3 py-0.5 mb-1">
-                    <span class="w-2 h-2 bg-top-yellow rounded-full animate-pulse"></span>
-                    <span class="text-sm text-gray-300" data-i18n="hero_badge">Desde 2011 no mercado</span>
-                </div>
+
                 <h1 class="font-display font-black leading-tight pt-8" data-i18n="hero_title">
                     <span class="block text-white text-lg md:text-2xl lg:text-3xl mb-3">SOLUÇÃO EM</span>
                     <span class="block gradient-text text-3xl md:text-5xl lg:text-6xl mb-8">LOCAÇÕES E
@@ -738,9 +771,9 @@
                 <div class="relative fade-in">
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl">
                         <div class="absolute inset-0 bg-gradient-to-t from-top-dark/80 to-transparent z-10"></div>
-                        <img src="/sobre_final.jpg"
-                            alt="Serviços Top Locações" class="w-full h-[500px] object-cover fleet-image"
-                            data-i18n="about_image_alt" data-i18n-attr="alt">
+                        <img src="/sobre_final.jpg" alt="Serviços Top Locações"
+                            class="w-full h-[500px] object-cover fleet-image" data-i18n="about_image_alt"
+                            data-i18n-attr="alt">
                         <div class="absolute bottom-6 left-6 z-20">
                             <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
                                 <p class="text-top-yellow font-bold text-lg" data-i18n="about_card_title">Frota
@@ -906,104 +939,126 @@
             <!-- Grid de Serviços -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
                 <!-- Locação -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer"
+                    onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
                         <img src="/servico_locacao_final.jpg" alt="Locação de Máquinas"
                             class="w-full h-full object-cover fleet-image" data-i18n="service_rental_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_rental_title">LOCAÇÃO DE MÁQUINAS E EQUIPAMENTOS</h3>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_rental_title">LOCAÇÃO DE
+                            MÁQUINAS E EQUIPAMENTOS</h3>
                         <p class="text-top-yellow text-sm" data-i18n="service_rental_sub">Frota revisada e moderna</p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="service_rental_hover">Máquinas prontas para qualquer desafio em obra.</p>
+                        <p class="text-white font-bold" data-i18n="service_rental_hover">Máquinas prontas para qualquer
+                            desafio em obra.</p>
                     </div>
                 </div>
 
                 <!-- Construção Civil -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer"
+                    onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
                         <img src="/servico_construcao_final.jpg" alt="Construção Civil"
                             class="w-full h-full object-cover fleet-image" data-i18n="service_construction_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_construction_title">CONSTRUÇÃO CIVIL</h3>
-                        <p class="text-top-yellow text-sm" data-i18n="service_construction_sub">Obras de infraestrutura</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_construction_title">CONSTRUÇÃO
+                            CIVIL</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_construction_sub">Obras de infraestrutura
+                        </p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="service_construction_hover">Projeto e execução de obras civis com padrão TOP.</p>
+                        <p class="text-white font-bold" data-i18n="service_construction_hover">Projeto e execução de
+                            obras civis com padrão TOP.</p>
                     </div>
                 </div>
 
                 <!-- Montagem Industrial -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer"
+                    onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
                         <img src="/servico_industrial_final.jpg" alt="Montagem Industrial"
                             class="w-full h-full object-cover fleet-image" data-i18n="service_industrial_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_industrial_title">MONTAGEM INDUSTRIAL</h3>
-                        <p class="text-top-yellow text-sm" data-i18n="service_industrial_sub">Estruturas e Instalações</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_industrial_title">MONTAGEM
+                            INDUSTRIAL</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_industrial_sub">Estruturas e Instalações
+                        </p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="service_industrial_hover">Montagem técnica e suporte especializado.</p>
+                        <p class="text-white font-bold" data-i18n="service_industrial_hover">Montagem técnica e suporte
+                            especializado.</p>
                     </div>
                 </div>
 
                 <!-- Transporte Rodoviário -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer"
+                    onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
                         <img src="/servico_transporte_final.jpg" alt="Transporte Rodoviário"
                             class="w-full h-full object-cover fleet-image" data-i18n="service_transport_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_transport_title">TRANSPORTE RODOVIÁRIO</h3>
-                        <p class="text-top-yellow text-sm" data-i18n="service_transport_sub">Cargas pesadas e logística</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_transport_title">TRANSPORTE
+                            RODOVIÁRIO</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_transport_sub">Cargas pesadas e logística
+                        </p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="service_transport_hover">Mobilidade e agilidade para seu projeto.</p>
+                        <p class="text-white font-bold" data-i18n="service_transport_hover">Mobilidade e agilidade para
+                            seu projeto.</p>
                     </div>
                 </div>
 
                 <!-- Terceirização -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer"
+                    onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
                         <img src="/servico_terceirizacao_final.jpg" alt="Terceirização"
-                            class="w-full h-full object-cover object-top fleet-image" data-i18n="service_outsourcing_alt"
-                            data-i18n-attr="alt">
+                            class="w-full h-full object-cover object-top fleet-image"
+                            data-i18n="service_outsourcing_alt" data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_outsourcing_title">TERCEIRIZAÇÃO DE MÃO DE OBRA</h3>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_outsourcing_title">
+                            TERCEIRIZAÇÃO DE MÃO DE OBRA</h3>
                         <p class="text-top-yellow text-sm" data-i18n="service_outsourcing_sub">Equipes qualificadas</p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="service_outsourcing_hover">Profissionais treinados em segurança e operação.</p>
+                        <p class="text-white font-bold" data-i18n="service_outsourcing_hover">Profissionais treinados em
+                            segurança e operação.</p>
                     </div>
                 </div>
 
                 <!-- Gestão Ambiental -->
-                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer" onclick="openServiceModal(this)">
+                <div class="relative group overflow-hidden rounded-2xl fade-in bg-top-gray cursor-pointer"
+                    onclick="openServiceModal(this)">
                     <div class="h-64 overflow-hidden">
                         <img src="/servico_ambiental_final.jpg" alt="Gestão Ambiental"
                             class="w-full h-full object-cover fleet-image" data-i18n="service_environmental_alt"
                             data-i18n-attr="alt">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_environmental_title">GESTÃO AMBIENTAL</h3>
-                        <p class="text-top-yellow text-sm" data-i18n="service_environmental_sub">Práticas sustentáveis</p>
+                        <h3 class="font-bold text-white text-lg mb-1" data-i18n="service_environmental_title">GESTÃO
+                            AMBIENTAL</h3>
+                        <p class="text-top-yellow text-sm" data-i18n="service_environmental_sub">Práticas sustentáveis
+                        </p>
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-top-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold" data-i18n="service_environmental_hover">Compromisso com o meio ambiente e conformidade.</p>
+                        <p class="text-white font-bold" data-i18n="service_environmental_hover">Compromisso com o meio
+                            ambiente e conformidade.</p>
                     </div>
                 </div>
             </div>
@@ -1028,19 +1083,20 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Munck -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
-                     data-cap="Até 62 toneladas métricas"
-                     data-images="/equipamentos/munck.jpg,/equipamentos/munck_2.jpg"
-                     data-detailed="true"
-                     data-key="munck">
-                    
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in"
+                    onclick="openEquipmentModal(event, this)" style="cursor:pointer;"
+                    data-cap="Até 62 toneladas métricas" data-images="/equipamentos/munck.jpg,/equipamentos/munck_2.jpg"
+                    data-detailed="true" data-key="munck">
+
                     <!-- Indicators -->
                     <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                        <div
+                            class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
                             <i class="fas fa-images text-top-yellow"></i>
                             <span>GALERIA</span>
                         </div>
-                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                        <div
+                            class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
                             FICHA TÉCNICA
                         </div>
                     </div>
@@ -1050,11 +1106,13 @@
                         <img src="/equipamentos/munck.jpg" alt="Caminhão Munck" class="equipment-img"
                             data-i18n="equip_munck_alt" data-i18n-attr="alt">
                         <div class="equip-overlay">
-                            <p class="text-white font-bold text-sm" data-i18n="equip_munck_desc">Movimentação de cargas pesadas e equipamentos com precisão e segurança.</p>
+                            <p class="text-white font-bold text-sm" data-i18n="equip_munck_desc">Movimentação de cargas
+                                pesadas e equipamentos com precisão e segurança.</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_munck_title">Munck (Guindauto)</h4>
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_munck_title">Munck (Guindauto)
+                        </h4>
                         <p class="text-top-yellow text-sm" data-i18n="equip_munck_cap">Até 62 toneladas métricas</p>
                     </div>
                     <!-- hidden data for modal -->
@@ -1066,19 +1124,20 @@
                 </div>
 
                 <!-- Pipa -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
-                     data-cap="8.000 a 20.000L"
-                     data-images="/equipamentos/pipa_1.jpg,/equipamentos/pipa_2.jpg"
-                     data-detailed="true"
-                     data-key="pipa">
-                    
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in"
+                    onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="8.000 a 20.000L"
+                    data-images="/equipamentos/pipa_1.jpg,/equipamentos/pipa_2.jpg" data-detailed="true"
+                    data-key="pipa">
+
                     <!-- Indicators -->
                     <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                        <div
+                            class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
                             <i class="fas fa-images text-top-yellow"></i>
                             <span>GALERIA</span>
                         </div>
-                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                        <div
+                            class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
                             FICHA TÉCNICA
                         </div>
                     </div>
@@ -1088,7 +1147,8 @@
                         <img src="/equipamentos/pipa_1.jpg" alt="Caminhão Pipa" class="equipment-img"
                             data-i18n="equip_pipa_alt" data-i18n-attr="alt">
                         <div class="equip-overlay">
-                            <p class="text-white font-bold text-sm" data-i18n="equip_pipa_desc">Combate a poeira, irrigação, abastecimento de água e manutenção de estradas com alto desempenho.</p>
+                            <p class="text-white font-bold text-sm" data-i18n="equip_pipa_desc">Combate a poeira,
+                                irrigação, abastecimento de água e manutenção de estradas com alto desempenho.</p>
                         </div>
                     </div>
                     <div class="p-4">
@@ -1104,19 +1164,20 @@
                 </div>
 
                 <!-- Comboio -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
-                     data-cap="4.000 a 10.000L"
-                     data-images="/equipamentos/comboio_1.jpg,/equipamentos/comboio_2.jpg"
-                     data-detailed="true"
-                     data-key="comboio">
-                    
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in"
+                    onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="4.000 a 10.000L"
+                    data-images="/equipamentos/comboio_1.jpg,/equipamentos/comboio_2.jpg" data-detailed="true"
+                    data-key="comboio">
+
                     <!-- Indicators -->
                     <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                        <div
+                            class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
                             <i class="fas fa-images text-top-yellow"></i>
                             <span>GALERIA</span>
                         </div>
-                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                        <div
+                            class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
                             FICHA TÉCNICA
                         </div>
                     </div>
@@ -1126,11 +1187,13 @@
                         <img src="/equipamentos/comboio_1.jpg" alt="Caminhão Comboio" class="equipment-img"
                             data-i18n="equip_comboio_alt" data-i18n-attr="alt">
                         <div class="equip-overlay">
-                            <p class="text-white font-bold text-sm" data-i18n="equip_comboio_desc">Abastecimento, lubrificação e manutenção de máquinas e equipamentos em campo com alta eficiência.</p>
+                            <p class="text-white font-bold text-sm" data-i18n="equip_comboio_desc">Abastecimento,
+                                lubrificação e manutenção de máquinas e equipamentos em campo com alta eficiência.</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_comboio_title">Caminhão Comboio (Melosa)</h4>
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_comboio_title">Caminhão Comboio
+                            (Melosa)</h4>
                         <p class="text-top-yellow text-sm" data-i18n="equip_comboio_cap">4.000 a 10.000L</p>
                     </div>
                     <!-- hidden data for modal -->
@@ -1142,19 +1205,20 @@
                 </div>
 
                 <!-- Basculante -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
-                     data-cap="10 a 20m³"
-                     data-images="/equipamentos/cacamba_1.jpg,/equipamentos/cacamba_2.jpg"
-                     data-detailed="true"
-                     data-key="dump">
-                    
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in"
+                    onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="10 a 20m³"
+                    data-images="/equipamentos/cacamba_1.jpg,/equipamentos/cacamba_2.jpg" data-detailed="true"
+                    data-key="dump">
+
                     <!-- Indicators -->
                     <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                        <div
+                            class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
                             <i class="fas fa-images text-top-yellow"></i>
                             <span>GALERIA</span>
                         </div>
-                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                        <div
+                            class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
                             FICHA TÉCNICA
                         </div>
                     </div>
@@ -1164,11 +1228,13 @@
                         <img src="/equipamentos/cacamba_1.jpg" alt="Caminhão Basculante" class="equipment-img"
                             data-i18n="equip_dump_alt" data-i18n-attr="alt">
                         <div class="equip-overlay">
-                            <p class="text-white font-bold text-sm" data-i18n="equip_dump_desc">Terraplenagem, mineração e transporte de materiais a granel com robustez e agilidade.</p>
+                            <p class="text-white font-bold text-sm" data-i18n="equip_dump_desc">Terraplenagem, mineração
+                                e transporte de materiais a granel com robustez e agilidade.</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_dump_title">Basculante (Caçamba)</h4>
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_dump_title">Basculante (Caçamba)
+                        </h4>
                         <p class="text-top-yellow text-sm" data-i18n="equip_dump_cap">10 a 20m³</p>
                     </div>
                     <!-- hidden data for modal -->
@@ -1180,19 +1246,20 @@
                 </div>
 
                 <!-- Retroescavadeira -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
-                     data-cap="4 x 4"
-                     data-images="/equipamentos/retroescavadeira_1.jpg,/equipamentos/retroescavadeira_2.jpg"
-                     data-detailed="true"
-                     data-key="backhoe">
-                    
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in"
+                    onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="4 x 4"
+                    data-images="/equipamentos/retroescavadeira_1.jpg,/equipamentos/retroescavadeira_2.jpg"
+                    data-detailed="true" data-key="backhoe">
+
                     <!-- Indicators -->
                     <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                        <div
+                            class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
                             <i class="fas fa-images text-top-yellow"></i>
                             <span>GALERIA</span>
                         </div>
-                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                        <div
+                            class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
                             FICHA TÉCNICA
                         </div>
                     </div>
@@ -1202,11 +1269,13 @@
                         <img src="/equipamentos/retroescavadeira_1.jpg" alt="Retroescavadeira" class="equipment-img"
                             data-i18n="equip_backhoe_alt" data-i18n-attr="alt">
                         <div class="equip-overlay">
-                            <p class="text-white font-bold text-sm" data-i18n="equip_backhoe_desc">Versatilidade em escavação e carregamento para obras urbanas e rurais.</p>
+                            <p class="text-white font-bold text-sm" data-i18n="equip_backhoe_desc">Versatilidade em
+                                escavação e carregamento para obras urbanas e rurais.</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_backhoe_title">Retroescavadeiras</h4>
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_backhoe_title">Retroescavadeiras
+                        </h4>
                         <p class="text-top-yellow text-sm" data-i18n="equip_backhoe_cap">4 x 4</p>
                     </div>
                     <ul class="hidden">
@@ -1217,19 +1286,20 @@
                 </div>
 
                 <!-- Empilhadeira -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
-                     data-cap="2 a 4 Toneladas"
-                     data-images="/equipamentos/empilhadeira_1.jpg,/equipamentos/empilhadeira_2.jpg"
-                     data-detailed="true"
-                     data-key="forklift">
-                    
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in"
+                    onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="2 a 4 Toneladas"
+                    data-images="/equipamentos/empilhadeira_1.jpg,/equipamentos/empilhadeira_2.jpg" data-detailed="true"
+                    data-key="forklift">
+
                     <!-- Indicators -->
                     <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                        <div
+                            class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
                             <i class="fas fa-images text-top-yellow"></i>
                             <span>GALERIA</span>
                         </div>
-                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                        <div
+                            class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
                             FICHA TÉCNICA
                         </div>
                     </div>
@@ -1239,11 +1309,13 @@
                         <img src="/equipamentos/empilhadeira_1.jpg" alt="Empilhadeira" class="equipment-img"
                             data-i18n="equip_forklift_alt" data-i18n-attr="alt">
                         <div class="equip-overlay">
-                            <p class="text-white font-bold text-sm" data-i18n="equip_forklift_desc">Movimentação e logística industrial com agilidade e total segurança.</p>
+                            <p class="text-white font-bold text-sm" data-i18n="equip_forklift_desc">Movimentação e
+                                logística industrial com agilidade e total segurança.</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_forklift_title">Empilhadeiras</h4>
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_forklift_title">Empilhadeiras
+                        </h4>
                         <p class="text-top-yellow text-sm" data-i18n="equip_forklift_cap">2 a 4 Toneladas</p>
                     </div>
                     <ul class="hidden">
@@ -1254,19 +1326,20 @@
                 </div>
 
                 <!-- Manipulador Telescópico -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
-                     data-cap="12 a 17 metros de Lança"
-                     data-images="/equipamentos/manipulador_1.jpg,/equipamentos/manipulador_2.jpg"
-                     data-detailed="true"
-                     data-key="telehandler">
-                    
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in"
+                    onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="12 a 17 metros de Lança"
+                    data-images="/equipamentos/manipulador_1.jpg,/equipamentos/manipulador_2.jpg" data-detailed="true"
+                    data-key="telehandler">
+
                     <!-- Indicators -->
                     <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                        <div
+                            class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
                             <i class="fas fa-images text-top-yellow"></i>
                             <span>GALERIA</span>
                         </div>
-                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                        <div
+                            class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
                             FICHA TÉCNICA
                         </div>
                     </div>
@@ -1276,11 +1349,13 @@
                         <img src="/equipamentos/manipulador_1.jpg" alt="Manipulador Telescópico" class="equipment-img"
                             data-i18n="equip_telehandler_alt" data-i18n-attr="alt">
                         <div class="equip-overlay">
-                            <p class="text-white font-bold text-sm" data-i18n="equip_telehandler_desc">Elevação e alcance de cargas pesadas em diferentes alturas e terrenos.</p>
+                            <p class="text-white font-bold text-sm" data-i18n="equip_telehandler_desc">Elevação e
+                                alcance de cargas pesadas em diferentes alturas e terrenos.</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_telehandler_title">Manipulador Telescópico</h4>
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_telehandler_title">Manipulador
+                            Telescópico</h4>
                         <p class="text-top-yellow text-sm" data-i18n="equip_telehandler_cap">12 a 17 metros de Lança</p>
                     </div>
                     <ul class="hidden">
@@ -1291,33 +1366,36 @@
                 </div>
 
                 <!-- Carreta Prancha -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
-                     data-cap="35 a 45 toneladas"
-                     data-images="/equipamentos/carretaprancha_1.jpg,/equipamentos/carretaprancha_2.jpg"
-                     data-detailed="true"
-                     data-key="lowbed">
-                    
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in"
+                    onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="35 a 45 toneladas"
+                    data-images="/equipamentos/carretaprancha_1.jpg,/equipamentos/carretaprancha_2.jpg"
+                    data-detailed="true" data-key="lowbed">
+
                     <!-- Indicators -->
                     <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                        <div
+                            class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
                             <i class="fas fa-images text-top-yellow"></i>
                             <span>GALERIA</span>
                         </div>
-                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                        <div
+                            class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
                             FICHA TÉCNICA
                         </div>
                     </div>
 
                     <div class="equip-accent"></div>
                     <div class="h-64 overflow-hidden relative">
-                        <img src="/equipamentos/carretaprancha_1.jpg" alt="Caminhão Carreta Prancha" class="equipment-img"
-                            data-i18n="equip_lowbed_alt" data-i18n-attr="alt">
+                        <img src="/equipamentos/carretaprancha_1.jpg" alt="Caminhão Carreta Prancha"
+                            class="equipment-img" data-i18n="equip_lowbed_alt" data-i18n-attr="alt">
                         <div class="equip-overlay">
-                            <p class="text-white font-bold text-sm" data-i18n="equip_lowbed_desc">Transporte de máquinas pesadas e cargas indivisíveis com segurança.</p>
+                            <p class="text-white font-bold text-sm" data-i18n="equip_lowbed_desc">Transporte de máquinas
+                                pesadas e cargas indivisíveis com segurança.</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_lowbed_title">Caminhão Carreta Prancha</h4>
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_lowbed_title">Caminhão Carreta
+                            Prancha</h4>
                         <p class="text-top-yellow text-sm" data-i18n="equip_lowbed_cap">35 a 45 toneladas</p>
                     </div>
                     <ul class="hidden">
@@ -1328,19 +1406,20 @@
                 </div>
 
                 <!-- Pá Carregadeira -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
-                     data-cap="13.471 kg / 2,3 m³"
-                     data-images="/equipamentos/pacarregadeira_1.jpg,/equipamentos/pacarregadeira_2.jpg"
-                     data-detailed="true"
-                     data-key="loader">
-                    
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in"
+                    onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="13.471 kg / 2,3 m³"
+                    data-images="/equipamentos/pacarregadeira_1.jpg,/equipamentos/pacarregadeira_2.jpg"
+                    data-detailed="true" data-key="loader">
+
                     <!-- Indicators -->
                     <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                        <div
+                            class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
                             <i class="fas fa-images text-top-yellow"></i>
                             <span>GALERIA</span>
                         </div>
-                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                        <div
+                            class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
                             FICHA TÉCNICA
                         </div>
                     </div>
@@ -1350,11 +1429,13 @@
                         <img src="/equipamentos/pacarregadeira_1.jpg" alt="Pá Carregadeira" class="equipment-img"
                             data-i18n="equip_loader_alt" data-i18n-attr="alt">
                         <div class="equip-overlay">
-                            <p class="text-white font-bold text-sm" data-i18n="equip_loader_desc">Alta performance para operações severas e eficiência de combustível.</p>
+                            <p class="text-white font-bold text-sm" data-i18n="equip_loader_desc">Alta performance para
+                                operações severas e eficiência de combustível.</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_loader_title">Pá Carregadeira JCB 427ZX</h4>
+                        <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_loader_title">Pá Carregadeira JCB
+                            427ZX</h4>
                         <p class="text-top-yellow text-sm" data-i18n="equip_loader_cap">13.471 kg / 2,3 m³</p>
                     </div>
                     <ul class="hidden">
@@ -1372,56 +1453,75 @@
     <section class="relative py-32 overflow-hidden bg-top-dark">
         <!-- Static Background Image -->
         <div class="absolute inset-0 z-0 bg-top-dark">
-            <img src="https://images.unsplash.com/photo-1466611653911-954ff21161d1?auto=format&fit=crop&q=80&w=2070" 
-                 alt="Parque Eólico" class="w-full h-full object-cover opacity-30">
+            <img src="https://images.unsplash.com/photo-1466611653911-954ff21161d1?auto=format&fit=crop&q=80&w=2070"
+                alt="Parque Eólico" class="w-full h-full object-cover opacity-30">
             <div class="absolute inset-0 bg-gradient-to-b from-top-dark/90 via-top-dark/40 to-top-dark"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 fade-in">
-                <div class="inline-flex items-center space-x-2 bg-top-yellow/10 border border-top-yellow/20 rounded-full px-4 py-1 mb-4">
+                <div
+                    class="inline-flex items-center space-x-2 bg-top-yellow/10 border border-top-yellow/20 rounded-full px-4 py-1 mb-4">
                     <span class="w-2 h-2 bg-top-yellow rounded-full animate-pulse"></span>
-                    <span class="text-xs font-bold text-top-yellow uppercase tracking-widest" data-i18n="modes_badge">Soluções Personalizadas</span>
+                    <span class="text-xs font-bold text-top-yellow uppercase tracking-widest"
+                        data-i18n="modes_badge">Soluções Personalizadas</span>
                 </div>
                 <h2 class="font-display font-bold text-4xl md:text-6xl mb-6">
                     <span class="text-white" data-i18n="modes_title_1">MODALIDADES DE</span>
                     <span class="text-top-yellow" data-i18n="modes_title_2"> LOCAÇÃO</span>
                 </h2>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed" data-i18n="modes_subtitle">Oferecemos diferentes formatos de contrato para atender às necessidades específicas do seu projeto.</p>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed" data-i18n="modes_subtitle">Oferecemos
+                    diferentes formatos de contrato para atender às necessidades específicas do seu projeto.</p>
                 <div class="section-divider w-24 mx-auto mt-8"></div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
-                    <div class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
-                        <i class="fas fa-user-gear text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
+                <div
+                    class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
+                        <i
+                            class="fas fa-user-gear text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
                     </div>
                     <h4 class="font-bold text-white text-xl mb-3" data-i18n="mode_with_title">Com Operador</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_with_text">Mão de obra especializada e treinada inclusa no pacote, garantindo máxima eficiência e segurança.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_with_text">Mão de obra
+                        especializada e treinada inclusa no pacote, garantindo máxima eficiência e segurança.</p>
                 </div>
 
-                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
-                    <div class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
-                        <i class="fas fa-user-slash text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
+                <div
+                    class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
+                        <i
+                            class="fas fa-user-slash text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
                     </div>
                     <h4 class="font-bold text-white text-xl mb-3" data-i18n="mode_without_title">Sem Operador</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_without_text">Locação pura do equipamento para empresas que já possuem equipe operacional qualificada.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_without_text">Locação pura do
+                        equipamento para empresas que já possuem equipe operacional qualificada.</p>
                 </div>
 
-                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
-                    <div class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
-                        <i class="fas fa-calendar-check text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
+                <div
+                    class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
+                        <i
+                            class="fas fa-calendar-check text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
                     </div>
                     <h4 class="font-bold text-white text-xl mb-3" data-i18n="mode_flex_title">Flexível</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_flex_text">Modelos de contrato por diária, semana, mês ou pacotes específicos por projeto.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_flex_text">Modelos de contrato por
+                        diária, semana, mês ou pacotes específicos por projeto.</p>
                 </div>
 
-                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
-                    <div class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
-                        <i class="fas fa-screwdriver-wrench text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
+                <div
+                    class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 text-center card-hover fade-in group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-top-yellow/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-top-yellow group-hover:rotate-6 transition-all duration-500">
+                        <i
+                            class="fas fa-screwdriver-wrench text-top-yellow text-4xl group-hover:text-top-dark transition-colors"></i>
                     </div>
                     <h4 class="font-bold text-white text-xl mb-3" data-i18n="mode_maint_title">Manutenção Inclusa</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_maint_text">Suporte técnico preventivo e corretivo garantido durante todo o período de locação.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="mode_maint_text">Suporte técnico
+                        preventivo e corretivo garantido durante todo o período de locação.</p>
                 </div>
             </div>
         </div>
@@ -1672,40 +1772,49 @@
                 </p>
 
                 <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-                    <div class="group bg-top-yellow text-top-dark p-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 shadow-xl">
+                    <div
+                        class="group bg-top-yellow text-top-dark p-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 shadow-xl">
                         <i class="fab fa-whatsapp text-3xl mb-3"></i>
                         <p class="font-bold mb-2" data-i18n="cta_whats">WhatsApp</p>
                         <div class="flex flex-col gap-2">
-                            <a href="https://wa.me/558732018279" target="_blank" class="text-lg font-black hover:opacity-80 transition-opacity flex items-center justify-center gap-2">
+                            <a href="https://wa.me/558732018279" target="_blank"
+                                class="text-lg font-black hover:opacity-80 transition-opacity flex items-center justify-center gap-2">
                                 <i class="fas fa-external-link-alt text-xs"></i> (87) 3201-8279
                             </a>
-                            <a href="https://wa.me/5584988612210" target="_blank" class="text-sm font-semibold opacity-70 hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                            <a href="https://wa.me/5584988612210" target="_blank"
+                                class="text-sm font-semibold opacity-70 hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                                 (84) 98861-2210
                             </a>
                         </div>
                     </div>
 
-                    <div class="group bg-white/10 hover:bg-white/20 text-white p-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 shadow-xl">
+                    <div
+                        class="group bg-white/10 hover:bg-white/20 text-white p-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 shadow-xl">
                         <i class="fas fa-phone text-3xl mb-3 text-top-yellow"></i>
                         <p class="font-bold mb-2" data-i18n="cta_phone">Telefones</p>
                         <div class="flex flex-col gap-2">
-                            <a href="tel:+558732018279" class="text-lg font-black text-top-yellow hover:text-white transition-colors flex items-center justify-center gap-2">
+                            <a href="tel:+558732018279"
+                                class="text-lg font-black text-top-yellow hover:text-white transition-colors flex items-center justify-center gap-2">
                                 <i class="fas fa-phone-alt text-xs"></i> (87) 3201-8279
                             </a>
-                            <a href="tel:+5584988612210" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center justify-center gap-2">
+                            <a href="tel:+5584988612210"
+                                class="text-sm text-gray-400 hover:text-white transition-colors flex items-center justify-center gap-2">
                                 (84) 98861-2210
                             </a>
                         </div>
                     </div>
 
-                    <div class="group bg-white/10 hover:bg-white/20 text-white p-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 shadow-xl">
+                    <div
+                        class="group bg-white/10 hover:bg-white/20 text-white p-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 shadow-xl">
                         <i class="fas fa-envelope text-3xl mb-3 text-top-yellow"></i>
                         <p class="font-bold mb-2" data-i18n="cta_email">E-mail</p>
                         <div class="flex flex-col gap-2">
-                            <a href="mailto:top@topconstrucoes.com" class="text-[13px] font-bold text-top-yellow hover:text-white transition-colors truncate block">
+                            <a href="mailto:top@topconstrucoes.com"
+                                class="text-[13px] font-bold text-top-yellow hover:text-white transition-colors truncate block">
                                 top@topconstrucoes.com
                             </a>
-                            <a href="mailto:odailtonpaulino@topconstrucoes.com" class="text-[11px] text-gray-400 hover:text-white transition-colors truncate block">
+                            <a href="mailto:odailtonpaulino@topconstrucoes.com"
+                                class="text-[11px] text-gray-400 hover:text-white transition-colors truncate block">
                                 odailtonpaulino@topconstrucoes.com
                             </a>
                         </div>
@@ -1736,32 +1845,37 @@
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <span class="text-top-yellow font-bold tracking-widest text-xs uppercase mb-3 block" data-i18n="regions_badge">Logística e Mobilização</span>
+                <span class="text-top-yellow font-bold tracking-widest text-xs uppercase mb-3 block"
+                    data-i18n="regions_badge">Logística e Mobilização</span>
                 <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
                     <span data-i18n="regions_title_1">NOSSA ÁREA DE</span>
                     <span class="text-top-yellow" data-i18n="regions_title_2"> ATUAÇÃO</span>
                 </h2>
                 <div class="w-24 h-1.5 bg-top-yellow mx-auto rounded-full mb-8"></div>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="regions_p_desc">Presença estratégica no Norte, Nordeste e Minas Gerais, garantindo agilidade na mobilização de equipamentos.</p>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="regions_p_desc">Presença estratégica no
+                    Norte, Nordeste e Minas Gerais, garantindo agilidade na mobilização de equipamentos.</p>
             </div>
 
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <!-- Map Column -->
                 <div class="lg:w-1/2 relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-top-yellow/20 to-transparent blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-top-yellow/20 to-transparent blur opacity-25 group-hover:opacity-40 transition duration-1000">
+                    </div>
                     <div class="relative bg-top-gray rounded-3xl p-2 border border-white/10 overflow-hidden shadow-2xl">
                         <!-- Clean Map Image -->
-                        <img src="assets/img/coverage_map_clean.png" 
-                             alt="Mapa de Atuação Top Locações" 
-                             class="w-full h-auto rounded-2xl opacity-80">
+                        <img src="assets/img/coverage_map_clean.png" alt="Mapa de Atuação Top Locações"
+                            class="w-full h-auto rounded-2xl opacity-80">
                     </div>
                 </div>
 
                 <!-- Regions List Column -->
                 <div class="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- RN -->
-                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
-                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                    <div
+                        class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div
+                            class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
                             <img src="assets/img/flags/rn.svg" alt="RN" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -1769,8 +1883,10 @@
                         </div>
                     </div>
                     <!-- Bahia -->
-                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
-                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                    <div
+                        class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div
+                            class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
                             <img src="assets/img/flags/ba.png" alt="BA" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -1778,8 +1894,10 @@
                         </div>
                     </div>
                     <!-- Pernambuco -->
-                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
-                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                    <div
+                        class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div
+                            class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
                             <img src="assets/img/flags/pe.svg" alt="PE" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -1787,8 +1905,10 @@
                         </div>
                     </div>
                     <!-- Ceará -->
-                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
-                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                    <div
+                        class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div
+                            class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
                             <img src="assets/img/flags/ce.png" alt="CE" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -1796,8 +1916,10 @@
                         </div>
                     </div>
                     <!-- Piauí -->
-                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
-                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                    <div
+                        class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div
+                            class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
                             <img src="assets/img/flags/pi.svg" alt="PI" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -1805,8 +1927,10 @@
                         </div>
                     </div>
                     <!-- Paraíba -->
-                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
-                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
+                    <div
+                        class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div
+                            class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/10 shadow-lg bg-white/5">
                             <img src="assets/img/flags/pb.svg" alt="PB" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -1814,8 +1938,10 @@
                         </div>
                     </div>
                     <!-- Minas Gerais -->
-                    <div class="bg-white/5 backdrop-blur-md border border-white/20 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
-                        <div class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_20px_rgba(212,168,67,0.3)] transition-all bg-white/5">
+                    <div
+                        class="bg-white/5 backdrop-blur-md border border-white/20 p-5 rounded-2xl flex items-center gap-4 hover:border-top-yellow/40 transition-all group">
+                        <div
+                            class="w-12 h-12 overflow-hidden rounded-lg flex items-center justify-center border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_20px_rgba(212,168,67,0.3)] transition-all bg-white/5">
                             <img src="assets/img/flags/mg.svg" alt="MG" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -2891,8 +3017,7 @@
     <div id="service-modal"
         class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 transition-all duration-300">
         <div class="absolute inset-0 bg-top-dark/80 backdrop-blur-xl" onclick="closeServiceModal()"></div>
-        <div
-            class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-4xl w-full shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
+        <div class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-4xl w-full shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
             id="modal-content">
             <button onclick="closeServiceModal()"
                 class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-top-yellow text-white rounded-full flex items-center justify-center transition-all group">
@@ -2930,8 +3055,7 @@
     <div id="equipment-modal"
         class="fixed inset-0 z-[100] hidden flex justify-center overflow-y-auto py-8 px-4 transition-all duration-300">
         <div class="fixed inset-0 bg-top-dark/80 backdrop-blur-xl" onclick="closeEquipmentModal()"></div>
-        <div
-            class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-5xl w-full h-fit my-auto shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
+        <div class="relative bg-top-gray border border-white/10 rounded-3xl overflow-hidden max-w-5xl w-full h-fit my-auto shadow-2xl transform transition-all duration-500 scale-90 opacity-0"
             id="equip-modal-content">
             <button onclick="closeEquipmentModal()"
                 class="absolute top-4 right-4 z-40 w-10 h-10 bg-black/50 hover:bg-top-yellow text-white rounded-full flex items-center justify-center transition-all group">
@@ -2940,16 +3064,23 @@
             <div class="flex flex-col lg:flex-row lg:h-[650px]">
                 <!-- Left: Image / Carousel -->
                 <div class="lg:w-1/2 relative h-64 sm:h-80 lg:h-full group bg-black/10">
-                    <img id="equip-modal-img" src="" alt="" class="w-full h-full object-contain transition-opacity duration-300">
-                    <div id="equip-modal-overlay" class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
-                    
+                    <img id="equip-modal-img" src="" alt=""
+                        class="w-full h-full object-contain transition-opacity duration-300">
+                    <div id="equip-modal-overlay"
+                        class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
+
                     <!-- Carousel Controls -->
-                    <div id="equip-modal-carousel-controls" class="absolute inset-0 flex items-center justify-between px-4 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity pointer-events-none">
-                        <button onclick="changeEquipImage(-1)" class="w-10 h-10 sm:w-12 sm:h-12 bg-top-dark/40 backdrop-blur-xl border border-white/10 hover:border-top-yellow/50 text-white hover:text-top-yellow rounded-xl sm:rounded-2xl flex items-center justify-center pointer-events-auto transition-all duration-300 shadow-2xl group">
-                            <i class="fas fa-chevron-left group-hover:-translate-x-0.5 transition-transform text-sm sm:text-base"></i>
+                    <div id="equip-modal-carousel-controls"
+                        class="absolute inset-0 flex items-center justify-between px-4 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity pointer-events-none">
+                        <button onclick="changeEquipImage(-1)"
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-top-dark/40 backdrop-blur-xl border border-white/10 hover:border-top-yellow/50 text-white hover:text-top-yellow rounded-xl sm:rounded-2xl flex items-center justify-center pointer-events-auto transition-all duration-300 shadow-2xl group">
+                            <i
+                                class="fas fa-chevron-left group-hover:-translate-x-0.5 transition-transform text-sm sm:text-base"></i>
                         </button>
-                        <button onclick="changeEquipImage(1)" class="w-10 h-10 sm:w-12 sm:h-12 bg-top-dark/40 backdrop-blur-xl border border-white/10 hover:border-top-yellow/50 text-white hover:text-top-yellow rounded-xl sm:rounded-2xl flex items-center justify-center pointer-events-auto transition-all duration-300 shadow-2xl group">
-                            <i class="fas fa-chevron-right group-hover:translate-x-0.5 transition-transform text-sm sm:text-base"></i>
+                        <button onclick="changeEquipImage(1)"
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-top-dark/40 backdrop-blur-xl border border-white/10 hover:border-top-yellow/50 text-white hover:text-top-yellow rounded-xl sm:rounded-2xl flex items-center justify-center pointer-events-auto transition-all duration-300 shadow-2xl group">
+                            <i
+                                class="fas fa-chevron-right group-hover:translate-x-0.5 transition-transform text-sm sm:text-base"></i>
                         </button>
                     </div>
 
@@ -2961,31 +3092,38 @@
                 </div>
 
                 <!-- Right: Content -->
-                <div class="lg:w-1/2 p-6 sm:p-8 lg:p-12 flex flex-col justify-between lg:overflow-y-auto custom-scrollbar bg-top-dark/30">
+                <div
+                    class="lg:w-1/2 p-6 sm:p-8 lg:p-12 flex flex-col justify-between lg:overflow-y-auto custom-scrollbar bg-top-dark/30">
                     <div id="equip-modal-main-info">
-                        <span class="text-top-yellow font-bold tracking-widest text-[10px] uppercase mb-2 block" data-i18n="equip_modal_badge">EQUIPAMENTO DISPONÍVEL</span>
-                        <h3 id="equip-modal-title" class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white mb-2 leading-tight"></h3>
+                        <span class="text-top-yellow font-bold tracking-widest text-[10px] uppercase mb-2 block"
+                            data-i18n="equip_modal_badge">EQUIPAMENTO DISPONÍVEL</span>
+                        <h3 id="equip-modal-title"
+                            class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white mb-2 leading-tight">
+                        </h3>
                         <p id="equip-modal-cap" class="text-top-yellow font-semibold text-base mb-4"></p>
                         <div class="w-12 lg:w-16 h-1 bg-top-yellow rounded-full mb-6"></div>
-                        
+
                         <div id="equip-basic-info">
-                            <p id="equip-modal-desc" class="text-gray-300 leading-relaxed text-base sm:text-lg mb-6"></p>
+                            <p id="equip-modal-desc" class="text-gray-300 leading-relaxed text-base sm:text-lg mb-6">
+                            </p>
                             <ul id="equip-modal-features" class="space-y-3 text-gray-300 text-sm sm:text-base"></ul>
                         </div>
 
                         <!-- Technical Detailed Section -->
                         <div id="equip-detailed-info" class="hidden space-y-6 animate-fade-in">
                             <p id="equip-modal-full-desc" class="text-gray-400 text-xs sm:text-sm leading-relaxed"></p>
-                            
+
                             <div class="grid grid-cols-1 gap-4 sm:gap-6">
                                 <div class="bg-white/5 rounded-xl p-4 border border-white/5">
-                                    <h5 id="equip-modal-truck-title" class="text-top-yellow font-bold text-xs uppercase mb-3 flex items-center gap-2">
+                                    <h5 id="equip-modal-truck-title"
+                                        class="text-top-yellow font-bold text-xs uppercase mb-3 flex items-center gap-2">
                                         <i class="fas fa-truck"></i> <span></span>
                                     </h5>
                                     <ul id="equip-modal-truck-specs" class="space-y-2 text-[11px] text-gray-400"></ul>
                                 </div>
                                 <div class="bg-white/5 rounded-xl p-4 border border-white/5">
-                                    <h5 id="equip-modal-crane-title" class="text-top-yellow font-bold text-xs uppercase mb-3 flex items-center gap-2">
+                                    <h5 id="equip-modal-crane-title"
+                                        class="text-top-yellow font-bold text-xs uppercase mb-3 flex items-center gap-2">
                                         <i class="fas fa-faucet-drip"></i> <span></span>
                                     </h5>
                                     <ul id="equip-modal-crane-specs" class="space-y-2 text-[11px] text-gray-400"></ul>
@@ -2993,10 +3131,12 @@
                             </div>
 
                             <div class="bg-top-yellow/5 rounded-xl p-4 border border-top-yellow/10">
-                                <h5 id="equip-modal-diff-title" class="text-white font-bold text-xs uppercase mb-3 flex items-center gap-2">
+                                <h5 id="equip-modal-diff-title"
+                                    class="text-white font-bold text-xs uppercase mb-3 flex items-center gap-2">
                                     <i class="fas fa-star text-top-yellow"></i> <span></span>
                                 </h5>
-                                <ul id="equip-modal-diff-specs" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-gray-400"></ul>
+                                <ul id="equip-modal-diff-specs"
+                                    class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-gray-400"></ul>
                             </div>
                         </div>
                     </div>
@@ -3014,7 +3154,7 @@
     </div>
 
     <script type="module" src="/src/main.js"></script>
-    
+
     <script>
         function openServiceModal(card) {
             const modal = document.getElementById('service-modal');
@@ -3039,7 +3179,7 @@
                 content.classList.remove('scale-90', 'opacity-0');
                 content.classList.add('scale-100', 'opacity-100');
             }, 10);
-            
+
             document.body.style.overflow = 'hidden';
         }
 
@@ -3049,7 +3189,7 @@
 
             content.classList.remove('scale-100', 'opacity-100');
             content.classList.add('scale-90', 'opacity-0');
-            
+
             setTimeout(() => {
                 modal.classList.add('hidden');
                 document.body.style.overflow = '';
@@ -3078,18 +3218,18 @@
 
         function changeEquipImage(dir, isAuto = false) {
             if (currentEquipImages.length <= 1) return;
-            
+
             // If manual interaction, reset the timer
             if (!isAuto) startEquipAuto();
 
             currentEquipIndex = (currentEquipIndex + dir + currentEquipImages.length) % currentEquipImages.length;
-            
+
             const imgEl = document.getElementById('equip-modal-img');
             const basicSec = document.getElementById('equip-basic-info');
             const detailedSec = document.getElementById('equip-detailed-info');
 
             imgEl.classList.add('opacity-0');
-            
+
             setTimeout(() => {
                 imgEl.src = currentEquipImages[currentEquipIndex];
                 imgEl.classList.remove('opacity-0');
@@ -3154,18 +3294,18 @@
             currentEquipImages = imagesStr ? imagesStr.split(',') : [card.querySelector('img').src];
             currentEquipIndex = 0;
             isDetailedEquip = card.dataset.detailed === 'true';
-            
+
             const imgEl = document.getElementById('equip-modal-img');
             imgEl.src = currentEquipImages[0];
             imgEl.alt = card.querySelector('img').alt;
             imgEl.classList.remove('opacity-0');
 
             // Touch support
-            imgEl.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX, {passive: true});
+            imgEl.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX, { passive: true });
             imgEl.addEventListener('touchend', e => {
                 touchEndX = e.changedTouches[0].screenX;
                 handleEquipSwipe();
-            }, {passive: true});
+            }, { passive: true });
 
             const controls = document.getElementById('equip-modal-carousel-controls');
             controls.style.display = currentEquipImages.length > 1 ? '' : 'none';
@@ -3183,7 +3323,7 @@
             document.getElementById('equip-modal-title').innerText = title;
             document.getElementById('equip-modal-cap').innerText = cap;
             document.getElementById('equip-modal-desc').innerText = desc;
-            
+
             const badge = document.getElementById('equip-modal-cap-badge');
             badge.innerText = cap;
             badge.style.display = cap ? '' : 'none';
@@ -3206,12 +3346,12 @@
             if (isDetailedEquip && key) {
                 basicSec.classList.remove('hidden');
                 detailedSec.classList.add('hidden');
-                
+
                 const currentLang = document.documentElement.lang || 'pt-BR';
                 const dict = translations[currentLang] || translations['pt-BR'];
 
                 document.getElementById('equip-modal-full-desc').innerText = dict[`equip_${key}_full_desc`];
-                
+
                 // Truck Specs
                 document.getElementById('equip-modal-truck-title').querySelector('span').innerText = dict[`equip_${key}_truck_title`];
                 const truckSpecs = (dict[`equip_${key}_truck_specs`] || '').split(';');
@@ -3244,7 +3384,7 @@
 
         function closeEquipmentModal() {
             stopEquipAuto();
-            const modal   = document.getElementById('equipment-modal');
+            const modal = document.getElementById('equipment-modal');
             const content = document.getElementById('equip-modal-content');
             content.classList.remove('scale-100', 'opacity-100');
             content.classList.add('scale-90', 'opacity-0');
