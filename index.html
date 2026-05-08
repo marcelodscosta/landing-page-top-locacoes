@@ -1254,19 +1254,40 @@
                 </div>
 
                 <!-- Manipulador Telescópico -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="Elevação e Alcance">
-                    <div class="equip-accent"></div>
-                    <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/manipulador.jpg" alt="Manipulador Telescópico" class="equipment-img"
-                            data-i18n="equip_telehandler_alt" data-i18n-attr="alt">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
+                     data-cap="12 a 17 metros de Lança"
+                     data-images="/equipamentos/manipulador_1.jpg,/equipamentos/manipulador_2.jpg"
+                     data-detailed="true"
+                     data-key="telehandler">
+                    
+                    <!-- Indicators -->
+                    <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                            <i class="fas fa-images text-top-yellow"></i>
+                            <span>GALERIA</span>
+                        </div>
+                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                            FICHA TÉCNICA
+                        </div>
                     </div>
-                    <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_telehandler_desc">Elevação e alcance de cargas pesadas em diferentes alturas e terrenos.</p>
+
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/equipamentos/manipulador_1.jpg" alt="Manipulador Telescópico" class="equipment-img"
+                            data-i18n="equip_telehandler_alt" data-i18n-attr="alt">
+                        <div class="equip-overlay">
+                            <p class="text-white font-bold text-sm" data-i18n="equip_telehandler_desc">Elevação e alcance de cargas pesadas em diferentes alturas e terrenos.</p>
+                        </div>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_telehandler_title">Manipulador Telescópico</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_telehandler_cap">Elevação e Alcance</p>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_telehandler_cap">12 a 17 metros de Lança</p>
                     </div>
+                    <ul class="hidden">
+                        <li data-i18n="equip_telehandler_li1">Grande alcance vertical</li>
+                        <li data-i18n="equip_telehandler_li2">Estabilidade reforçada</li>
+                        <li data-i18n="equip_telehandler_li3">Acessórios diversos</li>
+                    </ul>
                 </div>
 
             </div>
@@ -1992,13 +2013,21 @@
                 equip_dozer_alt: 'Trator de Esteira',
                 equip_dozer_title: 'Trator de Esteira',
                 equip_dozer_desc: 'Alta tração e arrasto para obras pesadas',
-                equip_telehandler_alt: 'Manipulador Telescópico',
+                equip_telehandler_alt: 'Locação de Manipulador Telescópico JCB 540-170',
                 equip_telehandler_title: 'Manipulador Telescópico',
-                equip_telehandler_cap: 'Elevação e Alcance',
-                equip_telehandler_desc: 'Elevação e alcance de cargas pesadas em diferentes alturas e terrenos.',
-                equip_telehandler_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Grande alcance vertical',
-                equip_telehandler_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Estabilidade reforçada',
-                equip_telehandler_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Acessórios diversos',
+                equip_telehandler_cap: '12 a 17 metros de Lança',
+                equip_telehandler_desc: 'O manipulador telescópico JCB 540-170 é uma máquina de alto desempenho, com 4.000 kg de capacidade de carga e 16,7m de altura.',
+                equip_telehandler_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Altura de 16,7m',
+                equip_telehandler_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Capacidade de 4.000 kg',
+                equip_telehandler_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Tração 4x4x4',
+                equip_telehandler_full_title: 'Unidade: Manipulador Telescópico JCB 540-170 Loadall',
+                equip_telehandler_full_desc: 'O manipulador telescópico JCB 540-170 é uma máquina de alto desempenho, projetada para construção e agronegócio, com 4.000 kg de capacidade de carga e 16,7 metros de altura máxima de elevação. Oferece versatilidade total como guindaste, plataforma ou empilhadeira.',
+                equip_telehandler_truck_title: 'Ficha Técnica Resumida - JCB 540-170',
+                equip_telehandler_truck_specs: 'Capacidade Máxima: 4.000 kg;Altura Máxima de Elevação: 16,7 metros;Alcance Máximo Horizontal: 12,5 metros;Peso Operacional: 12.060 a 12.750 kg;Motor: JCB Dieselmax (85 hp ou 100 hp);Transmissão: 4x4x4 (4 rodas motrizes e direcionais);Velocidade Máxima: 29 km/h',
+                equip_telehandler_crane_title: 'Características e Benefícios',
+                equip_telehandler_crane_specs: 'Estabilizadores: Essenciais para máxima estabilidade;Engate Rápido Q-Fit: Troca rápida de implementos;Conforto: Cabine espaçosa com ar-condicionado;Segurança: Sistema de nivelamento de carga SWAY;Versatilidade: Substitui pá carregadeira e guindaste;Manobrabilidade: Raio de giro de 4,1 m',
+                equip_telehandler_diff_title: 'Dimensões e Capacidades',
+                equip_telehandler_diff_specs: 'Altura Total: 2,69 m;Largura Total: 2,44 m;Comprimento Total: 5,08 m;Capacidade na Altura Máxima: 2.500 kg;Capacidade no Alcance Máximo: 600 kg;Diferencial antibloqueio para terrenos severos',
                 equip_tele_alt: 'Manipulador Telescópico',
                 equip_tele_title: 'Manipulador',
                 equip_tele_desc: 'Telescópico para altura e alcance',
@@ -2283,13 +2312,21 @@
                 equip_dozer_alt: 'Bulldozer',
                 equip_dozer_title: 'Bulldozer',
                 equip_dozer_desc: 'High traction and pushing for heavy works',
-                equip_telehandler_alt: 'Telehandler',
+                equip_telehandler_alt: 'JCB 540-170 Telehandler Rental',
                 equip_telehandler_title: 'Telehandler',
-                equip_telehandler_cap: 'Elevation & Reach',
-                equip_telehandler_desc: 'Elevation and reach of heavy loads at different heights and terrains.',
-                equip_telehandler_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Great vertical reach',
-                equip_telehandler_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Reinforced stability',
-                equip_telehandler_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Various attachments',
+                equip_telehandler_cap: '12 to 17 meters Boom',
+                equip_telehandler_desc: 'The JCB 540-170 telehandler is a high-performance machine with 4,000 kg load capacity and 16.7m height.',
+                equip_telehandler_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>16.7m Max Height',
+                equip_telehandler_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>4,000 kg Capacity',
+                equip_telehandler_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>4x4x4 Traction',
+                equip_telehandler_full_title: 'Unit: JCB 540-170 Loadall Telehandler',
+                equip_telehandler_full_desc: 'The JCB 540-170 telehandler is a high-performance machine designed for construction and agribusiness, with a 4,000 kg load capacity and 16.7 meters maximum lifting height. It offers total versatility as a crane, platform, or forklift.',
+                equip_telehandler_truck_title: 'Technical Summary - JCB 540-170',
+                equip_telehandler_truck_specs: 'Max Capacity: 4,000 kg;Max Lift Height: 16.7 meters;Max Horizontal Reach: 12.5 meters;Operating Weight: 12,060 to 12,750 kg;Engine: JCB Dieselmax (85 hp or 100 hp);Transmission: 4x4x4 (4-wheel drive and steer);Max Speed: 29 km/h',
+                equip_telehandler_crane_title: 'Features and Benefits',
+                equip_telehandler_crane_specs: 'Stabilizers: Essential for maximum stability;Q-Fit Quick Hitch: Fast attachment changes;Comfort: Spacious cab with A/C;Safety: SWAY load leveling system;Versatility: Replaces loaders and cranes;Maneuverability: 4.1 m turning radius',
+                equip_telehandler_diff_title: 'Dimensions and Capacities',
+                equip_telehandler_diff_specs: 'Overall Height: 2.69 m;Overall Width: 2.44 m;Overall Length: 5.08 m;Capacity at Max Height: 2,500 kg;Capacity at Max Reach: 600 kg;Anti-lock differential for severe terrain',
                 equip_tele_alt: 'Telescopic Handler',
                 equip_tele_title: 'Telehandler',
                 equip_tele_desc: 'Telescopic reach for height and range',
@@ -2547,6 +2584,21 @@
                 equip_forklift_crane_specs: 'Ergonomía: Diseñada para reducir la fatiga;Seguridad: Sistemas de frenado hidráulico;Neumáticos: Neumáticos o macizos;Accesorios: Desplazador lateral Cascade opcional;Serie: X o XF de alto rendimiento;Aplicación: Logística y carga/descarga en ambientes abiertos',
                 equip_forklift_diff_title: 'Diferenciales Hangcha',
                 equip_forklift_diff_specs: 'Bajo costo de mantenimiento;Motor de alto torque y baja emisión;Estructura reforzada para uso severo;Visibilidad panorámica para el operador',
+                equip_telehandler_alt: 'Alquiler de Manipulador Telescópico JCB 540-170',
+                equip_telehandler_title: 'Manipulador Telescópico',
+                equip_telehandler_cap: '12 a 17 metros de Pluma',
+                equip_telehandler_desc: 'El manipulador telescópico JCB 540-170 es una máquina de alto rendimiento, con 4.000 kg de capacidad de carga y 16,7m de altura.',
+                equip_telehandler_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Altura de 16,7m',
+                equip_telehandler_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Capacidad de 4.000 kg',
+                equip_telehandler_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Tracción 4x4x4',
+                equip_telehandler_full_title: 'Unidad: Manipulador Telescópico JCB 540-170 Loadall',
+                equip_telehandler_full_desc: 'El manipulador telescópico JCB 540-170 es una máquina de alto rendimiento diseñada para la construcción y el agronegocio, con una capacidad de carga de 4.000 kg y una altura máxima de elevación de 16,7 metros. Ofrece una versatilidad total como grúa, plataforma o montacargas.',
+                equip_telehandler_truck_title: 'Ficha Técnica Resumida - JCB 540-170',
+                equip_telehandler_truck_specs: 'Capacidad Máxima: 4.000 kg;Altura Máxima de Elevación: 16,7 metros;Alcance Máximo Horizontal: 12,5 metros;Peso Operativo: 12.060 a 12.750 kg;Motor: JCB Dieselmax (85 hp o 100 hp);Transmisión: 4x4x4 (4 ruedas motrices y direccionales);Velocidad Máxima: 29 km/h',
+                equip_telehandler_crane_title: 'Características y Beneficios',
+                equip_telehandler_crane_specs: 'Estabilizadores: Esenciales para la máxima estabilidad;Enganche Rápido Q-Fit: Cambio rápido de implementos;Confort: Cabina espaciosa con aire acondicionado;Seguridad: Sistema de nivelación de carga SWAY;Versatilidad: Sustituye a la cargadora y la grúa;Maniobrabilidad: Radio de giro de 4,1 m',
+                equip_telehandler_diff_title: 'Dimensiones y Capacidades',
+                equip_telehandler_diff_specs: 'Altura Total: 2,69 m;Anchura Total: 2,44 m;Longitud Total: 5,08 m;Capacidad a Altura Máxima: 2.500 kg;Capacidad a Alcance Máximo: 600 kg;Diferencial autoblocante para terrenos severos',
                 equip_loader_alt: 'Cargadora Frontal',
                 equip_loader_title: 'Cargadora Frontal',
                 equip_loader_desc: 'Carga de materiales y movimiento',
@@ -2559,13 +2611,6 @@
                 equip_dozer_alt: 'Tractor de Orugas',
                 equip_dozer_title: 'Tractor de Orugas',
                 equip_dozer_desc: 'Alta tracción y empuje para obras pesadas',
-                equip_telehandler_alt: 'Manipulador Telescópico',
-                equip_telehandler_title: 'Manipulador Telescópico',
-                equip_telehandler_cap: 'Elevación y Alcance',
-                equip_telehandler_desc: 'Elevación y alcance de cargas pesadas en diferentes alturas y terrenos.',
-                equip_telehandler_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Gran alcance vertical',
-                equip_telehandler_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Estabilidad reforzada',
-                equip_telehandler_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Accesorios diversos',
                 equip_tele_alt: 'Manipulador Telescópico',
                 equip_tele_title: 'Manipulador',
                 equip_tele_desc: 'Telescópico para altura y alcance',
