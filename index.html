@@ -1066,23 +1066,40 @@
                 </div>
 
                 <!-- Pipa -->
-                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" data-cap="8.000L a 10.000L">
-                    <div class="equip-accent"></div>
-                    <div class="h-64 overflow-hidden">
-                        <img src="/equipamentos/pipa.jpg" alt="Caminhão Pipa" class="equipment-img"
-                            data-i18n="equip_pipa_alt" data-i18n-attr="alt">
+                <div class="equipment-card relative rounded-2xl overflow-hidden fade-in" onclick="openEquipmentModal(event, this)" style="cursor:pointer;" 
+                     data-cap="20.000L"
+                     data-images="/equipamentos/pipa_1.jpg,/equipamentos/pipa_2.jpg"
+                     data-detailed="true"
+                     data-key="pipa">
+                    
+                    <!-- Indicators -->
+                    <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                        <div class="bg-top-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-xl animate-pulse-subtle">
+                            <i class="fas fa-images text-top-yellow"></i>
+                            <span>GALERIA</span>
+                        </div>
+                        <div class="bg-top-yellow text-top-dark text-[9px] font-black px-2 py-1 rounded-md shadow-lg transform rotate-2">
+                            FICHA TÉCNICA
+                        </div>
                     </div>
-                    <div class="equip-overlay">
-                        <p class="text-white font-bold text-sm" data-i18n="equip_pipa_desc">Combate a poeira, irrigação, abastecimento de água e manutenção de estradas.</p>
+
+                    <div class="equip-accent"></div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/equipamentos/pipa_1.jpg" alt="Caminhão Pipa" class="equipment-img"
+                            data-i18n="equip_pipa_alt" data-i18n-attr="alt">
+                        <div class="equip-overlay">
+                            <p class="text-white font-bold text-sm" data-i18n="equip_pipa_desc">Combate a poeira, irrigação, abastecimento de água e manutenção de estradas com alto desempenho.</p>
+                        </div>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-white text-lg mb-1" data-i18n="equip_pipa_title">Caminhão Pipa</h4>
-                        <p class="text-top-yellow text-sm" data-i18n="equip_pipa_cap">8.000L a 10.000L</p>
+                        <p class="text-top-yellow text-sm" data-i18n="equip_pipa_cap">20.000L</p>
                     </div>
+                    <!-- hidden data for modal -->
                     <ul class="hidden">
-                        <li data-i18n="equip_pipa_li1">Distribuição controlada</li>
-                        <li data-i18n="equip_pipa_li2">Múltiplas aplicações</li>
-                        <li data-i18n="equip_pipa_li3">Alta pressão</li>
+                        <li data-i18n="equip_pipa_li1">Caminhão + Implemento</li>
+                        <li data-i18n="equip_pipa_li2">Operador certificado</li>
+                        <li data-i18n="equip_pipa_li3">Alta capacidade e pressão</li>
                     </ul>
                 </div>
 
@@ -1804,13 +1821,21 @@
                 equip_munck_crane_specs: 'Capacidade: 45 toneladas-metro (tm);Alcance: até 23,8 m vertical e 20,2 m horizontal;Configuração: 4 lanças hidráulicas + 4 manuais;Peso do equipamento: ~4.600 kg;Estabilização: patolamento hidráulico completo;Controle remoto via rádio com joysticks',
                 equip_munck_diff_title: 'Diferenciais do Conjunto',
                 equip_munck_diff_specs: 'Alta capacidade para içamentos complexos;Excelente desempenho off-road;Maior segurança com controle remoto;Conjunto robusto para operações severas',
-                equip_pipa_alt: 'Caminhão Pipa',
+                equip_pipa_alt: 'Caminhão Pipa 20.000L para Locação',
                 equip_pipa_title: 'Caminhão Pipa',
-                equip_pipa_cap: '8.000L a 10.000L',
-                equip_pipa_desc: 'Combate a poeira, irrigação, abastecimento de água e manutenção de estradas.',
-                equip_pipa_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Distribuição controlada',
-                equip_pipa_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Múltiplas aplicações',
-                equip_pipa_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta pressão',
+                equip_pipa_cap: '20.000L',
+                equip_pipa_desc: 'Combate a poeira, irrigação, abastecimento de água e manutenção de vias com alto desempenho.',
+                equip_pipa_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Caminhão + Implemento',
+                equip_pipa_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Operador certificado',
+                equip_pipa_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta capacidade e pressão',
+                equip_pipa_full_title: 'Conjunto: Caminhão Pipa - Transporte Água',
+                equip_pipa_full_desc: 'O conjunto é formado pelo caminhão Volvo VM 290 6x4R Euro 6 equipado com tanque pipa multitarefas de 20.000L, oferecendo alta performance para irrigação, combate a poeira e manutenção de vias.',
+                equip_pipa_truck_title: 'Principais Características do Caminhão',
+                equip_pipa_truck_specs: 'Motor Volvo – 290 cv;Transmissão: Manual - 9 Marchas;Cabine: Curta;Tração: 6X4R Traçado;Auxílio Rampa / Ar-Condicionado / Piloto Automático;Computador de Bordo / Sistema Regenerativo Limpeza Filtro Catalizador / Freio Motor com 2 Estágios',
+                equip_pipa_crane_title: 'Informação dos Implementos',
+                equip_pipa_crane_specs: 'Tanque Pipa - Transporte Água;Modelo: Multitarefas;Capacidade: 20.000L;Tomada de força direta e engrenada acionada pelo câmbio;Auto carregamento do tanque / Canhão Monitor;Barra irrigadora traseira / Aspersor traseiro rabo de pavão;Aspersor dianteiro laterais / Sistema lava ruas 2 bicos de pato frontais;Possui protetor ciclista / Para-choque traseiro homologado / Adequação chassi balanço traseiro',
+                equip_pipa_diff_title: 'Diferenciais do Conjunto',
+                equip_pipa_diff_specs: 'Alta capacidade de 20.000L;Versatilidade multitarefas;Excelente desempenho off-road 6x4;Segurança e conforto operacional',
                 equip_comboio_alt: 'Caminhão Comboio',
                 equip_comboio_title: 'Caminhão Comboio',
                 equip_comboio_cap: '2.000L a 3.000L',
@@ -2040,13 +2065,21 @@
                 equip_munck_crane_specs: 'Capacity: 45 ton-meters (tm);Reach: up to 23.8 m vertical and 20.2 m horizontal;Configuration: 4 hydraulic + 4 manual booms;Equipment weight: ~4,600 kg;Full hydraulic stabilization;Radio remote control with joysticks',
                 equip_munck_diff_title: 'Unit Differentials',
                 equip_munck_diff_specs: 'High capacity for complex lifts;Excellent off-road performance;Increased safety with remote control;Robust unit for severe operations',
-                equip_pipa_alt: 'Water Truck',
+                equip_pipa_alt: '20,000L Water Truck for Rental',
                 equip_pipa_title: 'Water Truck',
-                equip_pipa_cap: '10,000L to 20,000L',
-                equip_pipa_desc: 'Dust control, irrigation, water supply and road maintenance.',
-                equip_pipa_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Controlled distribution',
-                equip_pipa_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Multiple applications',
-                equip_pipa_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>High pressure',
+                equip_pipa_cap: '20,000L',
+                equip_pipa_desc: 'Dust control, irrigation, water supply and road maintenance with high performance.',
+                equip_pipa_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Truck + Implement',
+                equip_pipa_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Certified operator',
+                equip_pipa_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>High capacity and pressure',
+                equip_pipa_full_title: 'Unit: Water Truck - Water Transport',
+                equip_pipa_full_desc: 'The unit consists of a Volvo VM 290 6x4R Euro 6 truck equipped with a 20,000L multi-task water tank, offering high performance for irrigation, dust control, and road maintenance.',
+                equip_pipa_truck_title: 'Truck Key Features',
+                equip_pipa_truck_specs: 'Volvo Engine – 290 hp;Transmission: Manual - 9 Speeds;Cab: Short;Traction: 6X4R Off-road;Ramp Assist / Air Conditioning / Cruise Control;On-board Computer / Catalyst Filter Cleaning System / 2-Stage Engine Brake',
+                equip_pipa_crane_title: 'Implement Information',
+                equip_pipa_crane_specs: 'Water Tank - Water Transport;Model: Multi-task;Capacity: 20,000L;Direct and geared power take-off activated by the gearbox;Auto tank loading / Monitor Cannon;Rear irrigator bar / Peacock tail rear sprayer;Side front sprayers / Street washing system 2 front duck bill nozzles;Cyclist protector / Approved rear bumper / Rear swing chassis adjustment',
+                equip_pipa_diff_title: 'Unit Differentials',
+                equip_pipa_diff_specs: 'High capacity of 20,000L;Multi-task versatility;Excellent 6x4 off-road performance;Operational safety and comfort',
                 equip_comboio_alt: 'Fuel Service Truck',
                 equip_comboio_title: 'Fuel Service Truck',
                 equip_comboio_cap: '4,000L to 6,000L',
@@ -2276,13 +2309,21 @@
                 equip_munck_crane_specs: 'Capacidad: 45 toneladas-metro (tm);Alcance: hasta 23,8 m vertical y 20,2 m horizontal;Configuración: 4 lanzas hidráulicas + 4 manuales;Peso del equipo: ~4.600 kg;Estabilización: patolamiento hidráulico completo;Control remoto vía radio con joysticks',
                 equip_munck_diff_title: 'Diferenciales del Conjunto',
                 equip_munck_diff_specs: 'Alta capacidad para izajes complejos;Excelente rendimiento off-road;Mayor seguridad con control remoto;Conjunto robusto para operaciones severas',
-                equip_pipa_alt: 'Camión Cisterna',
+                equip_pipa_alt: 'Camión Cisterna 20.000L para Alquiler',
                 equip_pipa_title: 'Camión Cisterna',
-                equip_pipa_cap: '10.000L a 20.000L',
-                equip_pipa_desc: 'Control de polvo, riego, abastecimiento de agua y mantenimiento de vías.',
-                equip_pipa_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Distribución controlada',
-                equip_pipa_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Múltiples aplicaciones',
-                equip_pipa_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta presión',
+                equip_pipa_cap: '20.000L',
+                equip_pipa_desc: 'Control de polvo, riego, suministro de agua y mantenimiento de vías con alto rendimiento.',
+                equip_pipa_li1: '<i class="fas fa-check text-top-yellow mr-2"></i>Camión + Implemento',
+                equip_pipa_li2: '<i class="fas fa-check text-top-yellow mr-2"></i>Operador certificado',
+                equip_pipa_li3: '<i class="fas fa-check text-top-yellow mr-2"></i>Alta capacidad y presión',
+                equip_pipa_full_title: 'Conjunto: Camión Cisterna - Transporte de Agua',
+                equip_pipa_full_desc: 'El conjunto está formado por el camión Volvo VM 290 6x4R Euro 6 equipado con un tanque cisterna multitarea de 20.000L, que ofrece un alto rendimiento para riego, control de polvo y mantenimiento de vías.',
+                equip_pipa_truck_title: 'Características Principales del Camión',
+                equip_pipa_truck_specs: 'Motor Volvo – 290 cv;Transmisión: Manual - 9 Marchas;Cabina: Corta;Tracción: 6X4R Todo terreno;Asistencia en Rampa / Aire Acondicionado / Control de Crucero;Computadora de a bordo / Sistema de limpieza de filtro catalizador / Freno de motor de 2 etapas',
+                equip_pipa_crane_title: 'Información de los Implementos',
+                equip_pipa_crane_specs: 'Tanque Cisterna - Transporte de Agua;Modelo: Multitarea;Capacidad: 20.000L;Toma de fuerza directa y engranada activada por la caja de cambios;Carga automática del tanque / Cañón Monitor;Barra irrigadora trasera / Aspersor trasero cola de pavo real;Aspersores delanteros laterales / Sistema de lavado de calles 2 boquillas de pato frontales;Protector de ciclista / Parachoques trasero homologado / Ajuste del chasis de balanceo trasero',
+                equip_pipa_diff_title: 'Diferenciales del Conjunto',
+                equip_pipa_diff_specs: 'Alta capacidad de 20.000L;Versatilidad multitarea;Excelente rendimiento off-road 6x4;Seguridad y confort operativo',
                 equip_comboio_alt: 'Camión de Servicio',
                 equip_comboio_title: 'Camión de Servicio',
                 equip_comboio_cap: '4.000L a 6.000L',
@@ -2525,7 +2566,7 @@
             <div class="flex flex-col lg:flex-row lg:h-[650px]">
                 <!-- Left: Image / Carousel -->
                 <div class="lg:w-1/2 relative h-64 sm:h-80 lg:h-full group bg-black/10">
-                    <img id="equip-modal-img" src="" alt="" class="w-full h-full object-cover lg:object-cover transition-opacity duration-300">
+                    <img id="equip-modal-img" src="" alt="" class="w-full h-full object-contain transition-opacity duration-300">
                     <div id="equip-modal-overlay" class="absolute inset-0 bg-gradient-to-t from-top-gray via-transparent to-transparent"></div>
                     
                     <!-- Carousel Controls -->
