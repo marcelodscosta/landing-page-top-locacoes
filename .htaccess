@@ -91,6 +91,13 @@ FileETag None
     RewriteRule . index.html [L]
 </IfModule>
 
+# Allow Facebook/Meta crawler for link previews (WhatsApp, Facebook, Instagram)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_USER_AGENT} facebookexternalhit [NC]
+    RewriteRule ^ - [L]
+</IfModule>
+
 # Block malicious bots
 <IfModule mod_rewrite.c>
     RewriteEngine On
